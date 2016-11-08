@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Ottawa.ca</string>
+    <string name="action_about">About</string>
+    <string name="author">Raviraj Mangukiya (mang0055)</string>
+    <string name="string_emptry_list">No events. Pull from the top to refresh the list.</string>
+</resources>
