@@ -10,6 +10,5 @@ import retrofit2.http.GET;
 
 public interface ApiService {
 
-    @GET("buildings")
-    Call<Buildings> eventsList();
+  @GET("buildings") Call<Buildings> eventsList();
 }

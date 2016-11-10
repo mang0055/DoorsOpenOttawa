@@ -2,7 +2,6 @@ package modal;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,15 +10,13 @@ import java.util.List;
  */
 
 public class Buildings {
-    @SerializedName("buildings")
-    @Expose
-    public List<Building> buildings = new ArrayList<Building>();
+  @SerializedName("buildings") @Expose public List<Building> buildings = new ArrayList<Building>();
 
-    public List<Building> getBuildings() {
-        return buildings;
-    }
+  public List<Building> getBuildings() {
+    return buildings;
+  }
 
-    public void setBuildings(List<Building> buildings) {
-        this.buildings = buildings;
-    }
+  public void setBuildings(List<Building> buildings) {
+    this.buildings = buildings;
+  }
 }

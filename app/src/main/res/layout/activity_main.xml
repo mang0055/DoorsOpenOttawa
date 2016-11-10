@@ -8,34 +8,39 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.iamraviraj.mang0055.ottawa.ca.MainActivity">
+    tools:context="com.iamraviraj.mang0055.ottawa.ca.MainActivity"
+    >
 
 
-    <FrameLayout
-        android:id="@+id/emptyView"
+  <FrameLayout
+      android:id="@+id/emptyView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      >
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:text="@string/string_empty_list"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        />
+  </FrameLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/string_emptry_list"
-            android:textColor="@android:color/black"
-            android:textSize="20sp" />
-    </FrameLayout>
+  <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/swipe_refresh_list"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/swipe_refresh_list"
+    <GridView
+        android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <GridView
-            android:id="@+id/list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:numColumns="2"
-            android:text="Hello World!" />
-    </android.support.v4.widget.SwipeRefreshLayout>
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:text="Hello World!"
+        />
+  </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

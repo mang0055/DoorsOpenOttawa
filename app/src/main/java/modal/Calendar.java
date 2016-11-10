@@ -8,15 +8,13 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Calendar {
-    @SerializedName("date")
-    @Expose
-    private String date;
+  @SerializedName("date") @Expose private String date;
 
-    public String getDate() {
-        return date;
-    }
+  public String getDate() {
+    return date;
+  }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
+  public void setDate(String date) {
+    this.date = date;
+  }
 }

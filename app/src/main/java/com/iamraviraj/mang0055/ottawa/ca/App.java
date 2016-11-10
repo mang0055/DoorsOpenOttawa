@@ -13,14 +13,14 @@ import retrofit.RestClient;
 public class App extends Application {
     private static App mInstance;
 
+    public static synchronized App getInstance() {
+        return mInstance;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
         mInstance = this;
         new RestClient();
-    }
-
-    public static synchronized App getInstance() {
-        return mInstance;
     }
 }

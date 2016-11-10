@@ -8,10 +8,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.iamraviraj.mang0055.ottawa.ca.EventDetailActivity">
+    tools:context="com.iamraviraj.mang0055.ottawa.ca.EventDetailActivity"
+    >
 
-    <SeekBar
-        android:id="@+id/myseek"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+  <SeekBar
+      android:id="@+id/myseek"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
 </RelativeLayout>
