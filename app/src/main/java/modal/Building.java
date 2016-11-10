@@ -1,8 +1,5 @@
 package modal;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,10 +9,12 @@ import java.util.List;
 
 public class Building {
 
-    public Integer buildingId;
-    public String name;
-    public String address;
-    public String image;
+    private Integer buildingId;
+    private String name;
+    private String address;
+    private String image;
+    private List<Calendar> calendar = new ArrayList<Calendar>();
+    private List<Feature> features = new ArrayList<Feature>();
 
     public Integer getBuildingId() {
         return buildingId;
@@ -47,6 +46,22 @@ public class Building {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public List<Calendar> getCalendar() {
+        return calendar;
+    }
+
+    public void setCalendar(List<Calendar> calendar) {
+        this.calendar = calendar;
+    }
+
+    public List<Feature> getFeatures() {
+        return features;
+    }
+
+    public void setFeatures(List<Feature> features) {
+        this.features = features;
     }
 
 }
