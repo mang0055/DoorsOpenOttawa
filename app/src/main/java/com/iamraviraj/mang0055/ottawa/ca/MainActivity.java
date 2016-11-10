@@ -79,7 +79,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             case R.id.list:
                 HomeListAdapter mAdapter = (HomeListAdapter) parent.getAdapter();
                 Log.e("TAG", new Gson().toJson(mAdapter.getItem(position)));
-                Toast.makeText(getApplicationContext(), mAdapter.getItem(position).getCalendar().size()+" Dates are available.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), mAdapter.getItem(position).getCalendar().size()+" Dates available.", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
