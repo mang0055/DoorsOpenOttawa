@@ -24,7 +24,7 @@ public class Building {
    *
    * "image":"images/AIDSOttawa.jpg",
    *
-   * "calendar":[{"date":"Saturday, June 4, 2016 - 10:00 to 16:00"},{"date":"Sunday, June 5, 2016 - 10:00 to 16:00"}],
+   * "open_hours":[{"date":"Saturday, June 4, 2016 - 10:00 to 16:00"},{"date":"Sunday, June 5, 2016 - 10:00 to 16:00"}],
    *
    * "description":"The AIDS Committee of Ottawa (ACO) has served the HIV/AIDS community for 30 years,
    * providing education and support services around HIV/AIDS. Built in 1961 and overlooking the
