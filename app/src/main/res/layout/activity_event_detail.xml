@@ -21,6 +21,8 @@
         >
       <ImageView
           android:id="@+id/img_building"
+          android:minHeight="200dp"
+          android:minWidth="200dp"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           />

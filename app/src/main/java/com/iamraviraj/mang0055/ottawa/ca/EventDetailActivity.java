@@ -51,7 +51,7 @@ public class EventDetailActivity extends AppCompatActivity {
     StringBuffer mAmenities = new StringBuffer();
     mAmenities.append("Amenities:: \n");
     mAmenities.append(String.format(
-        "Accessible: %s\n BikeParking? %s\n FamilyFriendly? %s\n FreeParking? %s\n NewBuilding? %s\n OCTranspoNearBy? %s\n PaidParking? %s\n Saturday? %s\n Shuttle? %s\n Sunday? %s\n Washrooms? %s",
+        " Accessible: %s\n BikeParking? %s\n FamilyFriendly? %s\n FreeParking? %s\n NewBuilding? %s\n OCTranspoNearBy? %s\n PaidParking? %s\n Saturday? %s\n Shuttle? %s\n Sunday? %s\n Washrooms? %s",
         styleString(feature.getAccessible()), styleString(feature.getBikeParking()),
         styleString(feature.getFamilyFriendly()), styleString(feature.getFreeParking()),
         styleString(feature.getNewBuilding()), styleString(feature.getOcTranspoNearby()),
@@ -74,7 +74,7 @@ public class EventDetailActivity extends AppCompatActivity {
     if (value != null) {
       return value ? "Yes" : "No";
     } else {
-      return " - ";
+      return "information N/A ";
     }
   }
 }
