@@ -1,5 +1,6 @@
 package com.iamraviraj.mang0055.ottawa.ca;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
@@ -28,6 +29,7 @@ public class MainActivity extends BaseActivity
   GridView mListView;
   HomeListAdapter adapter;
   SwipeRefreshLayout swipeRefreshList;
+  public static final String KEY_BUILDING = "BUILDING";
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -74,9 +76,11 @@ public class MainActivity extends BaseActivity
       case R.id.list:
         HomeListAdapter mAdapter = (HomeListAdapter) parent.getAdapter();
         Log.e("TAG", new Gson().toJson(mAdapter.getItem(position)));
-        Toast.makeText(getApplicationContext(),
-            mAdapter.getItem(position).getCalendar().size() + " Dates available.",
-            Toast.LENGTH_SHORT).show();
+
+        Intent intentEventDetail = new Intent(getApplicationContext(), EventDetailActivity.class);
+        intentEventDetail.putExtra(KEY_BUILDING, new Gson().toJson(mAdapter.getItem(position)));
+        startActivity(intentEventDetail);
+
         break;
     }
   }

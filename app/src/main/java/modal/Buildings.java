@@ -20,6 +20,10 @@ public class Buildings {
 
   @SerializedName("buildings") @Expose public List<Building> buildings = new ArrayList<Building>();
 
+  public Buildings(List<Building> buildings) {
+    this.buildings = buildings;
+  }
+
   public List<Building> getBuildings() {
     return buildings;
   }

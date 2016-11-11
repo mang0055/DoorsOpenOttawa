@@ -28,6 +28,22 @@ public class Feature {
   @SerializedName("sunday") @Expose private Boolean sunday;
   @SerializedName("washrooms") @Expose private Boolean washrooms;
 
+  public Feature(Boolean accessible, Boolean bikeParking, Boolean familyFriendly,
+      Boolean freeParking, Boolean newBuilding, Boolean ocTranspoNearby, Boolean paidParking,
+      Boolean saturday, Boolean shuttle, Boolean sunday, Boolean washrooms) {
+    this.accessible = accessible;
+    this.bikeParking = bikeParking;
+    this.familyFriendly = familyFriendly;
+    this.freeParking = freeParking;
+    this.newBuilding = newBuilding;
+    this.ocTranspoNearby = ocTranspoNearby;
+    this.paidParking = paidParking;
+    this.saturday = saturday;
+    this.shuttle = shuttle;
+    this.sunday = sunday;
+    this.washrooms = washrooms;
+  }
+
   public Boolean getAccessible() {
     return accessible;
   }

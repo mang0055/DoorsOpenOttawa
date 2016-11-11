@@ -10,10 +10,51 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.iamraviraj.mang0055.ottawa.ca.EventDetailActivity"
     >
-
-  <SeekBar
-      android:id="@+id/myseek"
+  <ScrollView
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      />
+      android:layout_height="match_parent"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+      <ImageView
+          android:id="@+id/img_building"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+      <TextView
+          android:id="@+id/text_title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          style="@style/TextAppearance.AppCompat.Title"
+          />
+      <TextView
+          android:id="@+id/text_address"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          style="@style/TextAppearance.AppCompat.Subhead"
+          />
+      <TextView
+          android:id="@+id/text_description"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          style="@style/TextAppearance.AppCompat.Body1"
+          />
+
+      <TextView
+          android:id="@+id/text_openHours"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          style="@style/TextAppearance.AppCompat.Body2"
+          />
+      <TextView
+          android:id="@+id/text_features"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          style="@style/TextAppearance.AppCompat.Caption"
+          />
+    </LinearLayout>
+  </ScrollView>
 </RelativeLayout>

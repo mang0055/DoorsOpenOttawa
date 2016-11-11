@@ -1,6 +1,5 @@
 package modal;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +9,7 @@ import java.util.List;
  * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
 
-public class Building implements Serializable {
+public class Building {
   /**
    * Actual Json to understand how each Building JSON Object Parameters are assigned as variable.
    *
@@ -38,8 +37,20 @@ public class Building implements Serializable {
   private String name;
   private String address;
   private String image;
+  private String description;
   private List<Calendar> calendar = new ArrayList<Calendar>();
   private List<Feature> features = new ArrayList<Feature>();
+
+  public Building(Integer buildingId, String name, String address, String image, String description,
+      List<Calendar> calendar, List<Feature> features) {
+    this.buildingId = buildingId;
+    this.name = name;
+    this.address = address;
+    this.image = image;
+    this.description=description;
+    this.calendar = calendar;
+    this.features = features;
+  }
 
   public Integer getBuildingId() {
     return buildingId;
@@ -71,6 +82,14 @@ public class Building implements Serializable {
 
   public void setImage(String image) {
     this.image = image;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   public List<Calendar> getCalendar() {
