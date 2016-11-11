@@ -1,5 +1,7 @@
 package modal;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +40,7 @@ public class Building {
   private String address;
   private String image;
   private String description;
-  private List<Calendar> calendar = new ArrayList<Calendar>();
+  @SerializedName("open_hours") @Expose private List<Calendar> calendar = new ArrayList<Calendar>();
   private List<Feature> features = new ArrayList<Feature>();
 
   public Building(Integer buildingId, String name, String address, String image, String description,
