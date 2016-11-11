@@ -6,7 +6,7 @@ import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * Created by aark on 2016-10-28.
+ * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
 
 public class BaseActivity extends AppCompatActivity {

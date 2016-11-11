@@ -4,10 +4,17 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by aark on 2016-11-10.
+ * To hold Each Dates from Calender Json array of Building.
+ *
+ * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
 
 public class Calendar {
+
+  /**
+   * "calendar": [{"date": "Saturday, June 4, 2016 - 10:00 to 16:00"}],
+   */
+
   @SerializedName("date") @Expose private String date;
 
   public String getDate() {

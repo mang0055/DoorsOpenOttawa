@@ -4,10 +4,18 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by aark on 2016-11-10.
+ * To Hold all Amenities of Building
+ *
+ * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
-public class Feature {
 
+public class Feature {
+  /**
+   * "features": [{"accessible": true},{"bike_parking": true},{"family_friendly":true},
+   * {"free_parking": true},{"new_building": false},{"oc_transpo_nearby":true},
+   * {"paid_parking": false},{"saturday": true},{"shuttle": false},{"sunday": true},
+   * {"washrooms": true}]
+   */
   @SerializedName("accessible") @Expose private Boolean accessible;
   @SerializedName("bike_parking") @Expose private Boolean bikeParking;
   @SerializedName("family_friendly") @Expose private Boolean familyFriendly;

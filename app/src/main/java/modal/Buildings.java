@@ -6,10 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by aark on 2016-10-18.
+ * To hold all Building Model. Parent of @class Building model
+ *
+ * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
 
 public class Buildings {
+  /**
+   * Actual Json to understand how each JSON Parameters are assigned as variable.
+   *
+   * buildings[{Building1},{Building2}] - Json Array contains Buildings.
+   */
+
   @SerializedName("buildings") @Expose public List<Building> buildings = new ArrayList<Building>();
 
   public List<Building> getBuildings() {

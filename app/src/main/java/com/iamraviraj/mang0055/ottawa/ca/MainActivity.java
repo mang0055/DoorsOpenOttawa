@@ -96,7 +96,7 @@ public class MainActivity extends BaseActivity
       }
 
       @Override public void onFailure(Call<Buildings> call, Throwable t) {
-        Log.e("TAG", "YO ", t);
+        Log.e("TAG", "Request Fail ", t);
         swipeRefreshList.setRefreshing(false);
       }
     });

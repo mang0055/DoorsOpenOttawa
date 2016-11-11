@@ -13,7 +13,7 @@ import modal.Building;
 import utils.Constant;
 
 /**
- * Created by aark on 2016-10-28.
+ * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
 
 public class HomeListAdapter extends BaseAdapter {
@@ -47,6 +47,10 @@ public class HomeListAdapter extends BaseAdapter {
     ImageView info_image = (ImageView) view.findViewById(R.id.info_image);
     TextView info_text = (TextView) view.findViewById(R.id.info_text);
     info_text.setText(data.get(position).getName());
+
+    //Picasso ImageLoader popular library for Android
+    //Learn more about Picasso http://square.github.io/picasso/
+
     Picasso.with(context).load(Constant.ENDPOINT + data.get(position).getImage()).into(info_image);
 
     return view;

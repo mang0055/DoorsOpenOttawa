@@ -11,8 +11,7 @@
       android:layout_width="match_parent"
       android:layout_height="150dp"
       android:adjustViewBounds="true"
-      android:background="@color/colorPrimaryDark"
-      android:scaleType="centerCrop"
+
       />
 
   <TextView
@@ -22,7 +21,7 @@
       android:layout_alignParentBottom="true"
       android:background="#6d000000"
       android:padding="8dp"
-      android:text="@string/string_emptry_list"
+      android:text="@string/string_empty_list"
       android:textColor="@android:color/white"
       style="@style/Base.TextAppearance.AppCompat.Small"
       />

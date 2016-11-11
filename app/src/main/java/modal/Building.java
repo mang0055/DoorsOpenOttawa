@@ -1,14 +1,39 @@
 package modal;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by aark on 2016-10-18.
+ * To create Building model
+ *
+ * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
 
-public class Building {
-
+public class Building implements Serializable {
+  /**
+   * Actual Json to understand how each Building JSON Object Parameters are assigned as variable.
+   *
+   * {
+   * "buildingId":0,
+   *
+   * "name":"AIDS Committee of Ottawa",
+   *
+   * "address":"19 Main St.",
+   *
+   * "image":"images/AIDSOttawa.jpg",
+   *
+   * "calendar":[{"date":"Saturday, June 4, 2016 - 10:00 to 16:00"},{"date":"Sunday, June 5, 2016 - 10:00 to 16:00"}],
+   *
+   * "description":"The AIDS Committee of Ottawa (ACO) has served the HIV/AIDS community for 30 years,
+   * providing education and support services around HIV/AIDS. Built in 1961 and overlooking the
+   * Rideau Canal, the home of the ACO features a drop-in centre known as the Living Room - a place of
+   * comfort and care that pays tribute to the origins of the HIV/AIDS movement in Canada in the early
+   * 80s.",
+   *
+   * "features":[{"accessible":true},{"bike_parking":true}]
+   * }
+   */
   private Integer buildingId;
   private String name;
   private String address;

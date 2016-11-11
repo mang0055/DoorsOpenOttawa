@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.SeekBar;
 
+/**
+ * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
+ */
 public class EventDetailActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
