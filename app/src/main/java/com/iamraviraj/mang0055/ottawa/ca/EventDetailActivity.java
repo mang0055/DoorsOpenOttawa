@@ -1,11 +1,23 @@
 package com.iamraviraj.mang0055.ottawa.ca;
 
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
+import java.util.ArrayList;
+import java.util.Locale;
 import modal.Building;
 import modal.Feature;
 import utils.Constant;
@@ -13,9 +25,11 @@ import utils.Constant;
 /**
  * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
-public class EventDetailActivity extends AppCompatActivity {
+public class EventDetailActivity extends AppCompatActivity implements OnMapReadyCallback {
   ImageView imgBuilding;
   TextView buildingName, buildingAddress, buildingDescription, buildingOpenHours, buildingFeatures;
+  private GoogleMap mMap;
+  private Geocoder mGeocoder;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -35,7 +49,7 @@ public class EventDetailActivity extends AppCompatActivity {
           .into(imgBuilding);
       if (building.getCalendar().size() > 0) {
         StringBuffer mOpenHours = new StringBuffer();
-        mOpenHours.append("Open Doors:: \n");
+        //mOpenHours.append("Open Doors:: \n");
         for (modal.Calendar c : building.getCalendar()) {
           mOpenHours.append(c.getDate() + " \n");
         }
@@ -44,6 +58,7 @@ public class EventDetailActivity extends AppCompatActivity {
       if (building.getFeatures()!=null && building.getFeatures().size() > 0) {
         buildingFeatures.setText(printFeatures(building.getFeatures().get(0)));
       }
+      pin(building.getAddress());
     }
   }
 
@@ -68,6 +83,11 @@ public class EventDetailActivity extends AppCompatActivity {
     buildingDescription = (TextView) findViewById(R.id.text_description);
     buildingOpenHours = (TextView) findViewById(R.id.text_openHours);
     buildingFeatures = (TextView) findViewById(R.id.text_features);
+    // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+    SupportMapFragment mapFragment =
+        (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+    mapFragment.getMapAsync(this);
+    mGeocoder = new Geocoder(this, Locale.CANADA);
   }
 
   private String styleString(Boolean value) {
@@ -75,6 +95,29 @@ public class EventDetailActivity extends AppCompatActivity {
       return value ? "Yes" : "No";
     } else {
       return "information N/A ";
+    }
+  }
+
+  @Override public void onMapReady(GoogleMap googleMap) {
+    mMap = googleMap;
+  }
+  /** Locate and pin locationName to the map. */
+  private void pin(String locationName) {
+    try {
+      Address address = mGeocoder.getFromLocationName(locationName, 1).get(0);
+
+      // Fetch the address lines using getAddressLine,
+      // join them, and send them to the thread.
+      for(int i = 0; i < address.getMaxAddressLineIndex(); i++) {
+        Log.e("TAG",address.getAddressLine(i));
+      }
+
+      LatLng ll = new LatLng(address.getLatitude(), address.getLongitude());
+      mMap.addMarker(new MarkerOptions().position(ll).title(locationName));
+      mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ll, 10));
+      Toast.makeText(this, "Pinned: " + locationName, Toast.LENGTH_SHORT).show();
+    } catch (Exception e) {
+      Toast.makeText(this, "Not found: " + locationName, Toast.LENGTH_SHORT).show();
     }
   }
 }
