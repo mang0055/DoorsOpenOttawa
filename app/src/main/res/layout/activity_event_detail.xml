@@ -54,30 +54,31 @@
               android:text="1785 Baseline Road, Ottawa ON CANADA"
               style="@style/TextAppearance.AppCompat.Subhead"
               />
-          <TextView
-              android:id="@+id/text_openHours"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="From 8 AM to 10PM"
-              style="@style/TextAppearance.AppCompat.Body2"
-              />
+
 
         </LinearLayout>
       </LinearLayout>
       <fragment
-
           android:id="@+id/map"
           android:name="com.google.android.gms.maps.SupportMapFragment"
           android:layout_width="match_parent"
           android:layout_height="400px"
+          android:paddingTop="16dp"
           tools:context="com.algonquincollege.mang0055.acfinder.MapsActivity"
           />
-
+      <TextView
+          android:paddingTop="16dp"
+          android:id="@+id/text_openHours"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="From 8 AM to 10PM"
+          style="@style/TextAppearance.AppCompat.Body2"
+          />
       <TextView
           android:id="@+id/text_description"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:paddingTop="16dp"
+
           style="@style/TextAppearance.AppCompat.Body1"
           />
 

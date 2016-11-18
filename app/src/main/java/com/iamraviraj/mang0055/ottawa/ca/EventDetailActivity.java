@@ -49,7 +49,7 @@ public class EventDetailActivity extends AppCompatActivity implements OnMapReady
           .into(imgBuilding);
       if (building.getCalendar().size() > 0) {
         StringBuffer mOpenHours = new StringBuffer();
-        //mOpenHours.append("Open Doors:: \n");
+        mOpenHours.append("Open Doors:: \n");
         for (modal.Calendar c : building.getCalendar()) {
           mOpenHours.append(c.getDate() + " \n");
         }
