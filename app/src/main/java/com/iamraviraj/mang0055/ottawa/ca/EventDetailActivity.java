@@ -3,7 +3,6 @@ package com.iamraviraj.mang0055.ottawa.ca;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,20 +15,27 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
-import java.util.ArrayList;
+import java.io.IOException;
+import java.util.List;
 import java.util.Locale;
 import modal.Building;
 import modal.Feature;
+import modal.MapAddressModel;
+import retrofit.RestClient;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import utils.Constant;
 
 /**
  * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
-public class EventDetailActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class EventDetailActivity extends BaseActivity implements OnMapReadyCallback {
   ImageView imgBuilding;
   TextView buildingName, buildingAddress, buildingDescription, buildingOpenHours, buildingFeatures;
   private GoogleMap mMap;
   private Geocoder mGeocoder;
+  Building building = null;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -39,8 +45,7 @@ public class EventDetailActivity extends AppCompatActivity implements OnMapReady
 
     Bundle mBundle = this.getIntent().getExtras();
     if (mBundle != null) {
-      Building building =
-          new Gson().fromJson(mBundle.getString(MainActivity.KEY_BUILDING), Building.class);
+      building = new Gson().fromJson(mBundle.getString(MainActivity.KEY_BUILDING), Building.class);
       buildingName.setText(building.getName());
       buildingAddress.setText(building.getAddress());
       buildingDescription.setText(building.getDescription());
@@ -55,10 +60,9 @@ public class EventDetailActivity extends AppCompatActivity implements OnMapReady
         }
         buildingOpenHours.setText(mOpenHours.toString());
       }
-      if (building.getFeatures()!=null && building.getFeatures().size() > 0) {
+      if (building.getFeatures() != null && building.getFeatures().size() > 0) {
         buildingFeatures.setText(printFeatures(building.getFeatures().get(0)));
       }
-      pin(building.getAddress());
     }
   }
 
@@ -100,24 +104,69 @@ public class EventDetailActivity extends AppCompatActivity implements OnMapReady
 
   @Override public void onMapReady(GoogleMap googleMap) {
     mMap = googleMap;
+    if (building != null && !building.getAddress().isEmpty()) {
+      fetchLatLongFromAddress(building.getAddress());
+    }
   }
-  /** Locate and pin locationName to the map. */
-  private void pin(String locationName) {
+
+  private void showLocation(String locationName, LatLng ll) {
     try {
-      Address address = mGeocoder.getFromLocationName(locationName, 1).get(0);
-
-      // Fetch the address lines using getAddressLine,
-      // join them, and send them to the thread.
-      for(int i = 0; i < address.getMaxAddressLineIndex(); i++) {
-        Log.e("TAG",address.getAddressLine(i));
-      }
-
-      LatLng ll = new LatLng(address.getLatitude(), address.getLongitude());
       mMap.addMarker(new MarkerOptions().position(ll).title(locationName));
       mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ll, 10));
       Toast.makeText(this, "Pinned: " + locationName, Toast.LENGTH_SHORT).show();
     } catch (Exception e) {
       Toast.makeText(this, "Not found: " + locationName, Toast.LENGTH_SHORT).show();
     }
+  }
+
+  public void fetchLatLongFromAddress(String locationName) {
+    if (!mGeocoder.isPresent()) {
+      Log.w("TAG", "Geocoder implementation not present !");
+    }
+
+    try {
+      List<Address> addresses = mGeocoder.getFromLocationName(locationName, 100);
+      int tentatives = 0;
+      while (addresses.size() == 0 && (tentatives < 10)) {
+        addresses = mGeocoder.getFromLocationName(locationName, 1);
+        tentatives++;
+      }
+
+      if (addresses.size() > 0) {
+        Log.d("TAG",
+            "reverse Geocoding : locationName " + locationName + "Latitude " + addresses.get(0)
+                .getLatitude());
+        showLocation(locationName,
+            new LatLng(addresses.get(0).getLatitude(), addresses.get(0).getLongitude()));
+      } else {
+        //use http api
+        Log.d("TAG", "Use HTTP API to fetch Location");
+        if (isNetworkAvailable()) fetchLocationInfo(locationName);
+      }
+    } catch (IOException e) {
+      Log.d(EventDetailActivity.class.getName(),
+          "not possible finding LatLng for Address : " + locationName);
+    }
+  }
+
+  private void fetchLocationInfo(final String locationName) {
+
+    Call<MapAddressModel> tempJson = RestClient.getInstance()
+        .getApiService()
+        .callGoogleJSMapAPI(locationName, getString(R.string.google_maps_key));
+    tempJson.enqueue(new Callback<MapAddressModel>() {
+      @Override
+      public void onResponse(Call<MapAddressModel> call, Response<MapAddressModel> response) {
+        MapAddressModel mMapAddressModel = response.body();
+        Log.e("TAG", new Gson().toJson(mMapAddressModel));
+        showLocation(locationName,
+            new LatLng(mMapAddressModel.getResults().get(0).getGeometry().getLocation().getLat(),
+                mMapAddressModel.getResults().get(0).getGeometry().getLocation().getLng()));
+      }
+
+      @Override public void onFailure(Call<MapAddressModel> call, Throwable t) {
+        Log.e("TAG", "Error", t);
+      }
+    });
   }
 }

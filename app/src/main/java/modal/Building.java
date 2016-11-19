@@ -71,7 +71,7 @@ public class Building {
   }
 
   public String getAddress() {
-    return address;
+    return address+" Ottawa, ON";
   }
 
   public void setAddress(String address) {
