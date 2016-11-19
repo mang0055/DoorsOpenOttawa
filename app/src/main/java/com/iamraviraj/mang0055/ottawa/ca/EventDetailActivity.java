@@ -4,6 +4,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,7 +41,7 @@ public class EventDetailActivity extends BaseActivity implements OnMapReadyCallb
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_event_detail);
-
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     setUpViews();
 
     Bundle mBundle = this.getIntent().getExtras();
@@ -63,6 +64,18 @@ public class EventDetailActivity extends BaseActivity implements OnMapReadyCallb
       if (building.getFeatures() != null && building.getFeatures().size() > 0) {
         buildingFeatures.setText(printFeatures(building.getFeatures().get(0)));
       }
+    }
+  }
+
+  @Override public boolean onOptionsItemSelected(MenuItem item) {
+    // Handle presses on the action bar items
+    switch (item.getItemId()) {
+
+      case android.R.id.home:
+        finish();
+        return true;
+      default:
+        return super.onOptionsItemSelected(item);
     }
   }
 
