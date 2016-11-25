@@ -83,9 +83,6 @@ public class MainActivity extends BaseActivity
   @Override public boolean onOptionsItemSelected(MenuItem item) {
     // Handle presses on the action bar items
     switch (item.getItemId()) {
-      case R.id.search:
-
-        return true;
       case R.id.action_about:
         mAboutDialog.show(getFragmentManager(), "ABOUT_DIALOG_TAG");
         return true;
