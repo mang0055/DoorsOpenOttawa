@@ -1,9 +1,12 @@
 package com.iamraviraj.mang0055.ottawa.ca;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.util.Base64;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,13 +27,15 @@ import retrofit2.Response;
  * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
 public class MainActivity extends BaseActivity
-    implements AdapterView.OnItemClickListener, SwipeRefreshLayout.OnRefreshListener {
+    implements AdapterView.OnItemClickListener, SwipeRefreshLayout.OnRefreshListener,
+    View.OnClickListener {
 
   AboutDialogFragment mAboutDialog;
   GridView mListView;
   HomeListAdapter adapter;
   SwipeRefreshLayout swipeRefreshList;
   public static final String KEY_BUILDING = "BUILDING";
+  FloatingActionButton btn_addBuilding;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -48,21 +53,39 @@ public class MainActivity extends BaseActivity
     View empty = findViewById(R.id.emptyView);
     mListView.setEmptyView(empty);
 
+    btn_addBuilding = (FloatingActionButton) findViewById(R.id.btn_addBuilding);
+    btn_addBuilding.setOnClickListener(this);
     //Doing network request while loading first time.
     this.onRefresh();
-
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.menu_main, menu);
+    SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+    SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
+    searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+      @Override public boolean onQueryTextSubmit(String query) {
+        adapter.getFilter().filter(query);
+        return true;
+      }
+
+      @Override public boolean onQueryTextChange(String newText) {
+        adapter.getFilter().filter(newText);
+        return true;
+      }
+    });
     return true;
   }
 
   @Override public boolean onOptionsItemSelected(MenuItem item) {
     // Handle presses on the action bar items
     switch (item.getItemId()) {
+      case R.id.search:
 
+        return true;
       case R.id.action_about:
         mAboutDialog.show(getFragmentManager(), "ABOUT_DIALOG_TAG");
         return true;
@@ -91,7 +114,8 @@ public class MainActivity extends BaseActivity
     if (!isNetworkAvailable()) {
       return;
     }
-    Call<Buildings> buildingsCall = RestClient.getInstance().getApiService().eventsList(getAPIAuthorisation());
+    Call<Buildings> buildingsCall =
+        RestClient.getInstance().getApiService().eventsList(getAPIAuthorisation());
     buildingsCall.enqueue(new Callback<Buildings>() {
       @Override public void onResponse(Call<Buildings> call, Response<Buildings> response) {
         //Log.e("TAG", response.toString());
@@ -106,5 +130,13 @@ public class MainActivity extends BaseActivity
         swipeRefreshList.setRefreshing(false);
       }
     });
+  }
+
+  @Override public void onClick(View v) {
+    switch (v.getId()) {
+      case R.id.btn_addBuilding:
+        startActivity(new Intent(this, NewBuildingActivity.class));
+        break;
+    }
   }
 }
