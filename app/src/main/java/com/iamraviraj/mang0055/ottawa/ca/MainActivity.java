@@ -3,6 +3,7 @@ package com.iamraviraj.mang0055.ottawa.ca;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -49,6 +50,7 @@ public class MainActivity extends BaseActivity
 
     //Doing network request while loading first time.
     this.onRefresh();
+
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
@@ -89,7 +91,7 @@ public class MainActivity extends BaseActivity
     if (!isNetworkAvailable()) {
       return;
     }
-    Call<Buildings> buildingsCall = RestClient.getInstance().getApiService().eventsList();
+    Call<Buildings> buildingsCall = RestClient.getInstance().getApiService().eventsList(getAPIAuthorisation());
     buildingsCall.enqueue(new Callback<Buildings>() {
       @Override public void onResponse(Call<Buildings> call, Response<Buildings> response) {
         //Log.e("TAG", response.toString());
