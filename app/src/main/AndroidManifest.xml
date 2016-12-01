@@ -6,6 +6,9 @@
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
+  <uses-feature
+      android:name="android.hardware.camera"
+      android:required="true"/>
   <application
       android:name=".App"
       android:allowBackup="true"
@@ -33,7 +36,18 @@
     </activity>
     <activity android:name=".EventDetailActivity">
     </activity>
-    <activity android:name=".NewBuildingActivity"></activity>
+    <activity android:name=".NewBuildingActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.GET_CONTENT"/>
+
+        <category android:name="android.intent.category.DEFAULT"/>
+        <!-- The OPENABLE category declares that the returned file is accessible
+             from a content provider that supports OpenableColumns
+             and ContentResolver.openFileDescriptor() -->
+        <category android:name="android.intent.category.OPENABLE"/>
+      </intent-filter>
+
+    </activity>
   </application>
 
 </manifest>

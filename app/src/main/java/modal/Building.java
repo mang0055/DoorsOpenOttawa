@@ -54,6 +54,10 @@ public class Building {
     this.features = features;
   }
 
+  public Building() {
+
+  }
+
   public Integer getBuildingId() {
     return buildingId;
   }

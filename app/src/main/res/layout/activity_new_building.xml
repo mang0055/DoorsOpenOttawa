@@ -1,7 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:layout_centerHorizontal="true"
+      android:layout_gravity="center_horizontal"
+      android:paddingTop="10dp"
+      >
 
+    <ImageView
+        android:id="@+id/img_buildingImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#6d000000"
+        />
+
+    <ImageView
+        android:id="@+id/img_buildingImageOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="#6d000000"
+        android:contentDescription="@string/app_name"
+        android:src="@android:drawable/ic_menu_add"
+        />
+  </RelativeLayout>
+  <android.support.design.widget.TextInputLayout
+      android:id="@+id/editBuildingName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="16dp"
+      >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_building_Name"
+        android:text="Trump tower"
+        />
+  </android.support.design.widget.TextInputLayout>
+  <android.support.design.widget.TextInputLayout
+      android:id="@+id/editBuildingAddress"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_building_Address"
+        android:text="New York, NY 10022"
+        />
+  </android.support.design.widget.TextInputLayout>
+  <android.support.design.widget.TextInputLayout
+      android:id="@+id/editBuildingDescription"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_building_Description"
+        android:text="Trump Tower is a 58-story mixed-use skyscraper located on Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City."
+        />
+  </android.support.design.widget.TextInputLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:paddingTop="10dp"
+      >
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Cancel"
+        />
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Save"
+        />
+  </LinearLayout>
 </LinearLayout>
