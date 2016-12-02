@@ -13,13 +13,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 import com.google.gson.Gson;
+import java.util.Collections;
 import modal.Buildings;
 import retrofit.RestClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static com.iamraviraj.mang0055.ottawa.ca.HomeListAdapter.BuildingComparator.ID_SORT;
+import static com.iamraviraj.mang0055.ottawa.ca.HomeListAdapter.BuildingComparator.NAME_SORT;
+import static com.iamraviraj.mang0055.ottawa.ca.HomeListAdapter.BuildingComparator.acending;
+import static com.iamraviraj.mang0055.ottawa.ca.HomeListAdapter.BuildingComparator.decending;
+import static com.iamraviraj.mang0055.ottawa.ca.HomeListAdapter.BuildingComparator.getComparator;
 
 /**
  * Application get events from Ottawa.ca and display it in List
@@ -85,11 +91,22 @@ public class MainActivity extends BaseActivity
     switch (item.getItemId()) {
       case R.id.action_about:
         mAboutDialog.show(getFragmentManager(), "ABOUT_DIALOG_TAG");
-        return true;
-      default:
-        Toast.makeText(this, "MenuItem: " + item.getTitle(), Toast.LENGTH_LONG).show();
-        return super.onOptionsItemSelected(item);
+        break;
+      case R.id.action_sort_name_asc:
+        Collections.sort(adapter.getData(), acending(getComparator(ID_SORT)));
+        adapter.notifyDataSetChanged();
+        break;
+      case R.id.action_sort_name_dsc:
+        Collections.sort(adapter.getData(), decending(getComparator(ID_SORT)));
+        adapter.notifyDataSetChanged();
+        break;
+      case R.id.action_sort_name:
+        Collections.sort(adapter.getData(), decending(getComparator(NAME_SORT)));
+        adapter.notifyDataSetChanged();
+        break;
     }
+    item.setChecked(true);
+    return true;
   }
 
   //List/Grid View Item Click
@@ -111,8 +128,7 @@ public class MainActivity extends BaseActivity
     if (!isNetworkAvailable()) {
       return;
     }
-    Call<Buildings> buildingsCall =
-        RestClient.getInstance().getApiService().eventsList(getAPIAuthorisation());
+    Call<Buildings> buildingsCall = RestClient.getInstance().getApiService().eventsList();
     buildingsCall.enqueue(new Callback<Buildings>() {
       @Override public void onResponse(Call<Buildings> call, Response<Buildings> response) {
         //Log.e("TAG", response.toString());

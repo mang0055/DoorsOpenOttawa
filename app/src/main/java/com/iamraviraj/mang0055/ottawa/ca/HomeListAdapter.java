@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import modal.Building;
 import utils.Constant;
@@ -39,6 +40,10 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
 
   @Override public Building getItem(int position) {
     return data.get(position);
+  }
+
+  public List<Building> getData() {
+    return data;
   }
 
   @Override public long getItemId(int position) {
@@ -92,5 +97,46 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
       }
     };
     return filter;
+  }
+
+  enum BuildingComparator implements Comparator<Building> {
+    ID_SORT {
+      public int compare(Building o1, Building o2) {
+        return Integer.valueOf(o1.getBuildingId()).compareTo(o2.getBuildingId());
+      }
+    },
+    NAME_SORT {
+      public int compare(Building o1, Building o2) {
+        return o1.getName().compareTo(o2.getName());
+      }
+    };
+    public static Comparator<Building> acending(final Comparator<Building> other) {
+      return new Comparator<Building>() {
+        public int compare(Building o1, Building o2) {
+          return other.compare(o1, o2);
+        }
+      };
+    }
+    public static Comparator<Building> decending(final Comparator<Building> other) {
+      return new Comparator<Building>() {
+        public int compare(Building o1, Building o2) {
+          return -1 * other.compare(o1, o2);
+        }
+      };
+    }
+
+    public static Comparator<Building> getComparator(final BuildingComparator... multipleOptions) {
+      return new Comparator<Building>() {
+        public int compare(Building o1, Building o2) {
+          for (BuildingComparator option : multipleOptions) {
+            int result = option.compare(o1, o2);
+            if (result != 0) {
+              return result;
+            }
+          }
+          return 0;
+        }
+      };
+    }
   }
 }

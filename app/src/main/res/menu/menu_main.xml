@@ -15,4 +15,22 @@
       android:icon="@android:drawable/ic_dialog_info"
       android:title="@string/action_about"
       app:showAsAction="ifRoom"/>
+
+  <group
+      android:id="@+id/sort_options"
+      android:checkableBehavior="single">
+    <item
+        android:id="@+id/action_sort_name_asc"
+        android:checked="true"
+        android:title="Sort by Name (a-z)"/>
+    <item
+        android:id="@+id/action_sort_name_dsc"
+        android:checked="false"
+        android:title="Sort by Name (z-a)"/>
+    <item
+        android:id="@+id/action_sort_name"
+        android:checked="false"
+        android:title="Sort by Name"/>
+  </group>
+
 </menu>

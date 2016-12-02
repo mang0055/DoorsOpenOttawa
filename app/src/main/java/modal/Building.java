@@ -35,10 +35,15 @@ public class Building {
    * "features":[{"accessible":true},{"bike_parking":true}]
    * }
    */
+  @Expose
   private Integer buildingId;
+  @Expose
   private String name;
+  @Expose
   private String address;
+  @Expose
   private String image;
+  @Expose
   private String description;
   @SerializedName("open_hours") @Expose private List<Calendar> calendar = new ArrayList<Calendar>();
   private List<Feature> features = new ArrayList<Feature>();

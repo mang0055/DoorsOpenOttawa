@@ -71,13 +71,14 @@ public class NewBuildingActivity extends BaseActivity
     String name = editBuildingName.getEditText().getText().toString();
     String address = editBuildingAddress.getEditText().getText().toString();
     String description = editBuildingDescription.getEditText().getText().toString();
-    Building mBulding = new Building();
-    mBulding.setName(name);
-    mBulding.setAddress(address);
-    mBulding.setDescription(description);
+    Building mBuilding = new Building();
+    mBuilding.setName(name);
+    mBuilding.setAddress(address);
+    mBuilding.setImage("image/abc.jpg");
+    mBuilding.setDescription(description);
 
     Call<ResponseBody> callPostBuilding =
-        RestClient.getInstance().getApiService().postBuilding(getAPIAuthorisation(), mBulding);
+        RestClient.getInstance().getApiService().postBuilding(mBuilding);
     callPostBuilding.enqueue(new Callback<ResponseBody>() {
       @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
         Log.e("TAG", response.message());

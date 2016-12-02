@@ -7,4 +7,5 @@
   <string name="hint_building_Name">Building Name</string>
   <string name="hint_building_Address">Building Address</string>
   <string name="hint_building_Description">Building Description</string>
+  <string name="action_sort">Sort</string>
 </resources>
