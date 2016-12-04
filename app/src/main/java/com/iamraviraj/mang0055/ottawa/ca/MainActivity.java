@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import com.google.gson.Gson;
 import java.util.Collections;
+import modal.Building;
 import modal.Buildings;
 import retrofit.RestClient;
 import retrofit2.Call;

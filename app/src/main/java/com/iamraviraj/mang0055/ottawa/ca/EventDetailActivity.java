@@ -1,9 +1,12 @@
 package com.iamraviraj.mang0055.ottawa.ca;
 
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -67,16 +70,30 @@ public class EventDetailActivity extends BaseActivity implements OnMapReadyCallb
     }
   }
 
+  @Override public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.menu_edit_building, menu);
+    return true;
+  }
+
   @Override public boolean onOptionsItemSelected(MenuItem item) {
     // Handle presses on the action bar items
     switch (item.getItemId()) {
 
       case android.R.id.home:
         finish();
-        return true;
-      default:
-        return super.onOptionsItemSelected(item);
+        break;
+      case R.id.action_edit:
+        if (building.getBuildingId().intValue() > Constant.TOTAL_BUILDING) {
+          startActivity(
+              new Intent(getApplicationContext(), NewBuildingActivity.class).putExtra("Building",
+                  new Gson().toJson(building)));
+        } else {
+          Snackbar.make(imgBuilding, "You can not edit this building.", Snackbar.LENGTH_LONG)
+              .show();
+        }
+        break;
     }
+    return true;
   }
 
   private String printFeatures(Feature feature) {

@@ -6,6 +6,7 @@ package utils;
 
 public class Constant {
 
+  public static final int TOTAL_BUILDING = 132;
   public static boolean isDebug = true;
   /**
    * REMOTE URL's

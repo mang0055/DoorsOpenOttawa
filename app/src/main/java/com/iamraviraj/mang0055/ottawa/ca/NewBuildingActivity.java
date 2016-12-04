@@ -13,12 +13,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
 import modal.Building;
 import okhttp3.ResponseBody;
 import retrofit.RestClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import utils.Constant;
 
 /**
  * Created by aark on 2016-11-25.
@@ -27,7 +30,7 @@ import retrofit2.Response;
 public class NewBuildingActivity extends BaseActivity
     implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
   ImageView buildingImage, buildingImageOverlay;
-  Button btnCancel, btnSave;
+  Button btnCancel, btnSave, btnUpdate;
   static final int REQUEST_IMAGE_CAPTURE = 0;
   static final int REQUEST_IMAGE_GET = 1;
   TextInputLayout editBuildingName, editBuildingAddress, editBuildingDescription;
@@ -35,8 +38,20 @@ public class NewBuildingActivity extends BaseActivity
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_new_building);
-
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     setUpView();
+
+    if (getIntent().getExtras() != null) {
+      Building editableBuilding =
+          new Gson().fromJson(getIntent().getExtras().getString("Building"), Building.class);
+      fillViewsData(editableBuilding);
+      btnSave.setVisibility(View.GONE);
+      btnUpdate.setVisibility(View.VISIBLE);
+      btnUpdate.setTag(editableBuilding);
+    } else {
+      btnSave.setVisibility(View.VISIBLE);
+      btnUpdate.setVisibility(View.GONE);
+    }
   }
 
   private void setUpView() {
@@ -47,9 +62,31 @@ public class NewBuildingActivity extends BaseActivity
     editBuildingDescription = (TextInputLayout) findViewById(R.id.editBuildingDescription);
     btnCancel = (Button) findViewById(R.id.btnCancel);
     btnSave = (Button) findViewById(R.id.btnSave);
+    btnUpdate = (Button) findViewById(R.id.btnUpdate);
     btnCancel.setOnClickListener(this);
     btnSave.setOnClickListener(this);
+    btnUpdate.setOnClickListener(this);
     buildingImageOverlay.setOnClickListener(this);
+  }
+
+  @Override public boolean onOptionsItemSelected(MenuItem item) {
+    // Handle presses on the action bar items
+    switch (item.getItemId()) {
+
+      case android.R.id.home:
+        finish();
+        break;
+    }
+    return true;
+  }
+
+  private void fillViewsData(Building editableBuilding) {
+    Picasso.with(getApplicationContext())
+        .load(Constant.ENDPOINT + editableBuilding.getImage())
+        .into(buildingImage);
+    editBuildingName.getEditText().setText(editableBuilding.getName());
+    editBuildingAddress.getEditText().setText(editableBuilding.getAddress());
+    editBuildingDescription.getEditText().setText(editableBuilding.getDescription());
   }
 
   @Override public void onClick(View v) {
@@ -63,6 +100,9 @@ public class NewBuildingActivity extends BaseActivity
         break;
       case R.id.btnCancel:
         finish();
+        break;
+      case R.id.btnUpdate:
+        updateBuilding((Building) btnUpdate.getTag());
         break;
     }
   }
@@ -86,6 +126,33 @@ public class NewBuildingActivity extends BaseActivity
 
       @Override public void onFailure(Call<ResponseBody> call, Throwable t) {
         Log.e("TAG", "Fail: ", t);
+      }
+    });
+  }
+
+  private void updateBuilding(Building mBuilding) {
+    String name = editBuildingName.getEditText().getText().toString();
+    String address = editBuildingAddress.getEditText().getText().toString();
+    String description = editBuildingDescription.getEditText().getText().toString();
+    if (!name.equals(mBuilding.getName())) {
+      mBuilding.setName(name);
+    }
+    if (!address.equals(mBuilding.getAddress())) {
+      mBuilding.setAddress(address);
+    }
+    if (!description.equals(mBuilding.getDescription())) {
+      mBuilding.setDescription(description);
+    }
+    Call<ResponseBody> callPostBuilding = RestClient.getInstance()
+        .getApiService()
+        .updateBuilding(mBuilding.getBuildingId(), mBuilding);
+    callPostBuilding.enqueue(new Callback<ResponseBody>() {
+      @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+        Log.e("TAG", "Update: " + response.message());
+      }
+
+      @Override public void onFailure(Call<ResponseBody> call, Throwable t) {
+        Log.e("TAG", "Update Fail: ", t);
       }
     });
   }
