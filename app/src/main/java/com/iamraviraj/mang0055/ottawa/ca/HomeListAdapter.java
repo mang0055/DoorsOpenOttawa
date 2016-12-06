@@ -9,6 +9,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.github.ivbaranov.mfb.MaterialFavoriteButton;
 import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -50,19 +51,27 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
     return position;
   }
 
-  @Override public View getView(int position, View convertView, ViewGroup parent) {
+  @Override public View getView(final int position, View convertView, ViewGroup parent) {
     View view = convertView;
     if (convertView == null) view = inflater.inflate(R.layout.row_main, null);
 
     ImageView info_image = (ImageView) view.findViewById(R.id.info_image);
     TextView info_text = (TextView) view.findViewById(R.id.info_text);
     info_text.setText(data.get(position).getName());
-
+    MaterialFavoriteButton btn_favorite =
+        (MaterialFavoriteButton) view.findViewById(R.id.btn_favorite);
+    btn_favorite.setFavorite(data.get(position).isFavorite());
+    btn_favorite.setTag(data.get(position).getBuildingId());
     //Picasso ImageLoader popular library for Android
     //Learn more about Picasso http://square.github.io/picasso/
 
     Picasso.with(context).load(Constant.ENDPOINT + data.get(position).getImage()).into(info_image);
-
+    btn_favorite.setOnFavoriteChangeListener(new MaterialFavoriteButton.OnFavoriteChangeListener() {
+      @Override public void onFavoriteChanged(MaterialFavoriteButton buttonView, boolean favorite) {
+        App.storeBoolean(data.get(position).getBuildingId() + "", favorite);
+        data.get(position).setFavorite(favorite);
+      }
+    });
     return view;
   }
 
@@ -110,6 +119,7 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
         return o1.getName().compareTo(o2.getName());
       }
     };
+
     public static Comparator<Building> acending(final Comparator<Building> other) {
       return new Comparator<Building>() {
         public int compare(Building o1, Building o2) {
@@ -117,6 +127,7 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
         }
       };
     }
+
     public static Comparator<Building> decending(final Comparator<Building> other) {
       return new Comparator<Building>() {
         public int compare(Building o1, Building o2) {
@@ -138,5 +149,13 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
         }
       };
     }
+  }
+
+  public void updateUIFavorites(){
+    for (int i = 0; i < data.size(); i++) {
+      boolean temp = App.getStoredBoolean(data.get(i).getBuildingId() + "");
+      data.get(i).setFavorite(temp);
+    }
+    notifyDataSetChanged();
   }
 }

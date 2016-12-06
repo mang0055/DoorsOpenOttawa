@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="200dp"
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="4dp"
     card_view:cardUseCompatPadding="true">
@@ -26,11 +27,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#6d000000"
+        android:background="#9b000000"
+        android:gravity="center"
         android:padding="8dp"
         android:text="@string/string_empty_list"
         android:textColor="@android:color/white"
         style="@style/Base.TextAppearance.AppCompat.Small"
+
     />
+    <com.github.ivbaranov.mfb.MaterialFavoriteButton
+        android:id="@+id/btn_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        app:mfb_color="white"
+        app:mfb_type="heart"/>
   </RelativeLayout>
 </android.support.v7.widget.CardView>

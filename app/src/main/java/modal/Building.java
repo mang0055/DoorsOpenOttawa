@@ -47,9 +47,9 @@ public class Building {
   private String description;
   @SerializedName("open_hours") @Expose private List<Calendar> calendar = new ArrayList<Calendar>();
   private List<Feature> features = new ArrayList<Feature>();
-
+  private boolean favorite = false;
   public Building(Integer buildingId, String name, String address, String image, String description,
-      List<Calendar> calendar, List<Feature> features) {
+      List<Calendar> calendar, List<Feature> features,boolean favorite) {
     this.buildingId = buildingId;
     this.name = name;
     this.address = address;
@@ -57,6 +57,7 @@ public class Building {
     this.description=description;
     this.calendar = calendar;
     this.features = features;
+    this.favorite = favorite;
   }
 
   public Building() {
@@ -117,5 +118,13 @@ public class Building {
 
   public void setFeatures(List<Feature> features) {
     this.features = features;
+  }
+
+  public boolean isFavorite() {
+    return favorite;
+  }
+
+  public void setFavorite(boolean favorite) {
+    this.favorite = favorite;
   }
 }
