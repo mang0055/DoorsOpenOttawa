@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.Toast;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import java.io.File;
@@ -117,7 +118,7 @@ public class NewBuildingActivity extends BaseActivity
         break;
       case R.id.btnUpdate:
         Building mBuilding = (Building) btnUpdate.getTag();
-        //updateBuilding(mBuilding);
+        updateBuilding(mBuilding);
         if (imageUri != null) uploadBuildingPicture(mBuilding.getBuildingId(), imageUri);
         break;
     }
@@ -238,7 +239,8 @@ public class NewBuildingActivity extends BaseActivity
     httpClient.addInterceptor(logging);
     httpClient.addInterceptor(headers);
     Retrofit retrofit = new Retrofit.Builder().baseUrl(Constant.http_live_url)
-        .addConverterFactory(GsonConverterFactory.create()).client(httpClient.build())
+        .addConverterFactory(GsonConverterFactory.create())
+        .client(httpClient.build())
         .build();
     ApiService api = retrofit.create(ApiService.class);
     Log.i("TAG", "Uploading Building Picture");
@@ -247,6 +249,10 @@ public class NewBuildingActivity extends BaseActivity
     callPostBuilding.enqueue(new Callback<ResponseBody>() {
       @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
         Log.e("TAG", "Uploaded: " + response.message());
+        if (response.code() == 200) {
+          Toast.makeText(getApplicationContext(), "Building updated successfully.",
+              Toast.LENGTH_SHORT).show();
+        }
       }
 
       @Override public void onFailure(Call<ResponseBody> call, Throwable t) {

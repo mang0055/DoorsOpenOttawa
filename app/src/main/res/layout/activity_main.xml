@@ -50,7 +50,7 @@
       android:layout_alignParentBottom="true"
       android:layout_alignParentRight="true"
       android:layout_margin="20dp"
-      android:src="@android:drawable/ic_input_add"
+      android:src="@drawable/ic_add_24dp"
       app:fabSize="normal"
       />
 </RelativeLayout>

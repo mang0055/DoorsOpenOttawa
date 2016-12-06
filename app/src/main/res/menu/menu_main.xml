@@ -2,20 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    >
+>
   <item
       android:id="@+id/search"
-      android:icon="@android:drawable/ic_menu_search"
+      android:icon="@drawable/ic_search_24dp"
       android:title="@string/search_title"
       app:actionViewClass="android.support.v7.widget.SearchView"
       app:showAsAction="ifRoom|collapseActionView"
       tools:ignore="AppCompatResource"/>
-  <item
-      android:id="@+id/action_about"
-      android:icon="@android:drawable/ic_dialog_info"
-      android:title="@string/action_about"
-      app:showAsAction="ifRoom"/>
-
   <group
       android:id="@+id/sort_options"
       android:checkableBehavior="single">
@@ -32,5 +26,9 @@
         android:checked="false"
         android:title="Sort by Name"/>
   </group>
-
+  <item
+      android:id="@+id/action_about"
+      android:icon="@android:drawable/ic_dialog_info"
+      android:title="@string/action_about"
+      app:showAsAction="never"/>
 </menu>
