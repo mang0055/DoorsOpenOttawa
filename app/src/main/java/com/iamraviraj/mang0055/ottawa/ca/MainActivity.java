@@ -137,8 +137,8 @@ public class MainActivity extends BaseActivity
           adapter = new HomeListAdapter(getApplicationContext(), buildings.getBuildings());
           mListView.setAdapter(adapter);
           swipeRefreshList.setRefreshing(false);
-          Collections.sort(adapter.getData(), decending(getComparator(ID_SORT)));
-          adapter.notifyDataSetChanged();
+          //Collections.sort(adapter.getData(), decending(getComparator(ID_SORT)));
+          //adapter.notifyDataSetChanged();
         }
       }
 

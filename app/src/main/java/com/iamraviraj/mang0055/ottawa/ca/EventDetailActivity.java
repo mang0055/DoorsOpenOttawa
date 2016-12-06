@@ -25,6 +25,7 @@ import java.util.Locale;
 import modal.Building;
 import modal.Feature;
 import modal.MapAddressModel;
+import okhttp3.ResponseBody;
 import retrofit.RestClient;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -92,6 +93,9 @@ public class EventDetailActivity extends BaseActivity implements OnMapReadyCallb
           Snackbar.make(imgBuilding, "You can not edit this building.", Snackbar.LENGTH_LONG)
               .show();
         }
+        break;
+      case R.id.action_delete:
+        deleteBuilding();
         break;
     }
     return true;
@@ -197,6 +201,28 @@ public class EventDetailActivity extends BaseActivity implements OnMapReadyCallb
 
       @Override public void onFailure(Call<MapAddressModel> call, Throwable t) {
         Log.e("TAG", "Error", t);
+      }
+    });
+  }
+
+  private void deleteBuilding() {
+    if (building == null) {
+      Toast.makeText(getApplicationContext(), "You can not delete the building as its not exist.",
+          Toast.LENGTH_SHORT).show();
+      return;
+    }
+    Call<ResponseBody> callPostBuilding =
+        RestClient.getInstance().getApiService().deleteBuilding(building.getBuildingId());
+    callPostBuilding.enqueue(new Callback<ResponseBody>() {
+      @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+        Log.e("TAG", "Update: " + response.message());
+        Toast.makeText(getApplicationContext(), "Building Deleted Successfully.", Toast.LENGTH_LONG)
+            .show();
+        finish();
+      }
+
+      @Override public void onFailure(Call<ResponseBody> call, Throwable t) {
+        Log.e("TAG", "Update Fail: ", t);
       }
     });
   }

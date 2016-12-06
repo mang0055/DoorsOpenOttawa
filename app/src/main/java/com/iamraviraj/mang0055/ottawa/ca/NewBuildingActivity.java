@@ -142,6 +142,7 @@ public class NewBuildingActivity extends BaseActivity
     callPostBuilding.enqueue(new Callback<ResponseBody>() {
       @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
         Log.e("TAG", response.message());
+        if (imageUri == null) finish();
       }
 
       @Override public void onFailure(Call<ResponseBody> call, Throwable t) {
