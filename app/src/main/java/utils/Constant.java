@@ -12,6 +12,7 @@ public class Constant {
    * REMOTE URL's
    */
   public static String live_url = "https://doors-open-ottawa-hurdleg.mybluemix.net/";
+  public static String http_live_url = "http://doors-open-ottawa-hurdleg.mybluemix.net/";
 
   public static String client_id = "";
   public static String client_secret = "";

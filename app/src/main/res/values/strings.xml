@@ -9,4 +9,5 @@
   <string name="hint_building_Description">Building Description</string>
   <string name="action_sort">Sort</string>
   <string name="action_edit">Edit</string>
+  <string name="internal_storage">Internal storage</string>
 </resources>

@@ -15,7 +15,6 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import com.google.gson.Gson;
 import java.util.Collections;
-import modal.Building;
 import modal.Buildings;
 import retrofit.RestClient;
 import retrofit2.Call;
@@ -134,9 +133,13 @@ public class MainActivity extends BaseActivity
       @Override public void onResponse(Call<Buildings> call, Response<Buildings> response) {
         //Log.e("TAG", response.toString());
         Buildings buildings = response.body();
-        adapter = new HomeListAdapter(getApplicationContext(), buildings.getBuildings());
-        mListView.setAdapter(adapter);
-        swipeRefreshList.setRefreshing(false);
+        if (buildings != null) {
+          adapter = new HomeListAdapter(getApplicationContext(), buildings.getBuildings());
+          mListView.setAdapter(adapter);
+          swipeRefreshList.setRefreshing(false);
+          Collections.sort(adapter.getData(), decending(getComparator(ID_SORT)));
+          adapter.notifyDataSetChanged();
+        }
       }
 
       @Override public void onFailure(Call<Buildings> call, Throwable t) {

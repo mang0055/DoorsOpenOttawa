@@ -1,7 +1,7 @@
 package com.iamraviraj.mang0055.ottawa.ca;
 
+import android.content.ContentValues;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -15,13 +15,26 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
+import java.io.File;
+import java.io.IOException;
 import modal.Building;
+import okhttp3.Interceptor;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit.ApiService;
 import retrofit.RestClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import utils.Constant;
+import utils.FileUtils;
 
 /**
  * Created by aark on 2016-11-25.
@@ -34,6 +47,7 @@ public class NewBuildingActivity extends BaseActivity
   static final int REQUEST_IMAGE_CAPTURE = 0;
   static final int REQUEST_IMAGE_GET = 1;
   TextInputLayout editBuildingName, editBuildingAddress, editBuildingDescription;
+  Uri imageUri = null;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -102,7 +116,9 @@ public class NewBuildingActivity extends BaseActivity
         finish();
         break;
       case R.id.btnUpdate:
-        updateBuilding((Building) btnUpdate.getTag());
+        Building mBuilding = (Building) btnUpdate.getTag();
+        //updateBuilding(mBuilding);
+        if (imageUri != null) uploadBuildingPicture(mBuilding.getBuildingId(), imageUri);
         break;
     }
   }
@@ -116,7 +132,9 @@ public class NewBuildingActivity extends BaseActivity
     mBuilding.setAddress(address);
     mBuilding.setImage("image/abc.jpg");
     mBuilding.setDescription(description);
-
+    if (!isNetworkAvailable()) {
+      return;
+    }
     Call<ResponseBody> callPostBuilding =
         RestClient.getInstance().getApiService().postBuilding(mBuilding);
     callPostBuilding.enqueue(new Callback<ResponseBody>() {
@@ -142,6 +160,9 @@ public class NewBuildingActivity extends BaseActivity
     }
     if (!description.equals(mBuilding.getDescription())) {
       mBuilding.setDescription(description);
+    }
+    if (!isNetworkAvailable()) {
+      return;
     }
     Call<ResponseBody> callPostBuilding = RestClient.getInstance()
         .getApiService()
@@ -188,6 +209,9 @@ public class NewBuildingActivity extends BaseActivity
 
   private void capturePicRequest() {
     Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+    imageUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+        new ContentValues());
+    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
     if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
       startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
     }
@@ -195,13 +219,65 @@ public class NewBuildingActivity extends BaseActivity
 
   @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-      Bundle extras = data.getExtras();
-      Bitmap imageBitmap = (Bitmap) extras.get("data");
-      buildingImage.setImageBitmap(imageBitmap);
+      //Bundle extras = data.getExtras();
+      //Bitmap imageBitmap = (Bitmap) extras.get("data");
+      //buildingImage.setImageBitmap(imageBitmap);
+      buildingImage.setImageURI(imageUri);
     }
     if (requestCode == REQUEST_IMAGE_GET && resultCode == RESULT_OK) {
       Uri fullPhotoUri = data.getData();
       buildingImage.setImageURI(fullPhotoUri);
+      imageUri = fullPhotoUri;
     }
+  }
+
+  private void uploadBuildingPicture(int buildingId, Uri uri) {
+    OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+    HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+    logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+    httpClient.addInterceptor(logging);
+    httpClient.addInterceptor(headers);
+    Retrofit retrofit = new Retrofit.Builder().baseUrl(Constant.http_live_url)
+        .addConverterFactory(GsonConverterFactory.create()).client(httpClient.build())
+        .build();
+    ApiService api = retrofit.create(ApiService.class);
+    Log.i("TAG", "Uploading Building Picture");
+    Call<ResponseBody> callPostBuilding =
+        api.uploadBuildingPic(buildingId, prepareFilePart("image", uri));
+    callPostBuilding.enqueue(new Callback<ResponseBody>() {
+      @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+        Log.e("TAG", "Uploaded: " + response.message());
+      }
+
+      @Override public void onFailure(Call<ResponseBody> call, Throwable t) {
+        Log.e("TAG", "Uploaded Fail: ", t);
+      }
+    });
+  }
+
+  private Interceptor headers = new Interceptor() {
+    @Override public okhttp3.Response intercept(Chain chain) throws IOException {
+      Request original = chain.request();
+
+      Request request = original.newBuilder()
+          //.header("Content-Type", "application/octet-stream")
+          .header("Authorization", BaseActivity.getAPIAuthorisation())
+          .method(original.method(), original.body())
+          .build();
+      return chain.proceed(request);
+    }
+  };
+
+  private MultipartBody.Part prepareFilePart(String partName, Uri fileUri) {
+    String MULTIPART_FORM_DATA = "multipart/form-data";
+    // https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java
+    // use the FileUtils to get the actual file by uri
+    File file = FileUtils.getFile(this, fileUri);
+
+    // create RequestBody instance from file
+    RequestBody requestFile = RequestBody.create(MediaType.parse(MULTIPART_FORM_DATA), file);
+
+    // MultipartBody.Part is used to send also the actual file name
+    return MultipartBody.Part.createFormData(partName, file.getName(), requestFile);
   }
 }

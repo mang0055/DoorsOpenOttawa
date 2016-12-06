@@ -5,6 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
+import android.widget.Toast;
 
 /**
  * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
@@ -13,10 +14,16 @@ import android.util.Base64;
 public class BaseActivity extends AppCompatActivity {
 
   boolean isNetworkAvailable() {
+
     ConnectivityManager connectivityManager =
         (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
     NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-    return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    boolean flag = activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    if (!flag) {
+      Toast.makeText(getApplicationContext(), "Internet connection is not available.",
+          Toast.LENGTH_LONG).show();
+    }
+    return flag;
   }
 
   public static String getAPIAuthorisation() {
