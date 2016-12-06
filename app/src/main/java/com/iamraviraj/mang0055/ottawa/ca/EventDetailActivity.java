@@ -45,6 +45,7 @@ public class EventDetailActivity extends BaseActivity implements OnMapReadyCallb
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_event_detail);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    getSupportActionBar().setHomeButtonEnabled(true);
     setUpViews();
 
     Bundle mBundle = this.getIntent().getExtras();

@@ -53,6 +53,7 @@ public class NewBuildingActivity extends BaseActivity
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_new_building);
+    getSupportActionBar().setHomeButtonEnabled(true);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     setUpView();
 
@@ -153,6 +154,11 @@ public class NewBuildingActivity extends BaseActivity
     String name = editBuildingName.getEditText().getText().toString();
     String address = editBuildingAddress.getEditText().getText().toString();
     String description = editBuildingDescription.getEditText().getText().toString();
+    if (name.isEmpty() || address.isEmpty() || description.isEmpty()) {
+      Toast.makeText(getApplicationContext(),
+          "Building details: Name, Address, Description are missing.", Toast.LENGTH_SHORT).show();
+      return;
+    }
     if (!name.equals(mBuilding.getName())) {
       mBuilding.setName(name);
     }

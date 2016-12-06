@@ -46,7 +46,7 @@ public class MainActivity extends BaseActivity
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
+    getSupportActionBar().setHomeButtonEnabled(true);
     mAboutDialog = new AboutDialogFragment();
 
     mListView = (GridView) findViewById(R.id.list);
