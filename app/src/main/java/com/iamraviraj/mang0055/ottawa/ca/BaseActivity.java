@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class BaseActivity extends AppCompatActivity {
 
-  boolean isNetworkAvailable() {
+   boolean isNetworkAvailable() {
 
     ConnectivityManager connectivityManager =
         (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

@@ -1,0 +1,161 @@
+package com.iamraviraj.mang0055.ottawa.ca;
+
+import android.animation.Animator;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.RecyclerView;
+import android.transition.Fade;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import com.cleveroad.fanlayoutmanager.FanLayoutManager;
+import com.cleveroad.fanlayoutmanager.FanLayoutManagerSettings;
+import com.cleveroad.fanlayoutmanager.callbacks.FanChildDrawingOrderCallback;
+import modal.Buildings;
+import retrofit.RestClient;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class MainFragment extends Fragment {
+
+  private FanLayoutManager fanLayoutManager;
+
+  private SportCardsAdapter adapter;
+
+  public static MainFragment newInstance() {
+    Bundle args = new Bundle();
+    MainFragment fragment = new MainFragment();
+    fragment.setArguments(args);
+    return fragment;
+  }
+
+  @Override public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+  }
+
+  @Override public View onCreateView(LayoutInflater inflater, ViewGroup container,
+      Bundle savedInstanceState) {
+    return inflater.inflate(R.layout.fragment_main, container, false);
+  }
+
+  @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    super.onViewCreated(view, savedInstanceState);
+    final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rvCards);
+
+    FanLayoutManagerSettings fanLayoutManagerSettings =
+        FanLayoutManagerSettings.newBuilder(getContext())
+            .withFanRadius(true)
+            .withAngleItemBounce(5)
+            .withViewHeightDp(160)
+            .withViewWidthDp(120)
+            .build();
+
+    fanLayoutManager = new FanLayoutManager(getContext(), fanLayoutManagerSettings);
+
+    recyclerView.setLayoutManager(fanLayoutManager);
+    recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+    adapter = new SportCardsAdapter(getContext());
+    //adapter.addAll(SportCardsUtils.generateSportCards());
+    onRefresh(adapter);
+
+    adapter.setItemClickListener(new SportCardsAdapter.OnItemClickListener() {
+      @Override public void onItemClicked(int itemPosition, final View view) {
+        if (fanLayoutManager.getSelectedItemPosition() != itemPosition) {
+          fanLayoutManager.switchItem(recyclerView, itemPosition);
+        } else {
+          fanLayoutManager.straightenSelectedItem(new Animator.AnimatorListener() {
+            @Override public void onAnimationStart(Animator animator) {
+
+            }
+
+            @Override public void onAnimationEnd(Animator animator) {
+              if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                onClick(view, fanLayoutManager.getSelectedItemPosition());
+              } else {
+                onClick(fanLayoutManager.getSelectedItemPosition());
+              }
+            }
+
+            @Override public void onAnimationCancel(Animator animator) {
+
+            }
+
+            @Override public void onAnimationRepeat(Animator animator) {
+
+            }
+          });
+        }
+      }
+    });
+
+    recyclerView.setAdapter(adapter);
+
+    recyclerView.setChildDrawingOrderCallback(new FanChildDrawingOrderCallback(fanLayoutManager));
+
+    (view.findViewById(R.id.logo)).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        fanLayoutManager.collapseViews();
+      }
+    });
+  }
+
+  @android.support.annotation.RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+  public void onClick(View view, int pos) {
+    FullInfoTabFragment fragment = FullInfoTabFragment.newInstance(adapter.getModelByPos(pos));
+
+    fragment.setSharedElementEnterTransition(new SharedTransitionSet());
+    fragment.setEnterTransition(new Fade());
+    setExitTransition(new Fade());
+    fragment.setSharedElementReturnTransition(new SharedTransitionSet());
+
+    getActivity().getSupportFragmentManager()
+        .beginTransaction()
+        .addSharedElement(view, "shared")
+        .replace(R.id.root, fragment)
+        .addToBackStack(null)
+        .commit();
+  }
+
+  public void onClick(int pos) {
+    FullInfoTabFragment fragment = FullInfoTabFragment.newInstance(adapter.getModelByPos(pos));
+    getActivity().getSupportFragmentManager()
+        .beginTransaction()
+        .replace(R.id.root, fragment)
+        .addToBackStack(null)
+        .commit();
+  }
+
+  public boolean deselectIfSelected() {
+    if (fanLayoutManager.isItemSelected()) {
+      fanLayoutManager.deselectItem();
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public void onRefresh(final SportCardsAdapter scoreAdapter) {
+
+    Call<Buildings> buildingsCall = RestClient.getInstance().getApiService().eventsList();
+    buildingsCall.enqueue(new Callback<Buildings>() {
+      @Override public void onResponse(Call<Buildings> call, Response<Buildings> response) {
+        //Log.e("TAG", response.toString());
+        Buildings buildings = response.body();
+        if (buildings != null) {
+          adapter.addAll(buildings.getBuildings());
+          adapter.notifyDataSetChanged();
+        }
+      }
+
+      @Override public void onFailure(Call<Buildings> call, Throwable t) {
+        Log.e("TAG", "Request Fail ", t);
+      }
+    });
+  }
+}

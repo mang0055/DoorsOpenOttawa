@@ -151,7 +151,7 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
     }
   }
 
-  public void updateUIFavorites(){
+  public void updateUIFavorites() {
     for (int i = 0; i < data.size(); i++) {
       boolean temp = App.getStoredBoolean(data.get(i).getBuildingId() + "");
       data.get(i).setFavorite(temp);
