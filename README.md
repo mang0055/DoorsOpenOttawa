@@ -25,7 +25,7 @@ Special thanks to Professor Gerald Hurdle for setting up backend server.
 
 ## Contributors
 
-These guides were originally created and adapted by [Raviraj Mangukiya](http://github.com/nesquena)
+These guides were originally created and adapted by [Raviraj Mangukiya](http://github.com/ravirajcm)
 as a part of Android Course at Algonquin College.
 
 **Contact Information**
