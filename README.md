@@ -1,6 +1,6 @@
 ## Doors Open Ottawa ##
 
-Android Application for The City of Ottawa is to present Doors Open Ottawa, a free annual architectural event that celebrates our community's built heritage. On June 4 and 5, 2016, 132 historically, culturally, and functionally significant buildings opened their doors for free for the public's viewing pleasure.
+The City of Ottawa is to present Doors Open Ottawa, a free annual architectural event that celebrates our community's built heritage. On June 4 and 5, 2016, 132 historically, culturally, and functionally significant buildings opened their doors for free for the public's viewing pleasure.
 
 **Screens**
 
