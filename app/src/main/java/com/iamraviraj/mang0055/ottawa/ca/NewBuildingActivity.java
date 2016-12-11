@@ -13,12 +13,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.squareup.picasso.Picasso;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import modal.Building;
+import modal.Calendar;
 import okhttp3.Interceptor;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -43,12 +48,24 @@ import utils.FileUtils;
 
 public class NewBuildingActivity extends BaseActivity
     implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
-  ImageView buildingImage, buildingImageOverlay;
-  Button btnCancel, btnSave, btnUpdate;
   static final int REQUEST_IMAGE_CAPTURE = 0;
   static final int REQUEST_IMAGE_GET = 1;
+  ImageView buildingImage, buildingImageOverlay;
+  Button btnCancel, btnSave, btnUpdate;
   TextInputLayout editBuildingName, editBuildingAddress, editBuildingDescription;
   Uri imageUri = null;
+  private Interceptor headers = new Interceptor() {
+    @Override public okhttp3.Response intercept(Chain chain) throws IOException {
+      Request original = chain.request();
+
+      Request request = original.newBuilder()
+          //.header("Content-Type", "application/octet-stream")
+          .header("Authorization", BaseActivity.getAPIAuthorisation())
+          .method(original.method(), original.body())
+          .build();
+      return chain.proceed(request);
+    }
+  };
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -65,6 +82,7 @@ public class NewBuildingActivity extends BaseActivity
       btnUpdate.setVisibility(View.VISIBLE);
       btnUpdate.setTag(editableBuilding);
     } else {
+      ((RelativeLayout) findViewById(R.id.imgRelative)).setVisibility(View.GONE);
       btnSave.setVisibility(View.VISIBLE);
       btnUpdate.setVisibility(View.GONE);
     }
@@ -134,15 +152,27 @@ public class NewBuildingActivity extends BaseActivity
     mBuilding.setAddress(address);
     mBuilding.setImage("image/abc.jpg");
     mBuilding.setDescription(description);
+    List<Calendar> mCal = new ArrayList<>();
+    mCal.add(new Calendar("Saturday, June 4, 2016 - 10:00 to 16:00"));
+    mBuilding.setCalendar(mCal);
     if (!isNetworkAvailable()) {
       return;
     }
+    Log.e("TAG",
+        new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().toJson(mBuilding));
+
     Call<ResponseBody> callPostBuilding =
         RestClient.getInstance().getApiService().postBuilding(mBuilding);
     callPostBuilding.enqueue(new Callback<ResponseBody>() {
       @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
         Log.e("TAG", response.message());
-        if (imageUri == null) finish();
+        if (response.code() == 200) {
+          if (imageUri == null) {
+            Toast.makeText(getApplicationContext(), "Building Created Successfully",
+                Toast.LENGTH_LONG).show();
+            finish();
+          }
+        }
       }
 
       @Override public void onFailure(Call<ResponseBody> call, Throwable t) {
@@ -178,6 +208,10 @@ public class NewBuildingActivity extends BaseActivity
     callPostBuilding.enqueue(new Callback<ResponseBody>() {
       @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
         Log.e("TAG", "Update: " + response.message());
+        if (response.code() == 200) {
+          Toast.makeText(getApplicationContext(), "Building Updated Successfully.",
+              Toast.LENGTH_LONG).show();
+        }
       }
 
       @Override public void onFailure(Call<ResponseBody> call, Throwable t) {
@@ -245,8 +279,9 @@ public class NewBuildingActivity extends BaseActivity
     logging.setLevel(HttpLoggingInterceptor.Level.BODY);
     httpClient.addInterceptor(logging);
     httpClient.addInterceptor(headers);
+    Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
     Retrofit retrofit = new Retrofit.Builder().baseUrl(Constant.http_live_url)
-        .addConverterFactory(GsonConverterFactory.create())
+        .addConverterFactory(GsonConverterFactory.create(gson))
         .client(httpClient.build())
         .build();
     ApiService api = retrofit.create(ApiService.class);
@@ -267,19 +302,6 @@ public class NewBuildingActivity extends BaseActivity
       }
     });
   }
-
-  private Interceptor headers = new Interceptor() {
-    @Override public okhttp3.Response intercept(Chain chain) throws IOException {
-      Request original = chain.request();
-
-      Request request = original.newBuilder()
-          //.header("Content-Type", "application/octet-stream")
-          .header("Authorization", BaseActivity.getAPIAuthorisation())
-          .method(original.method(), original.body())
-          .build();
-      return chain.proceed(request);
-    }
-  };
 
   private MultipartBody.Part prepareFilePart(String partName, Uri fileUri) {
     String MULTIPART_FORM_DATA = "multipart/form-data";

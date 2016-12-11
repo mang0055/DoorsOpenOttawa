@@ -18,6 +18,18 @@ public class RestClient {
   private static final String BASE_URL = Constant.ENDPOINT;
   private static RestClient instance;
   private ApiService apiService;
+  private Interceptor headers = new Interceptor() {
+    @Override public Response intercept(Chain chain) throws IOException {
+      Request original = chain.request();
+
+      Request request = original.newBuilder()
+          .header("Content-Type", "application/json; charset=utf-8")
+          .header("Authorization", BaseActivity.getAPIAuthorisation())
+          .method(original.method(), original.body())
+          .build();
+      return chain.proceed(request);
+    }
+  };
 
   public RestClient() {
     instance = this;
@@ -49,17 +61,4 @@ public class RestClient {
   public ApiService getApiService() {
     return apiService;
   }
-
-  private Interceptor headers = new Interceptor() {
-    @Override public Response intercept(Chain chain) throws IOException {
-      Request original = chain.request();
-
-      Request request = original.newBuilder()
-          .header("Content-Type", "application/json; charset=utf-8")
-          .header("Authorization", BaseActivity.getAPIAuthorisation())
-          .method(original.method(), original.body())
-          .build();
-      return chain.proceed(request);
-    }
-  };
 }

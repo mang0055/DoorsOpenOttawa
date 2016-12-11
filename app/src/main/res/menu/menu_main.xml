@@ -16,15 +16,15 @@
     <item
         android:id="@+id/action_sort_name_asc"
         android:checked="true"
-        android:title="Sort by Name (a-z)"/>
+        android:title="Sort: Name (a-z)"/>
     <item
         android:id="@+id/action_sort_name_dsc"
         android:checked="false"
-        android:title="Sort by Name (z-a)"/>
+        android:title="Sort: Name (z-a)"/>
     <item
-        android:id="@+id/action_sort_name"
+        android:id="@+id/action_sort_id"
         android:checked="false"
-        android:title="Sort by Name"/>
+        android:title="Sort: ID (max-min)"/>
   </group>
   <item
       android:id="@+id/action_about"

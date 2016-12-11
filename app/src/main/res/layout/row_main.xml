@@ -1,46 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-    android:layout_height="200dp"
-    card_view:cardCornerRadius="4dp"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto" android:id="@+id/buildingItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="3dp"
     card_view:cardElevation="4dp"
-    card_view:cardUseCompatPadding="true">
+>
 
   <RelativeLayout
       android:layout_width="match_parent"
       android:layout_height="200dp"
       android:orientation="vertical"
-      android:padding="8dp"
   >
-
-    <ImageView
-        android:id="@+id/info_image"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-    />
-
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+      <ImageView
+          android:id="@+id/info_image"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:adjustViewBounds="true"
+          android:scaleType="centerCrop"
+      />
+      <ProgressBar
+          android:id="@+id/imageLoading"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:layout_marginBottom="20dp"
+          android:padding="50dp"/>
+    </FrameLayout>
     <TextView
         android:id="@+id/info_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:alpha="0.8"
         android:background="#9b000000"
-        android:gravity="center"
-        android:padding="8dp"
+        android:gravity="center|left"
+        android:maxLines="2"
+        android:paddingBottom="4dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="4dp"
         android:text="@string/string_empty_list"
         android:textColor="@android:color/white"
         style="@style/Base.TextAppearance.AppCompat.Small"
+
 
     />
     <com.github.ivbaranov.mfb.MaterialFavoriteButton
         android:id="@+id/btn_favorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        app:mfb_color="white"
-        app:mfb_type="heart"/>
+        android:layout_marginBottom="4dp"
+        app:mfb_favorite_image="@drawable/ic_favorite_white_fill_24dp"
+        app:mfb_not_favorite_image="@drawable/ic_favorite_border_white_24dp"
+    />
   </RelativeLayout>
+
 </android.support.v7.widget.CardView>

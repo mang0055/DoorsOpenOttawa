@@ -1,7 +1,7 @@
 <resources>
-  <string name="app_name">Doors Open</string>
+  <string name="app_name">Doors Open Ottawa</string>
   <string name="action_about">About</string>
-  <string name="author">Raviraj Mangukiya (mang0055)</string>
+  <string name="author">Raviraj Mangukiya (ravirajcm@gmail.com)</string>
   <string name="string_empty_list">No events. Pull from the top to refresh the list.</string>
   <string name="search_title">Search Building</string>
   <string name="hint_building_Name">Building Name</string>

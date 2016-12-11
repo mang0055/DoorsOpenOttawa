@@ -1,45 +1,129 @@
 package com.iamraviraj.mang0055.ottawa.ca;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
+import android.support.v7.graphics.Palette;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.github.ivbaranov.mfb.MaterialFavoriteButton;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
+import database.Fav;
+import database.FavImpl;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import modal.Building;
 import utils.Constant;
 
+import static com.iamraviraj.mang0055.ottawa.ca.MainActivity.KEY_BUILDING;
+
 /**
  * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
 
-public class HomeListAdapter extends BaseAdapter implements Filterable {
+public class HomeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
+    implements Filterable, View.OnClickListener {
 
   Context context;
   List<Building> data;
+  List<Building> temporarydata;
   LayoutInflater inflater;
-  private List<Building> temporarydata;
+  FavImpl favImpl;
 
   public HomeListAdapter(Context applicationContext, List<Building> buildings) {
     this.context = applicationContext;
     this.data = buildings;
     this.temporarydata = buildings;
+    this.favImpl = new FavImpl(context);
     inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
   }
 
-  @Override public int getCount() {
+  @Override public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+    View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_main, parent, false);
+    return new MyViewHolder(v);
+  }
+
+  @Override public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, final int position) {
+    final MyViewHolder holder = (MyViewHolder) viewHolder;
+    Building building = data.get(position);
+    holder.info_text.setText(building.getName());
+    holder.btn_favorite.setTag(building.getBuildingId());
+    holder.buildingItem.setOnClickListener(this);
+    Picasso.with(context).load(Constant.ENDPOINT + building.getImage()).into(holder.info_image);
+    holder.buildingItem.setTag(building);
+
+    Picasso.with(context).load(Constant.ENDPOINT + building.getImage()).into(new Target() {
+      @Override public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+        holder.imageLoading.setVisibility(View.GONE);
+        Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
+          @Override public void onGenerated(Palette palette) {
+            Palette.Swatch textSwatch = palette.getVibrantSwatch();
+            if (textSwatch != null) holder.imageLoading.setBackgroundColor(textSwatch.getRgb());
+          }
+        });
+      }
+
+      @Override public void onBitmapFailed(Drawable errorDrawable) {
+
+      }
+
+      @Override public void onPrepareLoad(Drawable placeHolderDrawable) {
+
+      }
+    });
+    Fav fav = favImpl.getFav(building.getBuildingId() + "");
+    if (fav != null) {
+      holder.btn_favorite.setFavorite(fav.isFavTag());
+    }
+    holder.btn_favorite.setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        int bId = data.get(position).getBuildingId();
+        Log.e("TAG", "BuildingID->> " + bId);
+        Fav fav = favImpl.getFav(bId + "");
+        if (fav != null) {
+          fav.setBuildingID(bId);
+          if (fav.isFavTag()) {
+            fav.setFavTag(false);
+            favImpl.update(fav);
+            holder.btn_favorite.setFavorite(false);
+          } else {
+            fav.setFavTag(true);
+            int a = favImpl.update(fav);
+            if (a == 0) {
+              favImpl.insert(fav);
+            }
+            holder.btn_favorite.setFavorite(true);
+          }
+          Log.e("TAG", new Gson().toJson(fav));
+        } else {
+          fav = new Fav(0, bId, true);
+          favImpl.insert(fav);
+          holder.btn_favorite.setFavorite(true);
+          Log.e("TAG", "N " + new Gson().toJson(fav));
+        }
+      }
+    });
+  }
+
+  @Override public int getItemCount() {
     return data.size();
   }
 
-  @Override public Building getItem(int position) {
+  public Building getItem(int position) {
     return data.get(position);
   }
 
@@ -47,40 +131,12 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
     return data;
   }
 
-  @Override public long getItemId(int position) {
-    return position;
-  }
-
-  @Override public View getView(final int position, View convertView, ViewGroup parent) {
-    View view = convertView;
-    if (convertView == null) view = inflater.inflate(R.layout.row_main, null);
-
-    ImageView info_image = (ImageView) view.findViewById(R.id.info_image);
-    TextView info_text = (TextView) view.findViewById(R.id.info_text);
-    info_text.setText(data.get(position).getName());
-    MaterialFavoriteButton btn_favorite =
-        (MaterialFavoriteButton) view.findViewById(R.id.btn_favorite);
-    btn_favorite.setFavorite(data.get(position).isFavorite());
-    btn_favorite.setTag(data.get(position).getBuildingId());
-    //Picasso ImageLoader popular library for Android
-    //Learn more about Picasso http://square.github.io/picasso/
-
-    Picasso.with(context).load(Constant.ENDPOINT + data.get(position).getImage()).into(info_image);
-    btn_favorite.setOnFavoriteChangeListener(new MaterialFavoriteButton.OnFavoriteChangeListener() {
-      @Override public void onFavoriteChanged(MaterialFavoriteButton buttonView, boolean favorite) {
-        App.storeBoolean(data.get(position).getBuildingId() + "", favorite);
-        data.get(position).setFavorite(favorite);
-      }
-    });
-    return view;
-  }
-
   @Override public Filter getFilter() {
     Filter filter = new Filter() {
 
       @Override protected void publishResults(CharSequence constraint, FilterResults results) {
         if (results.count == 0) {
-          notifyDataSetInvalidated();
+          notifyDataSetChanged();
         } else {
           data = (List<Building>) results.values;
           notifyDataSetChanged();
@@ -96,7 +152,9 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
         } else {
           ArrayList<Building> filteredList = new ArrayList<Building>();
           for (Building j : allJournals) {
-            if (j.getName().contains(constraint)) filteredList.add(j);
+            if (j.getName().toLowerCase().startsWith(constraint.toString().toLowerCase())) {
+              filteredList.add(j);
+            }
           }
           result.values = filteredList;
           result.count = filteredList.size();
@@ -108,6 +166,21 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
     return filter;
   }
 
+  private Building getBuildingFromPosition(View v) {
+    return (Building) v.getTag();
+  }
+
+  @Override public void onClick(View view) {
+    switch (view.getId()) {
+      case R.id.buildingItem:
+        Intent intentEventDetail = new Intent(context, EventDetailActivity.class);
+        intentEventDetail.putExtra(KEY_BUILDING, new Gson().toJson(getBuildingFromPosition(view)));
+        intentEventDetail.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intentEventDetail);
+        break;
+    }
+  }
+
   enum BuildingComparator implements Comparator<Building> {
     ID_SORT {
       public int compare(Building o1, Building o2) {
@@ -116,7 +189,7 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
     },
     NAME_SORT {
       public int compare(Building o1, Building o2) {
-        return o1.getName().compareTo(o2.getName());
+        return o1.getName().toLowerCase().compareTo(o2.getName().toLowerCase());
       }
     };
 
@@ -151,11 +224,20 @@ public class HomeListAdapter extends BaseAdapter implements Filterable {
     }
   }
 
-  public void updateUIFavorites(){
-    for (int i = 0; i < data.size(); i++) {
-      boolean temp = App.getStoredBoolean(data.get(i).getBuildingId() + "");
-      data.get(i).setFavorite(temp);
+  public class MyViewHolder extends RecyclerView.ViewHolder {
+    ImageView info_image;
+    TextView info_text;
+    MaterialFavoriteButton btn_favorite;
+    CardView buildingItem;
+    ProgressBar imageLoading;
+
+    public MyViewHolder(View view) {
+      super(view);
+      buildingItem = (CardView) view.findViewById(R.id.buildingItem);
+      info_image = (ImageView) view.findViewById(R.id.info_image);
+      info_text = (TextView) view.findViewById(R.id.info_text);
+      btn_favorite = (MaterialFavoriteButton) view.findViewById(R.id.btn_favorite);
+      imageLoading = (ProgressBar) view.findViewById(R.id.imageLoading);
     }
-    notifyDataSetChanged();
   }
 }

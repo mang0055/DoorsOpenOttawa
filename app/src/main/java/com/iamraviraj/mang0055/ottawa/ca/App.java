@@ -10,18 +10,11 @@ import retrofit.RestClient;
 
 public class App extends Application {
 
-  private static App mInstance;
   public static SharedPreferences mediapref = null;
+  private static App mInstance;
 
   public static synchronized App getInstance() {
     return mInstance;
-  }
-
-  @Override public void onCreate() {
-    super.onCreate();
-    mInstance = this;
-    mediapref = this.getSharedPreferences(getResources().getString(R.string.app_name), 0);
-    new RestClient();
   }
 
   public static void storeBoolean(String key, boolean value) {
@@ -30,5 +23,20 @@ public class App extends Application {
 
   public static boolean getStoredBoolean(String key) {
     return mediapref.getBoolean(key, false);
+  }
+
+  public static void storeString(String key, String value) {
+    mediapref.edit().putString(key, value).commit();
+  }
+
+  public static String getString(String key) {
+    return mediapref.getString(key,null);
+  }
+
+  @Override public void onCreate() {
+    super.onCreate();
+    mInstance = this;
+    mediapref = this.getSharedPreferences(getResources().getString(R.string.app_name), 0);
+    new RestClient();
   }
 }

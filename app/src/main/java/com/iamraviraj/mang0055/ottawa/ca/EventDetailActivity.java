@@ -5,10 +5,12 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -35,12 +37,15 @@ import utils.Constant;
 /**
  * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
  */
-public class EventDetailActivity extends BaseActivity implements OnMapReadyCallback {
+public class EventDetailActivity extends BaseActivity
+    implements OnMapReadyCallback, SwipeRefreshLayout.OnRefreshListener {
   ImageView imgBuilding;
   TextView buildingName, buildingAddress, buildingDescription, buildingOpenHours, buildingFeatures;
+  Building building = null;
+  RelativeLayout activity_event_detail;
+  SwipeRefreshLayout swipe_refresh_activity;
   private GoogleMap mMap;
   private Geocoder mGeocoder;
-  Building building = null;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -85,7 +90,7 @@ public class EventDetailActivity extends BaseActivity implements OnMapReadyCallb
         finish();
         break;
       case R.id.action_edit:
-        if (building.getBuildingId().intValue() > Constant.TOTAL_BUILDING) {
+        if (building.getBuildingId() > Constant.TOTAL_BUILDING) {
           startActivity(
               new Intent(getApplicationContext(), NewBuildingActivity.class).putExtra("Building",
                   new Gson().toJson(building)));
@@ -116,12 +121,15 @@ public class EventDetailActivity extends BaseActivity implements OnMapReadyCallb
   }
 
   private void setUpViews() {
+    swipe_refresh_activity = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_activity);
+    swipe_refresh_activity.setOnRefreshListener(this);
     imgBuilding = (ImageView) findViewById(R.id.img_building);
     buildingName = (TextView) findViewById(R.id.text_title);
     buildingAddress = (TextView) findViewById(R.id.text_address);
     buildingDescription = (TextView) findViewById(R.id.text_description);
     buildingOpenHours = (TextView) findViewById(R.id.text_openHours);
     buildingFeatures = (TextView) findViewById(R.id.text_features);
+    activity_event_detail = (RelativeLayout) findViewById(R.id.id_activity_event_detail);
     // Obtain the SupportMapFragment and get notified when the map is ready to be used.
     SupportMapFragment mapFragment =
         (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -194,9 +202,11 @@ public class EventDetailActivity extends BaseActivity implements OnMapReadyCallb
       public void onResponse(Call<MapAddressModel> call, Response<MapAddressModel> response) {
         MapAddressModel mMapAddressModel = response.body();
         Log.e("TAG", new Gson().toJson(mMapAddressModel));
-        showLocation(locationName,
-            new LatLng(mMapAddressModel.getResults().get(0).getGeometry().getLocation().getLat(),
-                mMapAddressModel.getResults().get(0).getGeometry().getLocation().getLng()));
+        if (mMapAddressModel.getResults().size() > 0) {
+          showLocation(locationName,
+              new LatLng(mMapAddressModel.getResults().get(0).getGeometry().getLocation().getLat(),
+                  mMapAddressModel.getResults().get(0).getGeometry().getLocation().getLng()));
+        }
       }
 
       @Override public void onFailure(Call<MapAddressModel> call, Throwable t) {
@@ -223,6 +233,37 @@ public class EventDetailActivity extends BaseActivity implements OnMapReadyCallb
 
       @Override public void onFailure(Call<ResponseBody> call, Throwable t) {
         Log.e("TAG", "Update Fail: ", t);
+      }
+    });
+  }
+
+  @Override public void onRefresh() {
+    if (!isNetworkAvailable() && building == null && building.getBuildingId() <= -1) {
+      return;
+    }
+    Call<Building> buildingsCall =
+        RestClient.getInstance().getApiService().getEvent(building.getBuildingId());
+    buildingsCall.enqueue(new Callback<Building>() {
+      @Override public void onResponse(Call<Building> call, Response<Building> response) {
+        Log.e("TAG", response.toString());
+        if (response.code() == 200) {
+          Building mbuilding = response.body();
+          buildingName.setText(mbuilding.getName());
+          buildingAddress.setText(mbuilding.getAddress());
+          buildingDescription.setText(mbuilding.getDescription());
+          Picasso.with(getApplicationContext())
+              .load(Constant.ENDPOINT + mbuilding.getImage())
+              .into(imgBuilding);
+        } else {
+          Log.e("TAG", response.toString());
+        }
+
+        swipe_refresh_activity.setRefreshing(false);
+      }
+
+      @Override public void onFailure(Call<Building> call, Throwable t) {
+        Log.e("TAG", "Request Fail ", t);
+        swipe_refresh_activity.setRefreshing(false);
       }
     });
   }

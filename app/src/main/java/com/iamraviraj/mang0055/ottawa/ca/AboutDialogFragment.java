@@ -21,7 +21,7 @@ public class AboutDialogFragment extends DialogFragment {
     // Use the Builder class for convenient dialog construction
     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
     builder.setTitle(R.string.action_about)
-        .setMessage(R.string.author)
+        .setMessage("Raviraj Mangukiya (ravirajcm@gmail.com)   Website: http://iamraviraj.com")
         .setCancelable(false)
         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
           @Override public void onClick(DialogInterface dialog, int which) {

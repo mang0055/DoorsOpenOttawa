@@ -1,0 +1,2709 @@
+{
+  "buildings": [
+    {
+      "updatedAt": "2016-12-05T00:35:55.732Z",
+      "createdAt": "2016-12-05T00:35:55.732Z",
+      "buildingId": 0,
+      "name": "AIDS Committee of Ottawa",
+      "address": "19 Main St.",
+      "image": "images/AIDSOttawa.jpg",
+      "description": "The AIDS Committee of Ottawa (ACO) has served the HIV/AIDS community for 30 years, providing education and support services around HIV/AIDS. Built in 1961 and overlooking the Rideau Canal, the home of the ACO features a drop-in centre known as the Living Room - a place of comfort and care that pays tribute to the origins of the HIV/AIDS movement in Canada in the early 80s.",
+      "_id": "5844b66b0d3cad002d32219c",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32219e"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32219d"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.734Z",
+      "createdAt": "2016-12-05T00:35:55.734Z",
+      "buildingId": 1,
+      "name": "Abbotsford House",
+      "address": "950 Bank St",
+      "image": "images/AbbotsfordHouse.jpg",
+      "description": "Built in 1872 in gothic revival style, the designated heritage property was purchased in 1889 as a home \"to assist those who, through age, infirmity and misfortune, were unable to help themselves.\" Renovated in 1928 (including the addition of a wing) and again in the mid-70s, it’s now an active centre for adults over 55. Three original marble fireplace mantels still adorn the parlour and dining room. The main level is open for viewing.",
+      "_id": "5844b66b0d3cad002d32219f",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221a0"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.735Z",
+      "createdAt": "2016-12-05T00:35:55.735Z",
+      "buildingId": 2,
+      "name": "Advanced Research Complex, University of Ottawa ",
+      "address": "25 Templeton St.",
+      "image": "images/AdvancedResearchComplexuOttawa.jpg",
+      "description": "Located at the corner of King Edward Avenue, this -million University of Ottawa facility designed by architect Stephen Jones of Cole and Associates opened in 2014. Its impressive lobby puts science on display by showcasing a 44-tonne accelerator mass spectrometer through a two-storey viewing window. It also contains world-class photonics laboratories, nestled into the hillside to shield them from vibrations.",
+      "_id": "5844b66b0d3cad002d3221a1",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221a2"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.735Z",
+      "createdAt": "2016-12-05T00:35:55.735Z",
+      "buildingId": 3,
+      "name": "Alex Trebek Alumni Hall",
+      "address": "157 Séraphin-Marion St.",
+      "image": "images/AlexTrebekPavillion.jpg",
+      "description": "Come visit the Alex Trebek Alumni Hall. The hall was created by combining two splendid Victorian residences from the 19th century: the Gaston Héon house and the Thomas Foran house, located in the historic quadrangle of the University of Ottawa. Many of the patrimonial attributes have been retained in the red brick building; documents and artefacts are on display.",
+      "_id": "5844b66b0d3cad002d3221a3",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221a4"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.736Z",
+      "createdAt": "2016-12-05T00:35:55.736Z",
+      "buildingId": 4,
+      "name": "Alta Vista Animal Hospital",
+      "address": "2616 Bank St.",
+      "image": "images/AltaVistaAH.jpg",
+      "description": "Established in 1958, the Alta Vista Animal Hospital functions just like a human hospital. With a staff of 160 people, including 35 veterinarians, the hospital offers 24-hour emergency care, general care, an intensive care unit for our critical patients, and a referral centre (including CT and MRI). Kids, dress up like a vet and bring your stuffed animals for the popular teddy bear surgery. Come learn about what they do!",
+      "_id": "5844b66b0d3cad002d3221a5",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221a7"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221a6"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.736Z",
+      "createdAt": "2016-12-05T00:35:55.736Z",
+      "buildingId": 5,
+      "name": "Ashbury College",
+      "address": "362 Mariposa Ave",
+      "image": "images/Ashbury.jpg",
+      "description": "Ashbury College is celebrating 125 years in Ottawa. From its humble beginnings as a one-room schoolhouse for 17 boys, to a leading international school with 700 coed students, the sprawling campus blends historic architecture with modern innovation, such as the original chapel and the recently-opened Creative Learning Centre.",
+      "_id": "5844b66b0d3cad002d3221a8",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221a9"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.736Z",
+      "createdAt": "2016-12-05T00:35:55.736Z",
+      "buildingId": 6,
+      "name": "Ayers Building - Rural Ottawa South Support Services",
+      "address": "1128 Mill St., Manotick  ",
+      "image": "images/SGroups1HeritageProgramsUnitDoorsOpenOttawaDOO2015Buildings2015BuildingPicsAYERSresized.jpg",
+      "description": "Built in 1902, the former Union Bank known as the Ayers Building, is part of Dickinson Square in the heart of Manotick Village. The current home of the Rural Ottawa South Support Services features a beautiful red brick exterior, high baseboards, original window trim, and authentic banisters and spindles, and is a City of Ottawa Unique Heritage Site and has an Ontario Heritage Designation.",
+      "_id": "5844b66b0d3cad002d3221aa",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221ac"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221ab"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.737Z",
+      "createdAt": "2016-12-05T00:35:55.737Z",
+      "buildingId": 7,
+      "name": "BYTOWN MUSEUM: Commissariat Building",
+      "address": "1 Canal Lane",
+      "image": "images/Bytown1.jpg",
+      "description": "Explore Ottawa’s oldest stone building-the Commissariat. Home to the BYTOWN MUSEUM, the building was commissioned by the British Military and completed in 1827 as a storehouse during construction of the Rideau Canal. Explore our largest artifact and the history inside and outside our walls. Tours in English and French offered throughout the day.",
+      "_id": "5844b66b0d3cad002d3221ad",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221af"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221ae"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.737Z",
+      "createdAt": "2016-12-05T00:35:55.737Z",
+      "buildingId": 8,
+      "name": "Barry Padolsky Associates Inc. Architects, Mercury Court Building",
+      "address": "377 Dalhousie St., Suite 313",
+      "image": "images/barrypadolsky.jpg",
+      "description": "Originally built in 1923 as Larocque’s Department Store, Mercury Court was renovated and expanded by Barry Padolsky Associates Inc. Architects from 1989 to 1993; it is now home to this architectural firm. Features include the \"Flying Mercury\" weathervane, which adorned the Sun Life Building at Bank and Sparks Streets until 1949.",
+      "_id": "5844b66b0d3cad002d3221b0",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221b1"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.737Z",
+      "createdAt": "2016-12-05T00:35:55.737Z",
+      "buildingId": 9,
+      "name": "Beckta Dining & Wine Bar",
+      "address": "150 Elgin Steet, Unit 100",
+      "image": "images/Beckta.jpg",
+      "description": "Beckta is a landmark fine dining restaurant that relocated to the historic Grant House in November of 2014. The building has a heritage designation for both the interior and exterior, and was the home and workplace of Dr. James Grant, Canada’s first Surgeon General. The building has also housed the University Club of Ottawa as well as Friday’s Roast Beef House.",
+      "_id": "5844b66b0d3cad002d3221b2",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221b3"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.737Z",
+      "createdAt": "2016-12-05T00:35:55.737Z",
+      "buildingId": 10,
+      "name": "Bethany Hope Centre",
+      "address": "820 Woodroffe Ave.",
+      "image": "images/BethanyHopeEve.jpg",
+      "description": "Bethany Hope Centre is a reinvention of an old barracks-type building, now a space full of light, colour and beauty designed by Barry Hobin and Associates. In conjunction with DOO, take part in the centre’s annual Community Day festivities and see how BHC supports young-parent families in the Ottawa area. Visit www.bethanyhopecentre.org for more information.",
+      "_id": "5844b66b0d3cad002d3221b4",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221b5"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.737Z",
+      "createdAt": "2016-12-05T00:35:55.737Z",
+      "buildingId": 11,
+      "name": "Billings Estate Artefact Collection Storage",
+      "address": "172 Guigues St.",
+      "image": "images/BillingsEstateArtefact.jpg",
+      "description": "Explore behind the scenes of the Billings Estate National Historic Site artefact collection, listen to the stories these treasures tell, and learn how the City of Ottawa cares for historic artefacts. Experience pieces from the past first hand by investigating an object and seeing what secrets you can unlock!",
+      "_id": "5844b66b0d3cad002d3221b6",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221b8"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221b7"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.738Z",
+      "createdAt": "2016-12-05T00:35:55.738Z",
+      "buildingId": 12,
+      "name": "Billings Estate National Historic Site",
+      "address": "2100 Cabot St.",
+      "image": "images/BillingsEstateHistoricSite.jpg",
+      "description": "Braddish Billings, the first settler of Gloucester Township, built Ottawa’s oldest wood-frame house, Billings Estate National Historic Site, from 1827-1829. Learn about the architectural details as you tour the home from basement to attic and learn about the evolution of the property. Photography permitted. Guided tours available.",
+      "_id": "5844b66b0d3cad002d3221b9",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221bb"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221ba"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.738Z",
+      "createdAt": "2016-12-05T00:35:55.738Z",
+      "buildingId": 13,
+      "name": "Bridgehead Roastery",
+      "address": "130 Anderson St.",
+      "image": "images/BridgeHead2.jpg",
+      "description": "Bridgehead restored the beauty and character of this original structure, which was a carriage stable built in the 1920s, to use as the roastery that supplies fair trade and organic coffee to all 15 of their Ottawa locations. Main level accessible. Roastery open Mon. - Sun. 6:30 a.m. to 7 p.m.",
+      "_id": "5844b66b0d3cad002d3221bc",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221be"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221bd"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.738Z",
+      "createdAt": "2016-12-05T00:35:55.738Z",
+      "buildingId": 14,
+      "name": "Britannia Yacht Club",
+      "address": "2777 Cassels St. North Side of Tennis Courts at the end of Cassels Street",
+      "image": "images/BYCClubHouse.jpg",
+      "description": "Established in 1887, the newly renovated club house boasts the beautiful Dragon Lounge where visitors can see a unique bar fashioned out of a dragon sailboat. Visitors will notice a large stone tower that is part of the original structure. Despite additions, the clubhouse still retains its historic appearance. It offers one of the best views of the Ottawa River that is enjoyed by our members year round. Ottawa’s signature Tall Ship Black Jack will be offering tours during Doors Open Ottawa at the Britannia Yacht Club on Sunday June 5th from 10:00 am - 4:00 pm.",
+      "_id": "5844b66b0d3cad002d3221bf",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221c0"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.738Z",
+      "createdAt": "2016-12-05T00:35:55.738Z",
+      "buildingId": 15,
+      "name": "CKCU Radio University Centre",
+      "address": "1125 Colonel By Dr., Room 517, University Centre",
+      "image": "images/CKCURadioUniCentre.jpg",
+      "description": "CKCU is Canada's oldest campus community radio station, broadcasting live 24 hours a day to a 100 km radius on FM 93.1 and around the world on ckcufm.com.  Enjoy non-stop tours of the station, and multiple food services within the building. Parking lot 2 is the closest parking lot, parking will cost $3.",
+      "_id": "5844b66b0d3cad002d3221c1",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221c2"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.739Z",
+      "createdAt": "2016-12-05T00:35:55.739Z",
+      "buildingId": 16,
+      "name": "Canadian Conservation Institute",
+      "address": "1030 Innes Rd. (corner of Innes & St. Laurent)",
+      "image": "images/CanadianConservationInstitute.jpg",
+      "description": "Discover the fascinating world of heritage conservation and conservation science! Learn how the Canadian Conservation Institute supports museums, archives, and historic sites of Canada in conserving our heritage collections so they can be accessed by current and future generations.",
+      "_id": "5844b66b0d3cad002d3221c3",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221c4"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.739Z",
+      "createdAt": "2016-12-05T00:35:55.739Z",
+      "buildingId": 17,
+      "name": "Canadian Guide Dogs for the Blind National Training Centre",
+      "address": "4120 Rideau Valley Dr. North, Manotick",
+      "image": "images/CanadianGuideDogs.jpg",
+      "description": "Canadian Guide Dogs for the Blind has provided professionally trained guide dogs to visually impaired Canadians since 1984, and assistance dogs to individuals with mobility-related disabilities since 2010. The property includes a residence building and a kennel building.",
+      "_id": "5844b66b0d3cad002d3221c5",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221c6"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.739Z",
+      "createdAt": "2016-12-05T00:35:55.739Z",
+      "buildingId": 18,
+      "name": "Canadian Space Services",
+      "address": "2336 Craig's Side Rd.",
+      "image": "images/CSSBuilding.jpg",
+      "description": "In 1960, NATO and the Canadian Department of National Defence built this satellite communications (SATCOM) station. Supporting a 68-ft. diameter metal space frame radar dome on its roof, it provides environmental protection for the 50-ft. diameter SATCOM antenna it houses. The antenna provided satellite communications between all NATO countries until 1999. It is now headquarters for the Canadian Space Services Ltd., CSS Wind Inc., and Rocky Mountain Equipment Ltd.",
+      "_id": "5844b66b0d3cad002d3221c7",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221c8"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.739Z",
+      "createdAt": "2016-12-05T00:35:55.739Z",
+      "buildingId": 19,
+      "name": "Canmet ENERGY, Natural Resources Canada",
+      "address": "1 Haanel Dr.",
+      "image": "images/CanmetEnergy.jpg",
+      "description": "Discover the research taking place at Canada’s most diverse clean energy science and technology facility. View the power of renewable energy, discover how to be energy efficient, learn about improving the iron making process, explore the cleaner use of fossil fuels and much more! Visitors must wear closed-toed shoes, and children require supervision.",
+      "_id": "5844b66b0d3cad002d3221c9",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221ca"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.740Z",
+      "createdAt": "2016-12-05T00:35:55.740Z",
+      "buildingId": 20,
+      "name": "Carleton Immersive Media Studio (CIMS)",
+      "address": "1125 Colonel By Drive, VSIM (Visualization, Simulation and Modeling)",
+      "image": "images/CarletonImmersiveMS.jpg",
+      "description": "Carleton Immersive Media Studio (CIMS) is a Carleton University research centre dedicated to developing innovative, hybrid applications of digital technologies for architectural rehabilitation and conservation. Their work engages a spectrum of technologies that connect digital acquisition, building information modelling, simulation and fabrication.",
+      "_id": "5844b66b0d3cad002d3221cb",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221cc"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.740Z",
+      "createdAt": "2016-12-05T00:35:55.740Z",
+      "buildingId": 21,
+      "name": "Carleton Masonic Lodge",
+      "address": "3704 Carp Rd.",
+      "image": "images/CarletonMasonicLodge.jpg",
+      "description": "The original lodge was built in 1904, but was destroyed by the great fire in Carp in 1920. The current building was originally the old Presbyterian Church that stood in Stittsville and was purchased to replace the lodge lost in the fire. Accentuated by original stained glass windows, it has been the Village of Carp’s Masonic Lodge since 1925. The lodge’s interior features beautiful oak furniture used by a military Masonic Lodge in France during the WWI.",
+      "_id": "5844b66b0d3cad002d3221cd",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221ce"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.740Z",
+      "createdAt": "2016-12-05T00:35:55.740Z",
+      "buildingId": 22,
+      "name": "Carleton Memorial United Church",
+      "address": "740 Melfa Crescent",
+      "image": "images/CarletonMemorial.jpg",
+      "description": "Carleton Memorial was founded in memory of WWII Veterans and continues to be a thriving church still actively serving the Carleton Heights and Debra Dynes communities. The sanctuary features a lovely, high pitch ceiling and eight beautifully designed and hand-crafted stained glass memorial windows created by Brian Eagle of Northern Stain Glass.",
+      "_id": "5844b66b0d3cad002d3221cf",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221d0"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.740Z",
+      "createdAt": "2016-12-05T00:35:55.740Z",
+      "buildingId": 23,
+      "name": "Carp Exhibit Hall",
+      "address": "3790 Carp Rd.",
+      "image": "images/CarpExhibitHall.jpg",
+      "description": "The red painted frame building with white trim remains a focal point in the Carp area to this day. One of the few remaining octagonal fairground buildings once so popular in Ontario, it continues to function as the main - hall for the Carp Fair, and the poplar Carp Farmers’ Market.",
+      "_id": "5844b66b0d3cad002d3221d1",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 8:00 to 13:00",
+          "_id": "5844b66b0d3cad002d3221d2"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.741Z",
+      "createdAt": "2016-12-05T00:35:55.741Z",
+      "buildingId": 24,
+      "name": "Central Experimental Farm - Various Sites",
+      "address": "960 Carling Ave.",
+      "image": "images/CentralExperimentalFarm.jpg",
+      "description": "The Saunders building holds a complete collection of all plants found in Canada. In the state-of-the-art greenhouse, you can see how crops are grown indoors. Outdoor exhibits will also focus on the agricultural research done at the CEF, the many crops grown there and work on soils and the environment in general.",
+      "_id": "5844b66b0d3cad002d3221d3",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221d4"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.741Z",
+      "createdAt": "2016-12-05T00:35:55.741Z",
+      "buildingId": 25,
+      "name": "Christ Church Cathedral",
+      "address": "420 Sparks St.",
+      "image": "images/ChristChurchCathedral.jpg",
+      "description": "The first Christ Church was erected in 1832 on land donated by Nicholas Sparks. In 1870, architect King Arnoldi was commissioned to build a Middle Pointed style of English Gothic. In 1932, a Modern Gothic chancel replaced the original. Christopher Wallis designed the stained glass narthex window above the gallery for the Cathedral Sesquicentennial.",
+      "_id": "5844b66b0d3cad002d3221d5",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221d7"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 12:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221d6"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.741Z",
+      "createdAt": "2016-12-05T00:35:55.741Z",
+      "buildingId": 26,
+      "name": "Christ the Saviour Orthodox Church & Holy Trinity Hall",
+      "address": "721 Somserset St. W",
+      "image": "images/ChristTheSaviourOrthodoxChurch.jpg",
+      "description": "A three-domed Byzantine church built in 1968, this site is remarkable for its striking frescoes, its many icons and ornate chandeliers. The neighbouring Holy Trinity Hall is a former fire hall, constructed in 1913. It features magnificent pressed-tin ceilings, iconography from the original 1918 church building and a display of historical photographs. Guided tours. Refreshments available. Sacred concert of Orthodox liturgical music by the church choir, Saturday at 3:15 p.m.",
+      "_id": "5844b66b0d3cad002d3221d8",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221d9"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.741Z",
+      "createdAt": "2016-12-05T00:35:55.741Z",
+      "buildingId": 27,
+      "name": "City of Ottawa Archives, Rideau Branch",
+      "address": "6581 Fourth Line Rd., North Gower",
+      "image": "images/CityOfOttawaArchivesRideauBranch.jpg",
+      "description": "Rideau Archives is located in the former Township of North Gower hall, built in 1876, a one-storey, brick-faced example of a modest town hall with fine proportions, careful detailing and a cupola. The archival collection is a treasure trove of material from the southern rural part of the City. Exhibitions include the \"Corners\" of the old Townships and local election material.",
+      "_id": "5844b66b0d3cad002d3221da",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221dc"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221db"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.741Z",
+      "createdAt": "2016-12-05T00:35:55.741Z",
+      "buildingId": 28,
+      "name": "Connaught Building",
+      "address": "555 MacKenzie Ave.",
+      "image": "images/ConnaughtBuilding.jpg",
+      "description": "Built in Modified Norman style and designed by David Ewart, Connaught opened in 1915 and was named after the Duke of Connaught, third son of Queen Victoria and Governor General of Canada 1911-16. Designated as a \"Classified\" federal heritage building, primarily for its architectural significance, the structure is considered to be the \"Crown Jewel\" of the Canada Revenue Agency. Access is limited to the Mackenzie lobby area and the 8th floor executive boardroom.",
+      "_id": "5844b66b0d3cad002d3221dd",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221df"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221de"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.741Z",
+      "createdAt": "2016-12-05T00:35:55.741Z",
+      "buildingId": 29,
+      "name": "Cumberland Heritage Village Museum",
+      "address": "2940 Old Montreal Rd",
+      "image": "images/CumberlandHeritageVillageMuseum.jpg",
+      "description": "Cumberland Heritage Village Museum offers historic and reproduction buildings clustered on picturesque grounds depicting rural life in the 1920s and 1930s. Tour an operational sawmill and blacksmith forge, a one-room school house, a train station and telegraphy office, a 1927 Imperial Gas garage, a 1904 church and family homes.",
+      "_id": "5844b66b0d3cad002d3221e0",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221e2"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221e1"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.742Z",
+      "createdAt": "2016-12-05T00:35:55.742Z",
+      "buildingId": 30,
+      "name": "Diane A. Gagné Financial Services",
+      "address": "5 Blackburn Ave.",
+      "image": "images/DianeGagne.jpg",
+      "description": "Constructed in 1905 in Queen Anne Revival style, the building was home to WWI aviator Billy Bishop, was used as office space by the Italian Embassy, and was national headquarters to both the Victorian Order of Nurses and the Heritage Canada Foundation.  Purchased in 2009 by Diane A. Gagn\\xe9 Financial Services, the building has been fully renovated into the modern age while preserving its historical and heritage characteristics.",
+      "_id": "5844b66b0d3cad002d3221e3",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221e4"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.742Z",
+      "createdAt": "2016-12-05T00:35:55.742Z",
+      "buildingId": 31,
+      "name": "Dickinson House",
+      "address": "1127 Mill St., Manotick",
+      "image": "images/DickinsonHouse.jpg",
+      "description": "Dickinson House was built by M. K. Dickinson, the founder of the village of Manotick. From 1870 to 1972, the house was the residence of the Dickinson, Spratt and Watson families, the owner/operators of the grist mill across the square. The house was visited by Sir John A. Macdonald during the 1887 General Election.",
+      "_id": "5844b66b0d3cad002d3221e5",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221e7"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221e6"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.742Z",
+      "createdAt": "2016-12-05T00:35:55.742Z",
+      "buildingId": 32,
+      "name": "Diefenbunker: Canada's Cold War Museum",
+      "address": "3929 Carp Rd.",
+      "image": "images/Diefenbunker.jpg",
+      "description": "The Diefenbunker: Canada’s Cold War Museum is a four-storey Cold War bunker built to protect the government from a nuclear attack on Ottawa. Once top-secret, this underground facility is now open year-round. Free tours in French and English by reservation only. Please visit www.diefenbunker.ca in early May to reserve your space.",
+      "_id": "5844b66b0d3cad002d3221e8",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221ea"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221e9"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.742Z",
+      "createdAt": "2016-12-05T00:35:55.742Z",
+      "buildingId": 33,
+      "name": "Discovery Centre, MacOdrum Library, Carleton University",
+      "address": "1125 Colonel By Drive",
+      "image": "images/DiscoveryCentreMacOdrumLibrary.jpg",
+      "description": "Does your classroom have 3D printers? Learning is changing, and so are learning spaces. Visit this collaborative work space that is fitted with ergonomic, accessible furniture and state-of-the-art technology. Come see the gaming lab, a wall-sized screen, and treadmill desks. It’s a multipurpose space that is changing the student learning experience.",
+      "_id": "5844b66b0d3cad002d3221eb",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 12:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221ed"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 12:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221ec"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.743Z",
+      "createdAt": "2016-12-05T00:35:55.743Z",
+      "buildingId": 34,
+      "name": "Dormition of the Virgin Mary Greek Orthodox Church",
+      "address": "1315 Prince of Wales Dr.",
+      "image": "images/GreekOrthodoxChurch.jpg",
+      "description": "Built in 1975, and designed by architect Konstantinos Zourdoumis. A fine example of Neo-Byzantine style with its domed structure. Highlights include hand-painted Byzantine icons on the domed ceiling and walls, the hand-carved wood \"Iconostasion\" wall of icons in front of the Altar, and mosaic tiles. Photography permitted. Service at 10 a.m. on Sunday.",
+      "_id": "5844b66b0d3cad002d3221ee",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221f0"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 14:00",
+          "_id": "5844b66b0d3cad002d3221ef"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.743Z",
+      "createdAt": "2016-12-05T00:35:55.743Z",
+      "buildingId": 35,
+      "name": "Earnscliffe, British High Commissioner's Official Residence",
+      "address": "140 Sussex Dr.",
+      "image": "images/EarnScliffe.jpg",
+      "description": "This National Historic Site of Canada is best known as the home of Canada’s first Prime Minister, Sir John A. Macdonald. Built of local limestone between 1855 and 1857 by John MacKinnon, this Victorian manor is nestled between the Ottawa River and Sussex Drive. It has been home to successive British High Commissioners to Canada since 1930.",
+      "_id": "5844b66b0d3cad002d3221f1",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221f2"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.743Z",
+      "createdAt": "2016-12-05T00:35:55.743Z",
+      "buildingId": 36,
+      "name": "Embassy of Algeria, Fleck-Paterson House",
+      "address": "500 Wilbrod St.",
+      "image": "images/CentralEmbAlgeria.jpg",
+      "description": "The house was built in 1901 by J.R. Booth for his daughter, Gertrude Fleck. The house remained Mrs. Fleck’s private residence until her death in 1940. It was then purchased by Senator Norman Paterson, who lived in it until his death in 1983. The house was bought by the Algerian Embassy in 2002 and is now used as a chancery.",
+      "_id": "5844b66b0d3cad002d3221f3",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221f4"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.743Z",
+      "createdAt": "2016-12-05T00:35:55.743Z",
+      "buildingId": 37,
+      "name": "Embassy of the Czech Republic",
+      "address": "251 Cooper St.",
+      "image": "images/EmbassyOfTheCzechRepublic.jpg",
+      "description": "The construction of the building dates back to 1879, and is typical of late Victorian vernacular architecture in North America. In 1913 it was enlarged to twice the size. The Liberal Federation took it over in 1957 as their headquarters. The University Club bought the property in 1970. Starting 2000, this building became the Czech Embassy. In 2006, portions of the Embassy were carefully renovated. Guided tours on ground floor only.",
+      "_id": "5844b66b0d3cad002d3221f5",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221f7"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 13:00",
+          "_id": "5844b66b0d3cad002d3221f6"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.744Z",
+      "createdAt": "2016-12-05T00:35:55.744Z",
+      "buildingId": 38,
+      "name": "Embassy of the Republic of Angola",
+      "address": "189 Laurier Ave. East",
+      "image": "images/Angola.jpg",
+      "description": "Formerly known as Panet House, it was built in 1876 by Colonel Charles-Eugene Panet, Deputy Minister of Militia and defence. In 1915, the building was acquired by another owner who raised the roof and added bedroom suites, converting the building into apartments. In 1986, the house became part of the King Edward Avenue Heritage Conservation District.",
+      "_id": "5844b66b0d3cad002d3221f8",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 13:00",
+          "_id": "5844b66b0d3cad002d3221f9"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.744Z",
+      "createdAt": "2016-12-05T00:35:55.744Z",
+      "buildingId": 39,
+      "name": "Embassy of the Republic of Armenia to Canada",
+      "address": "7 Delaware Ave.",
+      "image": "images/Armenia.jpg",
+      "description": "The Embassy is housed in a beautiful Spanish Colonial Revival style mansion built in 1907 (later renovated by Werner Ernst Noffke) with smooth stucco walls, arched doorways, and elaborate plaster ceiling decoration. Touches of Armenian heritage can be found throughout, such as the engraving of Mount Ararat and \"Immortal Armenia\" sculpture.",
+      "_id": "5844b66b0d3cad002d3221fa",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221fc"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221fb"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.744Z",
+      "createdAt": "2016-12-05T00:35:55.744Z",
+      "buildingId": 40,
+      "name": "Embassy of the Republic of Croatia",
+      "address": "229 Chapel St.",
+      "image": "images/EmbassyOfTheRepublicOfCroatia.jpg",
+      "description": "Known as Toller House, it was built in the Domestic Gothic Revival style by Henry Horsey and J. Sheard, architects in 1875. The building was home to many dignitaries including Frederic Toller, Auditor General of the Dominion’s Currency in the 1880s. In 1999, it opened as the Embassy of Croatia after an award-winning restoration. Guided tours on ground level only.",
+      "_id": "5844b66b0d3cad002d3221fd",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221ff"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3221fe"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.744Z",
+      "createdAt": "2016-12-05T00:35:55.744Z",
+      "buildingId": 41,
+      "name": "Embassy of the United States",
+      "address": "490 Sussex Dr.",
+      "image": "images/UsEmbassy.jpg",
+      "description": "The U.S. Embassy in Ottawa was completed in 1999 and replaced the original Wellington Street facility. Designed by the U.S. firm Skidmore, Owings and Merrill, the building has a distinctive architectural style featuring a central atrium. Its exterior themes reflect the architecture of the Byward Market, the Peacekeeping Monument, the National Gallery, Major’s Hill Park, and the York Steps. Pre-registration required at canada.usembassy.gov.",
+      "_id": "5844b66b0d3cad002d322200",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322201"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.745Z",
+      "createdAt": "2016-12-05T00:35:55.745Z",
+      "buildingId": 42,
+      "name": "Enriched Bread Artists",
+      "address": "951 Gladstone Ave.",
+      "image": "images/EnrichedBA.jpg",
+      "description": "Enriched Bread Artists is celebrating its 24th year in the former Standard Bread Company building. Opened in 1924, the building’s plaque with the Latin proverb: Audaces Fortuna Juvat meaning Fortune Favors the Bold, can still be seen near the entrance. It is now home to artists’ studios boldly continuing to sustain Ottawa.",
+      "_id": "5844b66b0d3cad002d322202",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322204"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322203"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.745Z",
+      "createdAt": "2016-12-05T00:35:55.745Z",
+      "buildingId": 43,
+      "name": "Evangelical Lutheran Church of St. Paul",
+      "address": "210 Wilbrod St.",
+      "image": "images/EvangelicalLutheranChurch.jpg",
+      "description": "In 1887, A. Harvey designed a new limestone Gothic Revival church to replace a modest frame church built in 1875. Cornerstone was laid on May 21, 1888. One of the city’s earliest Casavant pipe organs was installed in 1888. Renowned architect W. E. Noffke oversaw renovations in 1948. Some of the original stained glass windows remain.",
+      "_id": "5844b66b0d3cad002d322205",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322207"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 13:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322206"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.745Z",
+      "createdAt": "2016-12-05T00:35:55.745Z",
+      "buildingId": 44,
+      "name": "Fairfields Heritage House",
+      "address": "3080 Richmond Rd.",
+      "image": "images/FairFields.jpg",
+      "description": "Fairfields Heritage House, a 19th century gothic revival farmhouse, was the first heritage property designated by the former municipality of Nepean. Five generations of the Bell family lived in the home, and it was from here that they became successful in their farming, law and political endeavours. Photography permitted. Guided tours available.",
+      "_id": "5844b66b0d3cad002d322208",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32220a"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322209"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.745Z",
+      "createdAt": "2016-12-05T00:35:55.745Z",
+      "buildingId": 45,
+      "name": "First Baptist Church Ottawa",
+      "address": "140 Laurier Ave. West",
+      "image": "images/FirstBaptistChurchOttawa.jpg",
+      "description": "Designed by James Mather in the Gothic Revival style, the cornerstone of the church was laid in July 26, 1877 by then PM Alexander Mackenzie who was a regular worshipper. The church was designated a civic historic building in1985. The sanctuary features interesting stained glass windows - one with an Ottawa Valley theme. Open for Sunday worship June 5, 10:30 a.m. to 11:45 a.m.",
+      "_id": "5844b66b0d3cad002d32220b",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32220d"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 14:00",
+          "_id": "5844b66b0d3cad002d32220c"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.746Z",
+      "createdAt": "2016-12-05T00:35:55.746Z",
+      "buildingId": 46,
+      "name": "First Church of Christ, Scientist",
+      "address": "288 Metcalfe St.",
+      "image": "images/FirstChurchChristScientist.jpg",
+      "description": "Constructed in 1913, Ottawa architect J.P. MacLaren designed the church in Classic Italian style. Using Ohio sandstone, Corinthian columns, pediments, a recessed doorway and a temple plan, it features a spacious auditorium and three-manual Casavant pipe organ. No photos during 10 am Sunday service.  Mervyn Games will give organ concerts at 12:45 and 2 p.m. both days.",
+      "_id": "5844b66b0d3cad002d32220e",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322210"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32220f"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.746Z",
+      "createdAt": "2016-12-05T00:35:55.746Z",
+      "buildingId": 47,
+      "name": "French Embassy in Canada",
+      "address": "42 Sussex Dr.",
+      "image": "images/EmbassyFrance.jpg",
+      "description": "A prime example of 1930s Art Deco, built primarily of materials from Quebec and France (Bourgogne and St. Quentin). Architectural highlights inside include a replica of the Vimy Memorial, tapestries, bronze doors, the Birch Room, decorations by Andr\\xe9 Bizette-Lindet, a mural by Alfred Courmes, and historical wall engravings. No strollers, backpacks, or metal objects. Photography limited. Pre-registration required at http://www.ambafrance-ca.org between May 30 and June 3, 2016. A limited number of passes are available for each hour from 9 am until 4 pm (last admission at 4:30 pm - closed from noon to 1 p.m.).",
+      "_id": "5844b66b0d3cad002d322211",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 9:00 to 17:00",
+          "_id": "5844b66b0d3cad002d322212"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.746Z",
+      "createdAt": "2016-12-05T00:35:55.746Z",
+      "buildingId": 48,
+      "name": "Gloucester Artefact Collection Storage - Leitrim Complex",
+      "address": "4550 Bank St.",
+      "image": "images/GlouceSterArtifact.jpg",
+      "description": "Explore behind the scenes of the Gloucester artefact collection, listen to the stories these treasures tell, and learn how the City of Ottawa cares for historic artefacts. Experience pieces from the past firsthand by investigating an object and seeing what secrets you can unlock!",
+      "_id": "5844b66b0d3cad002d322213",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322215"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322214"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.746Z",
+      "createdAt": "2016-12-05T00:35:55.746Z",
+      "buildingId": 49,
+      "name": "Gloucester Historical Society",
+      "address": "4550B Bank St. Lower Level off of Leitrim Road",
+      "image": "images/GloucesterHistoricalSociety.jpg",
+      "description": "Built in 1962, the Gloucester Historical Society resides in the former Gloucester Township Hall. Volunteers will address questions regarding the history of Gloucester, and offer tours of the Gloucester museum artifacts located in the same building. Historic St. James Anglican Church will also be open next door. Parking is available off Leitrim Road next to the Fire Hall.",
+      "_id": "5844b66b0d3cad002d322216",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322218"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322217"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.746Z",
+      "createdAt": "2016-12-05T00:35:55.746Z",
+      "buildingId": 50,
+      "name": "Goulbourn Museum",
+      "address": "2064 Huntley Rd., Stittsville",
+      "image": "images/GoulBourn.jpg",
+      "description": "Built in 1872, the building currently known as the Goulbourn Museum used to be the old Town Hall. It was originally home to council meetings, parties, and dances. The adjacent History Centre building was built in 1961, and was the former Clerks building. Now it is used as office space, and stores the Museum’s collection of over 8,000 artefacts.",
+      "_id": "5844b66b0d3cad002d322219",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32221b"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32221a"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.747Z",
+      "createdAt": "2016-12-05T00:35:55.747Z",
+      "buildingId": 51,
+      "name": "HI-Ottawa Jail Hostel",
+      "address": "75 Nicholas Street",
+      "image": "images/HIOttawaHostelExterior.jpg",
+      "description": "Located in the former Carleton County Gaol, the HI-Ottawa Jail Hostel is steeped in history. Opened as a hostel since 1973, this building has become an international hub for backpackers and travelers in the Nation’s Capital.",
+      "_id": "5844b66b0d3cad002d32221c",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32221e"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32221d"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.747Z",
+      "createdAt": "2016-12-05T00:35:55.747Z",
+      "buildingId": 52,
+      "name": "HMCS CARLETON",
+      "address": "79 Prince of Wales",
+      "image": "images/HMCSCarleton.jpg",
+      "description": "Completed in 2015, this state of the art military facility provides training for sailors in the nation’s capital. This is where Canada’s sailors learn and practice their skills before they head to sea in the service of their country.",
+      "_id": "5844b66b0d3cad002d32221f",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322221"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322220"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.747Z",
+      "createdAt": "2016-12-05T00:35:55.747Z",
+      "buildingId": 53,
+      "name": "HUB Ottawa",
+      "address": "71 Bank St., 6th Floor",
+      "image": "images/HUBOttawa.jpg",
+      "description": "HUB Ottawa is a co-working space and community optimized for people, projects and organizations bettering the world. We facilitate innovation through collaboration. Our unique open space concept makes HUB the perfect place to work, learn, and collaborate. Our ceiling showcases a crowdfunded art installation called \"Resonant Currents.\"",
+      "_id": "5844b66b0d3cad002d322222",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322224"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322223"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.747Z",
+      "createdAt": "2016-12-05T00:35:55.747Z",
+      "buildingId": 54,
+      "name": "Header House - Blink Gallery",
+      "address": "Major's Hill Park",
+      "image": "images/BlinkGalleryExteriorview.jpg",
+      "description": "Header House is a small, stone heritage building located in Major’s Hill Park, the last remaining section of the park’s greenhouse complex which was dismantled in 1938. It’s also home to BLINK, an artist collective that supports regional artists to experiment and extend their practices.",
+      "_id": "5844b66b0d3cad002d322225",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322227"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322226"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.747Z",
+      "createdAt": "2016-12-05T00:35:55.747Z",
+      "buildingId": 55,
+      "name": "Heritage Building and Ottawa City Hall",
+      "address": "110 Laurier Ave. West, Elgin St. Entrance",
+      "image": "images/HeritageBuildingandOttawaCityHall.jpg",
+      "description": "Designed by R.W. Strickland and Kivas Tully, the Heritage Building features high Victorian design.  Formerly the teachers’ college, it became Ottawa City Hall after municipal amalgamation, with the new complex behind.  Saturday only: Coffee in the Mayor’s Office from 10 a.m. to noon. The new City Hall complex will feature the Emergency Operations Centre, a designated and appropriately equipped facility where officials from an organization - or organizations - assemble to manage the response to an emergency or disaster, open for the very first time during DOO.",
+      "_id": "5844b66b0d3cad002d322228",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32222a"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322229"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.748Z",
+      "createdAt": "2016-12-05T00:35:55.748Z",
+      "buildingId": 56,
+      "name": "High Commission of Malaysia",
+      "address": "60 Boteler Street ",
+      "image": "images/MalaysiaHighCommission.jpg",
+      "description": "The building was constructed in 1963 and previously owned by the L’Association canadienne-francais de L’Ontario. Acquired by the Malaysian Government in 1974, the building is now home to the High Commission of Malaysia and features a distinctive architectural design. Cultural exhibitions will be on display during the event.",
+      "_id": "5844b66b0d3cad002d32222b",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32222c"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.748Z",
+      "createdAt": "2016-12-05T00:35:55.748Z",
+      "buildingId": 57,
+      "name": "High Commission of the Republic of Trinidad and Tobago",
+      "address": "200 First Ave.",
+      "image": "images/Trinidad.jpg",
+      "description": "Built in 1914 by Bell Canada as a telephone exchange, this building currently houses the High Commission of the Republic of Trinidad and Tobago. The exterior features gray Ohio sandstone trim and dark red pressed brick. The interior has been redesigned to include offices, a reception area and colorful exhibits that showcase Trinidad and Tobago.",
+      "_id": "5844b66b0d3cad002d32222d",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32222f"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32222e"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.748Z",
+      "createdAt": "2016-12-05T00:35:55.748Z",
+      "buildingId": 58,
+      "name": "Hindu Temple of Ottawa-Carleton Inc.",
+      "address": "4835 Bank St.",
+      "image": "images/HinduTempleCarleton.jpg",
+      "description": "Designed according to specific religious architectural traditions, the temple stands as a monument to Hindu heritage in Ottawa. It is home to many deities and shrines made of granite, marble and bronze, all sculpted in India. There is an assembly hall and a library. Please remove shoes upon entering. No photography of shrines or deities.",
+      "_id": "5844b66b0d3cad002d322230",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322231"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.748Z",
+      "createdAt": "2016-12-05T00:35:55.748Z",
+      "buildingId": 59,
+      "name": "Hydro Ottawa, Chaudière Falls No. 2 Generating Station",
+      "address": "Mill St., Victoria Island",
+      "image": "images/Hydroottawaext.jpg",
+      "description": "Built in 1891, this Generating Station is believed to be the oldest operating hydroelectric generator in Canada. Learn how hydroelectricity is produced. Guided tours include stairs and are partially conducted outdoors. Spaces are limited; last tour at 3:30pm. Closed-toe shoes required. This facility is not accessible.",
+      "_id": "5844b66b0d3cad002d322232",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322234"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322233"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.749Z",
+      "createdAt": "2016-12-05T00:35:55.749Z",
+      "buildingId": 60,
+      "name": "Islamic Society of Cumberland (Masjid Bilal)",
+      "address": "4509 Innes Rd",
+      "image": "images/CumberlandMasjidbilalMosque.jpg",
+      "description": "With a unique architectural design, the Bilal Mosque is hard to miss. The strikingly modern mosque stands out among the surrounding buildings thanks to its impressive fa\\xe7ade, which features expansive arched windows, reminiscent of those found in Spain, that bathe the interior in natural light.",
+      "_id": "5844b66b0d3cad002d322235",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322237"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322236"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.749Z",
+      "createdAt": "2016-12-05T00:35:55.749Z",
+      "buildingId": 61,
+      "name": "James Bartleman Centre: City of Ottawa Archives",
+      "address": "100 Tallwood Dr.",
+      "image": "images/TallWoodArchives.jpg",
+      "description": "The Archives turns 40! Take a tour and enjoy a community BBQ and family activities. The Archives preserves Ottawa’s history including photographs, plans, maps and drawings. This award-winning building features a variety of energy-saving technologies and renewable resources. It has state-of-the art climate-controlled vaults, a conservation lab, and gallery.",
+      "_id": "5844b66b0d3cad002d322238",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322239"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.749Z",
+      "createdAt": "2016-12-05T00:35:55.749Z",
+      "buildingId": 62,
+      "name": "Jami Omar",
+      "address": "3990 Old Richmond Rd.",
+      "image": "images/JamiOmar.jpg",
+      "description": "Welcome to Jami Omar Mosque. Originally established in 1992, this brand new Jami Omar will be one of largest in Canada. Enjoy interactive guided tours and a day full of interesting activities for the whole family. Free gifts for everyone, free tasty refreshments, poster exhibition, cultural display, and much more!",
+      "_id": "5844b66b0d3cad002d32223a",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32223b"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.749Z",
+      "createdAt": "2016-12-05T00:35:55.749Z",
+      "buildingId": 63,
+      "name": "Jane's Walk in Lowertown East",
+      "address": "École secondaire de La Salle, 501 Old St. Patrick St",
+      "image": "images/JanesWalkSteAnne.jpg",
+      "description": "Kenneth Smid, an associate director at the National House of Prayer, will take you on a visit of the former Lowertown Convent. The tour will focus on the history of the building, which was built by a Roman Catholic priest and was used as a convent for many years. Visit www.janeswalkottawa.ca/walks/327 for details.",
+      "_id": "5844b66b0d3cad002d32223c",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 13:30",
+          "_id": "5844b66b0d3cad002d32223d"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.749Z",
+      "createdAt": "2016-12-05T00:35:55.749Z",
+      "buildingId": 64,
+      "name": "Joyful Land Kadampa Buddhist Centre",
+      "address": "879 Somerset St. W.",
+      "image": "images/JoyfulLandFacade.jpg",
+      "description": "Established in 1996 under the direction of Geshe Kelsang Gyatso Rinpoche, Joyful Land is the focal point for the Ottawa community of the modern tradition of Mahayana Buddhism called New Kadampa Tradition. Visit the heart of the building, a beautiful shrine where marvelous Buddha statues can be admired, and learn about meditation programs helping people to develop inner peace and good hearts. The bookshop offers an extensive selection of books, ritual implements and artwork.",
+      "_id": "5844b66b0d3cad002d32223e",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322240"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32223f"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.750Z",
+      "createdAt": "2016-12-05T00:35:55.750Z",
+      "buildingId": 65,
+      "name": "Knox Presbyterian Church",
+      "address": "120 Lisgar St.",
+      "image": "images/Knoxpresbyterian.jpg",
+      "description": "Knox was completed in 1933, and combines elements of English Gothic and Norman Church architecture. The Sanctuary is simple and unadorned yet beautiful, accented by soaring columns and different marble and stone materials, and two stained glass windows.",
+      "_id": "5844b66b0d3cad002d322241",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322243"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 13:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322242"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.750Z",
+      "createdAt": "2016-12-05T00:35:55.750Z",
+      "buildingId": 66,
+      "name": "Laurier House National Historic Site",
+      "address": "335 Laurier Ave. East",
+      "image": "images/LaurierHouse.jpg",
+      "description": "Laurier House commemorates two of Canada’s most notable prime ministers, Sir Wilfrid Laurier and the Rt. Hon. William Lyon Mackenzie King. For over fifty years, from 1897 to 1948, the house occupied a central position in the political life of Canada, as the place of residence of Laurier and, after his death, of Mackenzie King.",
+      "_id": "5844b66b0d3cad002d322244",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 17:00",
+          "_id": "5844b66b0d3cad002d322246"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 17:00",
+          "_id": "5844b66b0d3cad002d322245"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.751Z",
+      "createdAt": "2016-12-05T00:35:55.751Z",
+      "buildingId": 67,
+      "name": "Le Cordon Bleu Paris, Ottawa Culinary Arts Institute - Munross House",
+      "address": "453 Laurier Ave. E.",
+      "image": "images/CordonBleuMunrossMansion.jpg",
+      "description": "Munross Mansion, the Tudor revival style house, began construction in 1874 by Scottish lumberman, James Mather. The building has been carefully restored to its original grandeur. Now home to two organizations - Le Cordon Bleu Ottawa Culinary Arts Institute and Signatures Restaurant - it’s located just steps from the Rideau River and Strathcona Park.",
+      "_id": "5844b66b0d3cad002d322247",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322248"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.751Z",
+      "createdAt": "2016-12-05T00:35:55.751Z",
+      "buildingId": 68,
+      "name": "Lester B. Pearson Building; Global Affairs Canada",
+      "address": "125 Sussex Dr.",
+      "image": "images/LesterBPearsonBuilding.jpg",
+      "description": "Opened in 1973, the Lester B. Pearson Building was designed as a modernist take on the Sphinx of ancient Egypt. Come visit exhibits on our missions and embassies abroad, play in the kids’ zone, and participate in our \"human library\" of experts. For more information on our activities, visit Global Affairs Canada website, or follow us on Twitter @CanadaFP.",
+      "_id": "5844b66b0d3cad002d322249",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32224a"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.751Z",
+      "createdAt": "2016-12-05T00:35:55.751Z",
+      "buildingId": 69,
+      "name": "Library and Archives Canada",
+      "address": "395 Wellington St.",
+      "image": "images/LibraryAndArchivesCanada.jpg",
+      "description": "Library and Archives Canada (1963-1967). The building consists of two four-story wings and a central nine-story tower. The lower floors, comprised of glass, form part of the boundary of a raised courtyard that leads to Wellington Street. The collections are housed in the central tower, which is studded with small square windows.",
+      "_id": "5844b66b0d3cad002d32224b",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32224c"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.751Z",
+      "createdAt": "2016-12-05T00:35:55.751Z",
+      "buildingId": 70,
+      "name": "Library of Parliament - Former Bank of Nova Scotia",
+      "address": "125 Sparks St.",
+      "image": "images/LibraryOfParliament.jpg",
+      "description": "John Lyle, one of Canada’s leading Beaux-Arts architect, designed this former bank, incorporating Canadian motifs in the carved frieze. Two architectural firms collaborated to complete an innovative renovation in 2001. Access to limited areas. Guides to answer questions. Photography allowed.",
+      "_id": "5844b66b0d3cad002d32224d",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32224f"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32224e"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.752Z",
+      "createdAt": "2016-12-05T00:35:55.752Z",
+      "buildingId": 71,
+      "name": "Maplelawn Historic Garden",
+      "address": "529 Richmond Rd.",
+      "image": "images/MaplelawnHistoricGarden.jpg",
+      "description": "In the 19th century there were many fine houses in Ontario, but few were graced with walled gardens, and fewer still have survived. The walled garden at Maplelawn is a rare example and is also exceptionally well preserved. About 125 species of plants, most of them perennials, are still thriving there.",
+      "_id": "5844b66b0d3cad002d322250",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322251"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.752Z",
+      "createdAt": "2016-12-05T00:35:55.752Z",
+      "buildingId": 72,
+      "name": "National Gallery of Canada",
+      "address": "380 Sussex Dr.",
+      "image": "images/NationalGallery.jpg",
+      "description": "The stunning National Gallery of Canada presents Canada’s national art collection and outstanding special exhibitions year round. The panoramic views of the Ottawa River and Parliament Hill, the spacious galleries, gardens and courtyards make this award-winning architectural gem in itself worth the visit.",
+      "_id": "5844b66b0d3cad002d322252",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 18:00",
+          "_id": "5844b66b0d3cad002d322253"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.752Z",
+      "createdAt": "2016-12-05T00:35:55.752Z",
+      "buildingId": 73,
+      "name": "National Research Council Canada (NRC) - Temple of Science",
+      "address": "100 Sussex Drive",
+      "image": "images/NRCSussex.jpg",
+      "description": "NRC celebrates its centennial in 2016. Visitors can take in both the architecture and special science & technology exhibits on display at NRC’s heritage building. The construction and care lavished on the fittings of sculptured bronze and Italian travertine demonstrate that the building was not only intended to be a laboratory facility, but also a work of art.",
+      "_id": "5844b66b0d3cad002d322254",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322255"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.752Z",
+      "createdAt": "2016-12-05T00:35:55.752Z",
+      "buildingId": 74,
+      "name": "National Research Council Canada (NRC) - Uplands Wind Tunnel Facilities",
+      "address": "1920 Research Road, Building U70",
+      "image": "images/NRCWindTunnelU70.jpg",
+      "description": "NRC turns 100 this year! From Olympic athletes to trucks, cars, parachutes, and business and commercial aircraft, NRC has made a name for itself in the world of aerodynamics. Visitors can tour the 9-metre wind tunnel and witness a range of demonstrations sure to amaze both young and old. This facility is not accessible.",
+      "_id": "5844b66b0d3cad002d322256",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322257"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.752Z",
+      "createdAt": "2016-12-05T00:35:55.752Z",
+      "buildingId": 75,
+      "name": "Nepean Museum",
+      "address": "16 Rowley Ave.",
+      "image": "images/NepeanMuseum.jpg",
+      "description": "Nepean Museum resides in the original Nepean Library building and celebrates the history of the local community. Join us for a behind the scenes tour of the collections area and experience the thrill and challenge of identifying objects. Photography permitted. Guided tours available.",
+      "_id": "5844b66b0d3cad002d322258",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32225a"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322259"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.753Z",
+      "createdAt": "2016-12-05T00:35:55.753Z",
+      "buildingId": 76,
+      "name": "Nepean Sailing Club",
+      "address": "3259 Carling Avenue",
+      "image": "images/NepeanSailingClub.jpg",
+      "description": "Established in 1979, the Nepean Sailing Club is a family-oriented, volunteer based organization dedicated to promoting and encouraging active participation by its members and the general public in the sport of sailing and recreational boating. Griffiths Rankin Cook Architects won an architectural award in 1990 for the design of the main clubhouse.",
+      "_id": "5844b66b0d3cad002d32225b",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32225d"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32225c"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.753Z",
+      "createdAt": "2016-12-05T00:35:55.753Z",
+      "buildingId": 77,
+      "name": "Ojigkwanong Centre for Aboriginal Culture and Education (CACE), Ceiling Installation",
+      "address": "1125 Colonel By Drive, 228 Paterson Hall, Carleton University",
+      "image": "images/OjigkwanongCentreForAboriginalCultureAndEducation.jpg",
+      "description": "The \"Light Keeper\" is a permanent ceiling installation at the Ojigkwanong CACE at Carleton University. It was designed by Prof. Manuel Bez along with students and in consultation with the Centre’s architect Douglas Cardinal. It is based on the theme of light and the fact that Carleton is on traditional Algonquin land.",
+      "_id": "5844b66b0d3cad002d32225e",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322260"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32225f"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.753Z",
+      "createdAt": "2016-12-05T00:35:55.753Z",
+      "buildingId": 78,
+      "name": "Olde Forge Community Resource Centre",
+      "address": "2730 Carling Avenue",
+      "image": "images/OldeForgeBuilding.jpg",
+      "description": "The building began its life as a blacksmith’s shop in 1832 where the owner, George Winthrop, made horseshoes, ploughs and other equipment for the booming timber trade. In 1998, it was officially declared a heritage site, and today it serves as a community resource centre and provider of community support services to seniors and adults with physical disabilities.",
+      "_id": "5844b66b0d3cad002d322261",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322262"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.753Z",
+      "createdAt": "2016-12-05T00:35:55.753Z",
+      "buildingId": 79,
+      "name": "Ottawa Fire Services Training Centre",
+      "address": "898 Industrial Ave.",
+      "image": "images/OttawaFireTrainingCentre.jpg",
+      "description": "Get an up-close look at the Ottawa Fire Services Training Centre. The facility has a large, open training area, bordered by a gas fire simulator, a live-fire burn house and a training tower. The complex gives firefighters a safe environment to learn tactics and to train with a wide range of equipment used to respond to emergencies.",
+      "_id": "5844b66b0d3cad002d322263",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322265"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322264"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.753Z",
+      "createdAt": "2016-12-05T00:35:55.753Z",
+      "buildingId": 80,
+      "name": "Ottawa Fire Stations",
+      "address": "1643 Stittsville Main Street",
+      "image": "images/OttawaFireStations.jpg",
+      "description": "Here is an opportunity for the public to tour the rural fire halls in their communities. Emphasis will be on public education and fire safety (smoke detectors and a new law regarding carbon monoxide detectors). Giveaways, fire truck tours, meet and greet with firefighters.",
+      "_id": "5844b66b0d3cad002d322266",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322267"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.754Z",
+      "createdAt": "2016-12-05T00:35:55.754Z",
+      "buildingId": 81,
+      "name": "Ottawa Integrative Cancer Centre",
+      "address": "29 Bayswater Ave.",
+      "image": "images/OICC.jpg",
+      "description": "The OICC is the first integrative cancer care and research centre in Eastern Canada. The OICC provides complementary cancer care, alongside conventional treatments, to improve quality of life for those living with cancer. The building was the first home for CJOH TV in 1961.",
+      "_id": "5844b66b0d3cad002d322268",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32226a"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322269"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.754Z",
+      "createdAt": "2016-12-05T00:35:55.754Z",
+      "buildingId": 82,
+      "name": "Ottawa Main Mosque",
+      "address": "251 Northwestern Ave",
+      "image": "images/MainMosque.jpg",
+      "description": "With a very distinct architectural design, the Ottawa Main Mosque is hard to miss while driving along Scott Street with its raised minaret and central dome. It can hold up to 700 people. Its design includes a two-storey prayer hall, library and basement used for meetings, childcare and social events.",
+      "_id": "5844b66b0d3cad002d32226b",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32226d"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32226c"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.754Z",
+      "createdAt": "2016-12-05T00:35:55.754Z",
+      "buildingId": 83,
+      "name": "Ottawa New Edinburgh Club (ONEC)",
+      "address": "501 Sir George-Étienne Cartier Pkwy (formerly Rockcliffe Pkwy)",
+      "image": "images/ONEC.jpg",
+      "description": "ONEC is a community-based rowing, sailing and tennis club. The boathouse, built between 1914 and 1923 in a style typical of its era, is a recognized federal heritage building. Visitors can access a ballroom and upper deck with grand views of the Ottawa River, and a display of photos, trophies and other memorabilia from the club’s colourful past.",
+      "_id": "5844b66b0d3cad002d32226e",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322270"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32226f"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.754Z",
+      "createdAt": "2016-12-05T00:35:55.754Z",
+      "buildingId": 84,
+      "name": "Ottawa Paramedic Service Headquarters",
+      "address": "2465 Don Reid Dr.",
+      "image": "images/OttawaParamedic.jpg",
+      "description": "Opened in 2005, the 100,000 square-foot Ottawa Paramedic Service Headquarters is a state-of-the-art facility that houses all paramedic operations (except for medical dispatching), a vehicle depot and administrative area for the service. The building is the first in Ottawa to be certified as Leadership in Energy and Environmental Design (LEED).",
+      "_id": "5844b66b0d3cad002d322271",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322272"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.754Z",
+      "createdAt": "2016-12-05T00:35:55.754Z",
+      "buildingId": 85,
+      "name": "Ottawa Police Service Professional Development Centre",
+      "address": "1385 Woodroffe Ave., Building P",
+      "image": "images/OttawaPoliceService.jpg",
+      "description": "The Ottawa Police Professional Development Centre exists within the Algonquin College Police and Public Safety Institute. Police training goes on all year long, including academic courses, defensive tactics/scenarios and firearms training. New recruits, experienced officers and civilian members all enjoy training in this facility.",
+      "_id": "5844b66b0d3cad002d322273",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322274"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.755Z",
+      "createdAt": "2016-12-05T00:35:55.755Z",
+      "buildingId": 86,
+      "name": "Ottawa Rowing Club",
+      "address": "10 Lady Grey Dr.",
+      "image": "images/ORCBoathouse.jpg",
+      "description": "The Ottawa Rowing Club, established in 1867 and home to almost 1000 members, is Canada’s oldest and second largest rowing club in Canada. Our site on the Ottawa River features the original boathouse containing displays of ORC rowing history, and a larger boathouse containing a fleet of rowing shells. Learn about rowing and its history in Ottawa!",
+      "_id": "5844b66b0d3cad002d322275",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 14:30",
+          "_id": "5844b66b0d3cad002d322276"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.755Z",
+      "createdAt": "2016-12-05T00:35:55.755Z",
+      "buildingId": 87,
+      "name": "Ottawa Sports Hall of Fame",
+      "address": "110 Laurier Ave. W.",
+      "image": "images/OttawaSportsHall.jpg",
+      "description": "Housed under the Mayor’s office in the Heritage Building at Ottawa City Hall, the Ottawa Sport Hall of Fame showcases a variety of changing exhibitions and some permanent galleries to honour Ottawa’s inductees. The exhibits celebrate Ottawa’s sporting heritage and feature many outstanding individuals and teams who have brought great fame to the city.",
+      "_id": "5844b66b0d3cad002d322277",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322279"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322278"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.755Z",
+      "createdAt": "2016-12-05T00:35:55.755Z",
+      "buildingId": 88,
+      "name": "Ottawa Tennis and Lawn Bowling Clubhouse",
+      "address": "176 Cameron Ave",
+      "image": "images/OttawaTennisLawnClub.jpg",
+      "description": "The Ottawa Tennis and Lawn Bowling Club is more than 130 years old and has been in its current location in Old Ottawa South since 1922. The five-acre grounds hold 18 tennis courts, 10 beach volleyball courts and a 75\\u2019 by 35\\u2019 outdoor swimming pool. The two-storey clubhouse boasts original building materials, a bowler’s lounge and caf\\xe9 with a wraparound terrace facing the grounds and Rideau River.",
+      "_id": "5844b66b0d3cad002d32227a",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32227c"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32227b"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.755Z",
+      "createdAt": "2016-12-05T00:35:55.755Z",
+      "buildingId": 89,
+      "name": "Ottawa Valley Wild Bird Care Centre",
+      "address": "734 Moodie Drive",
+      "image": "images/OttawaValleyBirdCentre.jpg",
+      "description": "Built in 1992, the Wild Bird Care Centre is set within Ottawa’s greenbelt, surrounded by NCC trails. It has become a favourite place for nature enthusiasts and animal lovers alike. Operating solely on donations, this registered charity cares for ill, injured and orphaned wild birds found within the community and releases them back into the wild.",
+      "_id": "5844b66b0d3cad002d32227d",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 12:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32227f"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 12:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32227e"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.756Z",
+      "createdAt": "2016-12-05T00:35:55.756Z",
+      "buildingId": 90,
+      "name": "Parkdale Food Centre",
+      "address": "2-30 Rosemount Ave.",
+      "image": "images/ParkdaleFoodCentre.jpg",
+      "description": "The Parkdale Food Centre operates as the Hintonburg-Mechanicsville community food bank, and has been serving those in need for the past 25+ years. The food bank will offer tours of the facility to show how a food bank works and how it supports those less fortunate in the community.",
+      "_id": "5844b66b0d3cad002d322280",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322281"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.756Z",
+      "createdAt": "2016-12-05T00:35:55.756Z",
+      "buildingId": 91,
+      "name": "Pinhey's Point Historic Site",
+      "address": "270 Pinhey's Point Rd., Dunrobin",
+      "image": "images/PinheyPointHistoricSite.jpg",
+      "description": "Pinhey’s Point Historic Site stands as a testament to upper and middle class rural life in the 19th century. Built in four stages from 1820 to 1849, the Georgian-style house maintains many of its original features, including the imposing entrance and staircase, servants’ quarters, and 1860s wallpaper.",
+      "_id": "5844b66b0d3cad002d322282",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322284"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322283"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.756Z",
+      "createdAt": "2016-12-05T00:35:55.756Z",
+      "buildingId": 92,
+      "name": "Protection of the Holy Virgin Russian Orthodox Church",
+      "address": "99 Stonehurst Ave.",
+      "image": "images/ProtectionOfTheHolyVirginRussianOrthodoxChurch.jpg",
+      "description": "The Protection of the Holy Virgin Church was built to commemorate the 1,000-year anniversary of the baptism of Russia. Built according to the traditions of Russian Church architecture, it features golden onion domes, a five-tiered icon screen, and many hand-painted icons.",
+      "_id": "5844b66b0d3cad002d322285",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 12:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322286"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.756Z",
+      "createdAt": "2016-12-05T00:35:55.756Z",
+      "buildingId": 93,
+      "name": "Public Service Alliance of Canada",
+      "address": "233 Gilmour St.",
+      "image": "images/PSACBuilding.jpg",
+      "description": "The Public Service Alliance of Canada HQ is a departure from a traditional square office building of reflecting glass. Ottawa architects Schoeler & Heaton’s 1968 design is a less imposing, curved tower of brown-purple brick with inset windows. The Royal Architectural Institute of Canada as named it as one of the top 500 buildings produced in Canada during the last millennium.",
+      "_id": "5844b66b0d3cad002d322287",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322289"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322288"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.756Z",
+      "createdAt": "2016-12-05T00:35:55.756Z",
+      "buildingId": 94,
+      "name": "Queen of the Most Holy Rosary Roman Catholic Parish",
+      "address": "20 Grant St.",
+      "image": "images/HolyRosaryChurch.jpg",
+      "description": "The building that now houses the church was originally opened as the New Orpington Lodge in 1895. Later renamed St. George’s Home, it was the primary receiving home for Catholic children immigrating to Canada from the UK under the Child Immigration scheme. Following its closure, it was sold and then used by the Department of National Defence during World War II. It became a church in 1947.",
+      "_id": "5844b66b0d3cad002d32228a",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32228c"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 12:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32228b"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.757Z",
+      "createdAt": "2016-12-05T00:35:55.757Z",
+      "buildingId": 95,
+      "name": "Rideau Hall",
+      "address": "1 Sussex Dr.",
+      "image": "images/RideauHall.jpg",
+      "description": "Rideau Hall, with its buildings and beautiful grounds, is a national historic site and has been the official residence of the Governor General since 1867. It has been a stage for Canadian history for nearly 200 years. Visit the staterooms and learn about the history and role of the Governor General.",
+      "_id": "5844b66b0d3cad002d32228d",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32228f"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32228e"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.757Z",
+      "createdAt": "2016-12-05T00:35:55.757Z",
+      "buildingId": 96,
+      "name": "Rideau Valley Wildlife Sanctuary",
+      "address": "3370 Mulholland Rd",
+      "image": "images/RVWSanctuary.jpg",
+      "description": "The Rideau Valley Wildlife Sanctuary, a registered charity, is a wildlife rehabilitation centre in the Ottawa area that treats injured and orphaned wild mammals and turtles. Approximately 1,000 animals are admitted each year. Visitors will receive a tour of the centre and see wildlife being fed and treated behind one-way viewing windows.",
+      "_id": "5844b66b0d3cad002d322290",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322292"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322291"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.757Z",
+      "createdAt": "2016-12-05T00:35:55.757Z",
+      "buildingId": 97,
+      "name": "Rogers tv & tv Rogers",
+      "address": "475 Richmond Rd.",
+      "image": "images/RogersTVBuilding2.jpg",
+      "description": "Rogers tv and tv Rogers invite you to stop by on Saturday, June 4, 10 a.m. to 4 p.m. Come visit our studios and discover the fascinating world of television, volunteer programming, program proposals, etc. This is an event not to be missed!",
+      "_id": "5844b66b0d3cad002d322293",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322294"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.757Z",
+      "createdAt": "2016-12-05T00:35:55.757Z",
+      "buildingId": 98,
+      "name": "Saint Brigid's Centre for the Arts",
+      "address": "179 Murray St.",
+      "image": "images/StBrigidsCentrefortheArts.jpg",
+      "description": "Saint Brigid’s Centre for the Arts was constructed by Irish immigrants in 1889 and 1890 following their decision to leave Notre Dame Cathedral Basilica. The limestone church was designed by Ottawa architect James R. Bowes in an eclectic Victorian style that combines Gothic Revival with Neo-Hiberno Romanesque forms.",
+      "_id": "5844b66b0d3cad002d322295",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 12:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322297"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 12:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322296"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.757Z",
+      "createdAt": "2016-12-05T00:35:55.757Z",
+      "buildingId": 99,
+      "name": "Saint-François d'Assise Church",
+      "address": "20 Fairmont Ave.",
+      "image": "images/Stfrancoisassise.jpg",
+      "description": "For more than 125 years, the parish has been at the heart of Hintonburg. The church is reknowned for its antique statues, its organ and its double bell that rings twice daily. There is also a museum set up highlighting the history of the church and its place in the community.",
+      "_id": "5844b66b0d3cad002d322298",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32229a"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d322299"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.758Z",
+      "createdAt": "2016-12-05T00:35:55.758Z",
+      "buildingId": 100,
+      "name": "Scouts Canada National Museum",
+      "address": "1345 Baseline Rd.",
+      "image": "images/ScoutsCanadaNationalMuseum.jpg",
+      "description": "Nearly 100,000 Canadian Scouts have fun and unique experiences, while developing into confident future community citizens. See impressive displays of photos, uniforms and memorabilia that capture more than 110 years of Canadian Scouting. A recent museum expansion helps us to celebrate Scouting’s important contributions to Canada’s Heritage.",
+      "_id": "5844b66b0d3cad002d32229b",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32229d"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32229c"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.758Z",
+      "createdAt": "2016-12-05T00:35:55.758Z",
+      "buildingId": 101,
+      "name": "Shopify - Headquarters",
+      "address": "150 Elgin Street, Suite 800",
+      "image": "images/Shopify.jpg",
+      "description": "Shopify’s HQ was designed to juxtapose work and play areas; enabling teams to get work done, building social connections, stretch or relax. Each unique space is meant to help creative minds find the perfect location to be productive or to ideate. The office currently includes six floors, each featuring a different theme. Come experience it for yourself. Guided tours only. Space is limited.",
+      "_id": "5844b66b0d3cad002d32229e",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222a0"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d32229f"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.758Z",
+      "createdAt": "2016-12-05T00:35:55.758Z",
+      "buildingId": 102,
+      "name": "Sir John A. Macdonald Building - Former Bank of Montreal",
+      "address": "144 Wellington St.",
+      "image": "images/SirJohnAMacdonaldBuilding.jpg",
+      "description": "One of Canada’s premiere examples of modern classicism, this former bank has undergone an award-winning heritage restoration and construction of an annex. It was rehabilitated with environmental sustainability in mind. Access to limited areas. Guides are available to answer questions. Photography allowed.",
+      "_id": "5844b66b0d3cad002d3222a1",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 14:00",
+          "_id": "5844b66b0d3cad002d3222a2"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.758Z",
+      "createdAt": "2016-12-05T00:35:55.758Z",
+      "buildingId": 103,
+      "name": "South Nepean Muslim Community",
+      "address": "3020 Woodroffe Ave.",
+      "image": "images/SNMC.jpg",
+      "description": "Built in the Barrhaven area between 2011 and 2014, the building has a unique architectural style that incorporates East and West fitting nicely within the Canadian Context. The centre caters to one of the most diverse Canadian Muslim communities - a multicultural community within the larger multicultural Canadian society. Visitors will need to remove their shoes in some areas.",
+      "_id": "5844b66b0d3cad002d3222a3",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222a5"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222a4"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.759Z",
+      "createdAt": "2016-12-05T00:35:55.759Z",
+      "buildingId": 104,
+      "name": "Southminster United Church",
+      "address": "15 Aylmer Ave.",
+      "image": "images/SouthminsterUnitedChurch.jpg",
+      "description": "Designed by Ottawa architect J. Albert Ewart in the English Gothic Revival style, this landmark heritage building (1931) overlooks the Rideau Canal. The walls are Nepean sandstone and the roof is slate. The interior sanctuary has a high vaulted, wood panelled ceiling and a Casavant organ.",
+      "_id": "5844b66b0d3cad002d3222a6",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 14:00",
+          "_id": "5844b66b0d3cad002d3222a8"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 14:00",
+          "_id": "5844b66b0d3cad002d3222a7"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.759Z",
+      "createdAt": "2016-12-05T00:35:55.759Z",
+      "buildingId": 105,
+      "name": "Sri Sathya Sai Baba Spiritual Centre of Ottawa Carleton",
+      "address": "1694 Hunt Club Rd. (Entrance from Sable Ridge Dr.)",
+      "image": "images/SaiCentre.jpg",
+      "description": "The spiritual centre is a unique, non-denominational place of worship. Sathya Sai Baba’s life message is to \"love all, serve all\" and \"help ever, hurt never\", strongly promoting the Unity of Faiths as depicted through symbols and messages on the centre’s pillar. Designed by M. David Blakely, the 19,000 sq ft building was completed in 1997.",
+      "_id": "5844b66b0d3cad002d3222a9",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222aa"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.759Z",
+      "createdAt": "2016-12-05T00:35:55.759Z",
+      "buildingId": 106,
+      "name": "St. Albans Church",
+      "address": "454 King Edward Ave.",
+      "image": "images/StAlbansChurch.jpg",
+      "description": "Designed by Thomas Fuller, architect of the Houses of Parliament, St. Albans is one of the oldest church buildings in Ottawa. A recent renovation received an Award of Merit for heritage restoration from the City and provides space for parish activities, theatrical and concert events, and Centre 454, a community ministry. Lara Legault photo.",
+      "_id": "5844b66b0d3cad002d3222ab",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222ac"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.759Z",
+      "createdAt": "2016-12-05T00:35:55.759Z",
+      "buildingId": 107,
+      "name": "St. Andrew's Presbyterian Church",
+      "address": "82 Kent St.",
+      "image": "images/StAndrewPresbyterianChurch.jpg",
+      "description": "(Sunday church service at 9:30 & 11:00 a.m.) In 1828, Thomas McKay built Bytown’s first stone church on this site, purchased from Nicholas Sparks. In 1873, a larger church was needed so architect W.T. Thomas built this impressive Gothic Revival structure with a distinctive Reformation arrangement of pews around a high central pulpit. Beautiful vaulted ceiling and lovely stained glass.",
+      "_id": "5844b66b0d3cad002d3222ad",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 14:00",
+          "_id": "5844b66b0d3cad002d3222af"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 13:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222ae"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.759Z",
+      "createdAt": "2016-12-05T00:35:55.759Z",
+      "buildingId": 108,
+      "name": "St. James Anglican Church Leitrim",
+      "address": "4540 Bank St. (at Leitrim)",
+      "image": "images/StJamesAnglicanChurchLeitrim.jpg",
+      "description": "Built in 1860, it is one of the oldest churches in Ottawa. It is a modest building of frame construction typical of rural Anglican churches in the Ottawa valley. It includes the only surviving original stained glass window from Trinity Anglican Church, Ottawa South circa 1879. Don’t miss the Gloucester Historical Society & Museum located next door.",
+      "_id": "5844b66b0d3cad002d3222b0",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222b2"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222b1"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.760Z",
+      "createdAt": "2016-12-05T00:35:55.760Z",
+      "buildingId": 109,
+      "name": "St. John the Baptist Ukrainian Catholic Shrine",
+      "address": "952 Green Valley Cres.",
+      "image": "images/CentralStJohnEN1.jpg",
+      "description": "St. John the Baptist Ukrainian Catholic Shrine is in the 18th century Ukrainian baroque style - a synthesis of European baroque and cruciform Byzantine-Ukrainian styles. It is designated a Shrine because it represents the Canadian Ukrainian Catholic community in the nation’s capital. The Shrine is decorated with icons in the Byzantine style.",
+      "_id": "5844b66b0d3cad002d3222b3",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222b4"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.760Z",
+      "createdAt": "2016-12-05T00:35:55.760Z",
+      "buildingId": 110,
+      "name": "St. John the Evangelist Anglican Church",
+      "address": "154 Somerset St. W. (at Elgin)",
+      "image": "images/StJohns2016photo.jpg",
+      "description": "(Sunday church service at 8 a.m. and 10:15 a.m.) Known as \"The Church with the Open Door,\"St. John the Evangelist is a downtown Anglican parish that broadened its Elgin Street entrance to grow a caring community of those seeking God. Experience the beauty of this sacred space with its wooden arches and Warrior Chapel. Open-door sitters also welcome the public weekly at lunch, Mondays to Thursdays.",
+      "_id": "5844b66b0d3cad002d3222b5",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222b6"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.760Z",
+      "createdAt": "2016-12-05T00:35:55.760Z",
+      "buildingId": 111,
+      "name": "St. Luke Lutheran Church",
+      "address": "326 MacKay St.",
+      "image": "images/StLuke1922.jpg",
+      "description": "St. Luke Lutheran Church has served the spiritual needs of the community of New Edinburgh for 100 years. Built in 1915, it was designed by influential Ottawa architect, W. E. Noffke. Many of the congregation’s original members, who were German-speaking families from the area, assisted in the actual construction of the building.",
+      "_id": "5844b66b0d3cad002d3222b7",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222b8"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.760Z",
+      "createdAt": "2016-12-05T00:35:55.760Z",
+      "buildingId": 112,
+      "name": "St. Mary's Anglican Church",
+      "address": "2574 Sixth Line Rd., Dunrobin",
+      "image": "images/StMaryAnglicanChurch.jpg",
+      "description": "New St. Mary’s was built in 1909 after the Old St Mary’s at Pinhey’s Point, built in 1827, was deemed  structurally unsafe. Many of the pews and other interior fixtures are from the Old St. Mary’s Church. Old St. Mary’s was the first Anglican church in the Ottawa Diocese and is the oldest church in the Ottawa area. Ten stained glass windows.",
+      "_id": "5844b66b0d3cad002d3222b9",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 12:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222bb"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 12:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222ba"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.760Z",
+      "createdAt": "2016-12-05T00:35:55.760Z",
+      "buildingId": 113,
+      "name": "St. Matthew's Anglican Church",
+      "address": "130 Glebe Ave.",
+      "image": "images/StMatthewAnglicanChurch.jpg",
+      "description": "St. Matthew’s Church was constructed in 1929-30 and designed by Architect Cecil Burgess who celebrated the beauty of English ecclesiastical architecture. A new roof was completed in 2015-16. Inside, view famed Canadian iconographer Heiko Schlieper’s original series \"Passion of our Lord\" while listening to recorded music by St. Matthew’s choirs.",
+      "_id": "5844b66b0d3cad002d3222bc",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222be"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 11:30 to 16:00",
+          "_id": "5844b66b0d3cad002d3222bd"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.761Z",
+      "createdAt": "2016-12-05T00:35:55.761Z",
+      "buildingId": 114,
+      "name": "St. Paul's Eastern United Church",
+      "address": "473 Cumberland St.",
+      "image": "images/StPaulSunited.jpg",
+      "description": "St. Paul’s-Eastern United Church is one of the oldest congregations in Ottawa. The Romanesque Revival church was built from 1888 to 1889 for St. Paul’s Presbyterian Church by S.R. Badgley, architect. It originally had a large steeple. Unfortunately the church was built on sand and the steeple had to be removed, leaving a more squat building.",
+      "_id": "5844b66b0d3cad002d3222bf",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222c1"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222c0"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.761Z",
+      "createdAt": "2016-12-05T00:35:55.761Z",
+      "buildingId": 115,
+      "name": "St. Peter's Lutheran Church",
+      "address": "400 Sparks St.",
+      "image": "images/StPeters.jpg",
+      "description": "Erected in 1952, and built of sandstone from Nepean. Space designed by Cecil Burgess in the English Gothic Style. The Bell Carillon was installed in 1966 and the Casavant Organ was dedicated in 1977. Stained glass windows throughout are the work of Russell Goodman & Sons, installed between 1985 and 1993. Landscaping renovation was completed in 2010 for the 100th anniversary.",
+      "_id": "5844b66b0d3cad002d3222c2",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222c4"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 11:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222c3"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.761Z",
+      "createdAt": "2016-12-05T00:35:55.761Z",
+      "buildingId": 116,
+      "name": "Standard Bread Company/Gladstone Clayworks Co-op Pottery Studio",
+      "address": "949B Gladstone Ave.",
+      "image": "images/StandardBreadCompany.jpg",
+      "description": "Built in 1924, the ground floor (east side) was converted into a pottery studio in 2003. The 1,800 sq ft co-operative studio now accommodates 25 ceramic artists who work together, sharing their experience and skill. The public will view artists at work, and a variety of finished artwork in the adjoining gallery.",
+      "_id": "5844b66b0d3cad002d3222c5",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222c7"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222c6"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.761Z",
+      "createdAt": "2016-12-05T00:35:55.761Z",
+      "buildingId": 117,
+      "name": "SunTech Greenhouses Ltd.",
+      "address": "5541 Doyle Rd., Manotick",
+      "image": "images/Suntech.jpg",
+      "description": "In its 4 acre greenhouse, Suntech hydroponically grows 6 varieties of tomatoes, green beans, mini In its 4-acre greenhouse, Suntech hydroponically grows 6 varieties of tomatoes, green beans, mini cucumbers, and sweet snacking peppers. Come see the beauty of plants in full production; our tour will show you how we grow high-quality vegetables. Don’t miss the tasting tables we offer! Bring the family and friends!",
+      "_id": "5844b66b0d3cad002d3222c8",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222ca"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222c9"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.762Z",
+      "createdAt": "2016-12-05T00:35:55.762Z",
+      "buildingId": 118,
+      "name": "Supreme Court of Canada",
+      "address": "301 Wellington St.",
+      "image": "images/SupremeCourt.jpg",
+      "description": "(1939) The Court’s distinguished presence is emphasized by its massive scale and commanding Grand Entrance Hall. Architect Ernest Cormier’s Art Deco design enhances the natural beauty of the exquisite woods and marble interior. After delays during WWII, the Court took possession of the building in 1946. Only the Grand Entrance and courtroom will be open. Photography restrictions.",
+      "_id": "5844b66b0d3cad002d3222cb",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222cd"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222cc"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.762Z",
+      "createdAt": "2016-12-05T00:35:55.762Z",
+      "buildingId": 119,
+      "name": "TD Place",
+      "address": "1015 Bank St.",
+      "image": "images/TDPlace.jpg",
+      "description": "TD Place at Lansdowne is Ottawa’s exciting urban sports and entertainment destination that features a 24,000-seat outdoor stadium and a 10,000 indoor arena. It is home to the CFL’s Ottawa REDBLACKS, the NASL’s Ottawa Fury FC, and the OHL’s Ottawa 67’s. It has also played host to many including the Grey Cup, FIFA, and AC/DC. Visit the Ottawa 67’s locker room for a peak behind the scenes!",
+      "_id": "5844b66b0d3cad002d3222ce",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222cf"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.762Z",
+      "createdAt": "2016-12-05T00:35:55.762Z",
+      "buildingId": 120,
+      "name": "The Delegation of the Ismaili Imamat",
+      "address": "199 Sussex Dr.",
+      "image": "images/IsmailiImamat.jpg",
+      "description": "Designed by Japanese architect Fumihiko Maki, this award-winning building serves a representational role for the Ismaili Imamat, reflecting the wide-ranging humanistic and humanitarian agenda of the Aga Khan Development Network and its associated institutions. Visitors can also see an exhibit on Canada’s role in supporting global development. ",
+      "_id": "5844b66b0d3cad002d3222d0",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222d1"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.762Z",
+      "createdAt": "2016-12-05T00:35:55.762Z",
+      "buildingId": 121,
+      "name": "The Ottawa Regional Cancer Foundation's Maplesoft Centre",
+      "address": "1500 Alta Vista Drive",
+      "image": "images/MaplesoftCancerCentre.jpg",
+      "description": "The Cancer Foundation’s Maplesoft Centre is the first of its kind in Canada, officially opening in 2011. The building is warm and welcoming with all elements creating a calm and relaxing environment. The 11,463 square foot facility boasts some unique elements including retractable walls, a water feature, theatre, and beautiful photography.",
+      "_id": "5844b66b0d3cad002d3222d2",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222d4"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222d3"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.763Z",
+      "createdAt": "2016-12-05T00:35:55.763Z",
+      "buildingId": 122,
+      "name": "The Ottawa Rotary Home",
+      "address": "823 Rotary Way",
+      "image": "images/Rotary.jpg",
+      "description": "The Ottawa Rotary Home is a respite home located on five acres of gardens and playgrounds. This state-of-the-art facility is fully accessible and features an open concept living space. Well-equipped bathrooms and bedrooms offer mechanical lifts and large hallways that allow the individuals we support to move freely in their home away from home.",
+      "_id": "5844b66b0d3cad002d3222d5",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222d6"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.763Z",
+      "createdAt": "2016-12-05T00:35:55.763Z",
+      "buildingId": 123,
+      "name": "The Rectory Art House",
+      "address": "179 Murray St.",
+      "image": "images/TheRectoryArtHouse.jpg",
+      "description": "Built in the early 1980s, The Rectory Art House was formerly the rectory of Saint Brigid’s Church. Converted into artist studios and office space in June 2011, it now provides nine artists with private studio space and is the head office to Saint Brigid’s Centre for the Arts. Please note that this building is not wheelchair accessible.",
+      "_id": "5844b66b0d3cad002d3222d7",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222d9"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222d8"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.763Z",
+      "createdAt": "2016-12-05T00:35:55.763Z",
+      "buildingId": 124,
+      "name": "Thomson Hall o/a The Keg Manor",
+      "address": "529 Richmond Rd.",
+      "image": "images/Kegmanor.jpg",
+      "description": "A Georgian style estate, Thomson Hall was built between 1831 and 1833 by William Thomson. A private residence until 1989, it has been occupied by The Keg Manor since 1999. To the east of the house, a walled garden dating back to 1833 served as a vegetable garden for the families who lived there.  It is now open to the public and cared for by the Friends of Maplelawn.",
+      "_id": "5844b66b0d3cad002d3222da",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222db"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.763Z",
+      "createdAt": "2016-12-05T00:35:55.763Z",
+      "buildingId": 125,
+      "name": "Vanier Museopark",
+      "address": "300 Pères Blancs Ave., 2nd Floor",
+      "image": "images/VanierMuseopark.jpg",
+      "description": "The Vanier Museopark was named because of its location in the Richelieu Park. The property called Richelieu Park belonged to the Society of Missionaries of Africa. They built an important seminary on the site in 1938. They also exploited the sugar bush nearby, which made way for the sugar shack to be built in 1998.",
+      "_id": "5844b66b0d3cad002d3222dc",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222de"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222dd"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.764Z",
+      "createdAt": "2016-12-05T00:35:55.764Z",
+      "buildingId": 126,
+      "name": "Vietnam House",
+      "address": "85 Glebe Ave.",
+      "image": "images/Vietnam.jpg",
+      "description": "Built in 1913, the house is a low, sprawling structure and was Noffke’s first design in what was to become the architect’s favorite idiom of Spanish-Colonial Revival.  The house has been designated of heritage value by the City of Ottawa.",
+      "_id": "5844b66b0d3cad002d3222df",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222e0"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.764Z",
+      "createdAt": "2016-12-05T00:35:55.764Z",
+      "buildingId": 127,
+      "name": "Wabano Centre for Aboriginal Health",
+      "address": "299 Montreal Road",
+      "image": "images/Wabano.jpg",
+      "description": "The Wabano Centre for Aboriginal Health is an award-winning and internationally recognized healthcare facility, leading the way in community-based care and cultural programming. Filled with natural light, grand ceilings, Aboriginal art and awe-inspiring architecture by Douglas Cardinal, Wabano has become a place of belonging for all who visit.",
+      "_id": "5844b66b0d3cad002d3222e1",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222e3"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222e2"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.765Z",
+      "createdAt": "2016-12-05T00:35:55.765Z",
+      "buildingId": 128,
+      "name": "Watson's Mill",
+      "address": "5525 Dickinson St., Manotick",
+      "image": "images/Watsonsmill.jpg",
+      "description": "Watson’s Mill is a unique 1860s grist and flour mill located on the Rideau River. Still operating with most of its original systems and equipment intact, the Mill has a remarkable history linked to local politics, the building of a nation, and a tragic love story.",
+      "_id": "5844b66b0d3cad002d3222e4",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 17:00",
+          "_id": "5844b66b0d3cad002d3222e6"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 17:00",
+          "_id": "5844b66b0d3cad002d3222e5"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.765Z",
+      "createdAt": "2016-12-05T00:35:55.765Z",
+      "buildingId": 129,
+      "name": "Waupoos Family Farm",
+      "address": "2050 Rideau Rd.",
+      "image": "images/Waupoos.jpg",
+      "description": "The land grant was awarded to Andrew Spratt in 1832. The farmhouse was built in 1891. The barn and house addition were built after 1946. In 1956, the Oblates purchased the property to use as a Novitiate. The Waupoos Foundation leased the property in 1980, offering vacations to families in need. Cottages, lodge, chapel and pool were added in 1982.",
+      "_id": "5844b66b0d3cad002d3222e7",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b66b0d3cad002d3222e8"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.765Z",
+      "createdAt": "2016-12-05T00:35:55.765Z",
+      "buildingId": 130,
+      "name": "Wellington Building",
+      "address": "180 Wellington St.",
+      "image": "images/WellingtonBuilding.jpg",
+      "description": "Built in 1927 as the Canadian headquarters of Metropolitan Life Insurance, the rehabilitation of this heritage Beaux-Arts building was completed this spring. Highlights include a green wall and a dramatic ceiling mosaic restored piece-by-piece. Access to limited areas. Guides are available to answer questions. Photography allowed.",
+      "_id": "5844b66b0d3cad002d3222e9",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 14:00",
+          "_id": "5844b66b0d3cad002d3222ea"
+        }
+      ]
+    },
+    {
+      "updatedAt": "2016-12-05T00:35:55.766Z",
+      "createdAt": "2016-12-05T00:35:55.766Z",
+      "buildingId": 131,
+      "name": "Westboro Masonic Hall",
+      "address": "430 Churchill Ave. North",
+      "image": "images/WestBoromasonichall.jpg",
+      "description": "Built in 1924 for the Masons of Westboro, the two-storey red brick Edwardian structure houses an elegant Victorian banquet hall featuring high ornate ceiling hardwood floors, Austrian crystal chandelier, among other features. The top floor is dedicated to the Lodge Room where the Masons hold their meetings, opened to the public on this occasion.",
+      "_id": "5844b66b0d3cad002d3222eb",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 13:00 to 18:00",
+          "_id": "5844b66b0d3cad002d3222ed"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 13:00 to 18:00",
+          "_id": "5844b66b0d3cad002d3222ec"
+        }
+      ]
+    },
+    {
+      "__v": 0,
+      "_id": "5844b68d0d3cad002d3222ee",
+      "address": "1385 Woodroffe Ave.",
+      "buildingId": 132,
+      "createdAt": "2016-12-05T00:36:29.881Z",
+      "description": "@author Gerald.Hurdle@AlgonquinCollege.com",
+      "image": "images/hurdleg-i-am-smiling.png",
+      "name": "hurdleg",
+      "updatedAt": "2016-12-05T00:37:06.207Z",
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844b68d0d3cad002d3222f0"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844b68d0d3cad002d3222ef"
+        }
+      ]
+    },
+    {
+      "__v": 0,
+      "_id": "5844bccde5dc5b002d13b84d",
+      "address": "1785 Baseline Road",
+      "buildingId": 133,
+      "createdAt": "2016-12-05T01:03:09.288Z",
+      "description": "This building is my place.",
+      "image": "images/desk.jpg",
+      "name": "mang0055",
+      "updatedAt": "2016-12-06T05:55:39.475Z",
+      "open_hours": []
+    },
+    {
+      "buildingId": 134,
+      "updatedAt": "2016-12-05T03:39:37.950Z",
+      "createdAt": "2016-12-05T03:39:37.950Z",
+      "name": "hurdleg",
+      "address": "734 Moodie Dr.",
+      "image": "images/AltaVistaAH.jpg",
+      "description": "Wild Bird Care Centre",
+      "_id": "5844e1791086f3002dc8c59c",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "5844e1791086f3002dc8c59e"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "5844e1791086f3002dc8c59d"
+        }
+      ]
+    },
+    {
+      "buildingId": 135,
+      "updatedAt": "2016-12-06T01:34:44.524Z",
+      "createdAt": "2016-12-06T01:34:44.524Z",
+      "name": "hurdleg",
+      "address": "123 Main Street",
+      "image": "images/AltaVistaAH.jpg",
+      "description": "My 3rd building",
+      "_id": "584615b41086f3002dc8c59f",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "584615b41086f3002dc8c5a1"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "584615b41086f3002dc8c5a0"
+        }
+      ]
+    },
+    {
+      "__v": 0,
+      "_id": "58464ab11086f3002dc8c5a2",
+      "address": "New York, NY 10022",
+      "buildingId": 136,
+      "createdAt": "2016-12-06T05:20:49.974Z",
+      "description": "Trump Tower is a 58-story mixed-use skyscraper located on Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City.",
+      "image": "images/2016-12-04-02-59-02-1800165141.jpg",
+      "name": "mang0055",
+      "updatedAt": "2016-12-06T05:34:28.770Z",
+      "open_hours": []
+    },
+    {
+      "__v": 0,
+      "_id": "5846526835c7c6002db2cd63",
+      "address": "1785 Baseline Road",
+      "buildingId": 137,
+      "createdAt": "2016-12-06T05:53:44.067Z",
+      "description": "This is my testing Building.",
+      "image": "images/rahislife.jpg",
+      "name": "mang0055",
+      "updatedAt": "2016-12-06T05:54:26.824Z",
+      "open_hours": []
+    },
+    {
+      "__v": 0,
+      "_id": "58466b7935c7c6002db2cd66",
+      "address": "1785 Baseline Road",
+      "buildingId": 140,
+      "createdAt": "2016-12-06T07:40:41.183Z",
+      "description": "my development center",
+      "image": "images/bg.png",
+      "name": "mang0055",
+      "updatedAt": "2016-12-06T17:06:46.329Z",
+      "open_hours": []
+    },
+    {
+      "buildingId": 142,
+      "updatedAt": "2016-12-07T01:14:24.762Z",
+      "createdAt": "2016-12-07T01:14:24.762Z",
+      "address": "bannana",
+      "description": "hsnnz",
+      "image": "image/abc.jpg",
+      "name": "mang0055",
+      "_id": "58476270085d8f002d32a60d",
+      "__v": 0,
+      "open_hours": []
+    },
+    {
+      "buildingId": 143,
+      "updatedAt": "2016-12-07T03:53:13.621Z",
+      "createdAt": "2016-12-07T03:53:13.621Z",
+      "name": "hurdleg",
+      "address": "123 Main Street",
+      "image": "images/AltaVistaAH.jpg",
+      "description": "My 4th building",
+      "_id": "584787a9085d8f002d32a60e",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "584787a9085d8f002d32a610"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "584787a9085d8f002d32a60f"
+        }
+      ]
+    },
+    {
+      "buildingId": 144,
+      "updatedAt": "2016-12-07T03:53:19.384Z",
+      "createdAt": "2016-12-07T03:53:19.384Z",
+      "name": "hurdleg",
+      "address": "123 Main Street",
+      "image": "images/AltaVistaAH.jpg",
+      "description": "My 4th building",
+      "_id": "584787af085d8f002d32a611",
+      "__v": 0,
+      "open_hours": [
+        {
+          "date": "Saturday, June 4, 2016 - 10:00 to 16:00",
+          "_id": "584787af085d8f002d32a613"
+        },
+        {
+          "date": "Sunday, June 5, 2016 - 10:00 to 16:00",
+          "_id": "584787af085d8f002d32a612"
+        }
+      ]
+    }
+  ]
+}

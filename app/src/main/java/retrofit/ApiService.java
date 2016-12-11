@@ -38,4 +38,6 @@ public interface ApiService {
 
   @DELETE("buildings/{buildingId}") Call<ResponseBody> deleteBuilding(
       @Path("buildingId") int buildingId);
+
+  @GET("buildings/{buildingId}") Call<Building> getEvent(@Path("buildingId") int buildingId);
 }

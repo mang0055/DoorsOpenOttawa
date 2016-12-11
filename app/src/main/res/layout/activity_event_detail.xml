@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_event_detail"
+    android:id="@+id/id_activity_event_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -9,86 +9,92 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.iamraviraj.mang0055.ottawa.ca.EventDetailActivity"
-    >
-  <ScrollView
+>
+  <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/swipe_refresh_activity"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      >
-    <LinearLayout
+      android:layout_height="wrap_content"
+  >
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:layout_height="match_parent"
+    >
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:orientation="horizontal"
-
-          >
-        <ImageView
-            android:id="@+id/img_building"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="top"
-            android:minHeight="100dp"
-            android:minWidth="100dp"
-            />
+          android:orientation="vertical"
+      >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
-            >
-          <TextView
-              android:id="@+id/text_title"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+        >
+          <ImageView
+              android:id="@+id/img_building"
+              android:layout_width="100dp"
+              android:layout_height="100dp"
               android:layout_gravity="top"
-              android:text="Algonquin College"
-              style="@style/TextAppearance.AppCompat.Title"
-              />
-          <TextView
-              android:id="@+id/text_address"
+              android:minHeight="100dp"
+              android:minWidth="100dp"
+          />
+          <LinearLayout
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:text="1785 Baseline Road, Ottawa ON CANADA"
-              style="@style/TextAppearance.AppCompat.Subhead"
-              />
+              android:orientation="vertical"
+              android:padding="16dp"
+          >
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text="Algonquin College"
+                style="@style/TextAppearance.AppCompat.Title"
+            />
+            <TextView
+                android:id="@+id/text_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1785 Baseline Road, Ottawa ON CANADA"
+                style="@style/TextAppearance.AppCompat.Subhead"
+            />
 
 
+          </LinearLayout>
         </LinearLayout>
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="400px"
+            android:paddingTop="16dp"
+            tools:context="com.algonquincollege.mang0055.acfinder.MapsActivity"
+        />
+        <TextView
+            android:id="@+id/text_openHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="From 8 AM to 10PM"
+            style="@style/TextAppearance.AppCompat.Body2"
+        />
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            style="@style/TextAppearance.AppCompat.Body1"
+        />
+
+
+        <TextView
+            android:id="@+id/text_features"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Caption"
+        />
       </LinearLayout>
-      <fragment
-          android:id="@+id/map"
-          android:name="com.google.android.gms.maps.SupportMapFragment"
-          android:layout_width="match_parent"
-          android:layout_height="400px"
-          android:paddingTop="16dp"
-          tools:context="com.algonquincollege.mang0055.acfinder.MapsActivity"
-          />
-      <TextView
-          android:paddingTop="16dp"
-          android:id="@+id/text_openHours"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="From 8 AM to 10PM"
-          style="@style/TextAppearance.AppCompat.Body2"
-          />
-      <TextView
-          android:id="@+id/text_description"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-
-          style="@style/TextAppearance.AppCompat.Body1"
-          />
-
-
-      <TextView
-          android:id="@+id/text_features"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          style="@style/TextAppearance.AppCompat.Caption"
-          />
-    </LinearLayout>
-  </ScrollView>
+    </ScrollView>
+  </android.support.v4.widget.SwipeRefreshLayout>
 </RelativeLayout>

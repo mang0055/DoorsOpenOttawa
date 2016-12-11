@@ -13,6 +13,13 @@ import android.widget.Toast;
 
 public class BaseActivity extends AppCompatActivity {
 
+  public static String getAPIAuthorisation() {
+    String basicAuth =
+        "Basic " + Base64.encodeToString(String.format("%s:%s", "mang0055", "password").getBytes(),
+            Base64.NO_WRAP);
+    return basicAuth;
+  }
+
   boolean isNetworkAvailable() {
 
     ConnectivityManager connectivityManager =
@@ -24,12 +31,5 @@ public class BaseActivity extends AppCompatActivity {
           Toast.LENGTH_LONG).show();
     }
     return flag;
-  }
-
-  public static String getAPIAuthorisation() {
-    String basicAuth =
-        "Basic " + Base64.encodeToString(String.format("%s:%s", "mang0055", "password").getBytes(),
-            Base64.NO_WRAP);
-    return basicAuth;
   }
 }

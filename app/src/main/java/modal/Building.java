@@ -24,51 +24,39 @@ public class Building {
    *
    * "image":"images/AIDSOttawa.jpg",
    *
-   * "open_hours":[{"date":"Saturday, June 4, 2016 - 10:00 to 16:00"},{"date":"Sunday, June 5, 2016 - 10:00 to 16:00"}],
+   * "open_hours":[{"date":"Saturday, June 4, 2016 - 10:00 to 16:00"},{"date":"Sunday, June 5, 2016
+   * - 10:00 to 16:00"}],
    *
-   * "description":"The AIDS Committee of Ottawa (ACO) has served the HIV/AIDS community for 30 years,
+   * "description":"The AIDS Committee of Ottawa (ACO) has served the HIV/AIDS community for 30
+   * years,
    * providing education and support services around HIV/AIDS. Built in 1961 and overlooking the
-   * Rideau Canal, the home of the ACO features a drop-in centre known as the Living Room - a place of
-   * comfort and care that pays tribute to the origins of the HIV/AIDS movement in Canada in the early
+   * Rideau Canal, the home of the ACO features a drop-in centre known as the Living Room - a place
+   * of
+   * comfort and care that pays tribute to the origins of the HIV/AIDS movement in Canada in the
+   * early
    * 80s.",
    *
    * "features":[{"accessible":true},{"bike_parking":true}]
    * }
    */
-  @Expose
-  private Integer buildingId;
-  @Expose
-  private String name;
-  @Expose
-  private String address;
-  @Expose
-  private String image;
-  @Expose
-  private String description;
+  @Expose private Integer buildingId;
+  @Expose private String name;
+  @Expose private String address;
+  @Expose private String image;
+  @Expose private String description;
   @SerializedName("open_hours") @Expose private List<Calendar> calendar = new ArrayList<Calendar>();
   private List<Feature> features = new ArrayList<Feature>();
   private boolean favorite = false;
-  public Building(Integer buildingId, String name, String address, String image, String description,
-      List<Calendar> calendar, List<Feature> features,boolean favorite) {
-    this.buildingId = buildingId;
-    this.name = name;
-    this.address = address;
-    this.image = image;
-    this.description=description;
-    this.calendar = calendar;
-    this.features = features;
-    this.favorite = favorite;
-  }
 
   public Building() {
 
   }
 
-  public Integer getBuildingId() {
-    return buildingId;
+  public int getBuildingId() {
+    return buildingId.intValue();
   }
 
-  public void setBuildingId(Integer buildingId) {
+  public void setBuildingId(int buildingId) {
     this.buildingId = buildingId;
   }
 
@@ -81,7 +69,7 @@ public class Building {
   }
 
   public String getAddress() {
-    return address+" Ottawa, ON";
+    return address + " Ottawa, ON";
   }
 
   public void setAddress(String address) {
