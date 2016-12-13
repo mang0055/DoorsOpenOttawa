@@ -12,4 +12,14 @@
   <string name="action_delete">Delete</string>
   <string name="action_favorite">Favorite</string>
   <string name="internal_storage">Internal storage</string>
+  <string name="permission_rationale">Permission Rationale</string>
+  <string name="needed_for_html_demo_purposes">
+    This app was designed for an older version of Android. Denying Permission may cause it to no
+    longer function as intended>
+  </string>
+  <string name="needed_for_demo_purposes">Needed for demo purposes.</string>
+  <string name="permission_granted">Permission Granted!</string>
+  <string name="permission_permanently_denied">Permission Permanently Denied.</string>
+  <string name="permission_denied">Permission Denied.</string>
+  <string name="x_permissions_granted">%1$d Permissions Granted.</string>
 </resources>

@@ -68,7 +68,7 @@ public class HomeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     Picasso.with(context).load(Constant.ENDPOINT + building.getImage()).into(new Target() {
       @Override public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-        holder.imageLoading.setVisibility(View.GONE);
+        holder.imageLoading.setVisibility(View.INVISIBLE);
         Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
           @Override public void onGenerated(Palette palette) {
             Palette.Swatch textSwatch = palette.getVibrantSwatch();

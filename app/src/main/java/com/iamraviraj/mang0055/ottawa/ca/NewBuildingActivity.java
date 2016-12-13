@@ -1,10 +1,12 @@
 package com.iamraviraj.mang0055.ottawa.ca;
 
+import android.Manifest;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.util.Log;
 import android.view.MenuInflater;
@@ -17,6 +19,8 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.greysonparrelli.permiso.Permiso;
+import com.greysonparrelli.permiso.PermisoDialogFragment;
 import com.squareup.picasso.Picasso;
 import java.io.File;
 import java.util.ArrayList;
@@ -57,6 +61,7 @@ public class NewBuildingActivity extends BaseActivity
     setContentView(R.layout.activity_new_building);
     getSupportActionBar().setHomeButtonEnabled(true);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    Permiso.getInstance().setActivity(this);
     setUpView();
 
     if (getIntent().getExtras() != null) {
@@ -71,6 +76,17 @@ public class NewBuildingActivity extends BaseActivity
       btnSave.setVisibility(View.VISIBLE);
       btnUpdate.setVisibility(View.GONE);
     }
+  }
+
+  @Override protected void onResume() {
+    super.onResume();
+    Permiso.getInstance().setActivity(this);
+  }
+
+  @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+      @NonNull int[] grantResults) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    Permiso.getInstance().onRequestPermissionResult(requestCode, permissions, grantResults);
   }
 
   private void setUpView() {
@@ -248,10 +264,10 @@ public class NewBuildingActivity extends BaseActivity
   @Override public boolean onMenuItemClick(MenuItem item) {
     switch (item.getItemId()) {
       case R.id.item_camera:
-        capturePicRequest();
+        checkPermissionCamera();
         return true;
       case R.id.item_gallary:
-        choosePicRequest();
+        checkPermissionGallery();
         return true;
       default:
         return false;
@@ -331,5 +347,50 @@ public class NewBuildingActivity extends BaseActivity
 
     // MultipartBody.Part is used to send also the actual file name
     return MultipartBody.Part.createFormData(partName, file.getName(), requestFile);
+  }
+
+  private void checkPermissionGallery() {
+    // A request for a single permission
+    Permiso.getInstance().requestPermissions(new Permiso.IOnPermissionResult() {
+      @Override public void onPermissionResult(Permiso.ResultSet resultSet) {
+        if (resultSet.isPermissionGranted(Manifest.permission.READ_EXTERNAL_STORAGE)) {
+          choosePicRequest();
+        } else if (resultSet.isPermissionPermanentlyDenied(
+            Manifest.permission.READ_EXTERNAL_STORAGE)) {
+          Toast.makeText(NewBuildingActivity.this, R.string.permission_permanently_denied,
+              Toast.LENGTH_SHORT).show();
+        } else {
+          Toast.makeText(NewBuildingActivity.this, R.string.permission_denied, Toast.LENGTH_SHORT)
+              .show();
+        }
+      }
+
+      @Override public void onRationaleRequested(Permiso.IOnRationaleProvided callback,
+          String... permissions) {
+        PermisoDialogFragment.Builder builder =
+            new PermisoDialogFragment.Builder(R.string.permission_rationale,
+                R.string.needed_for_html_demo_purposes, android.R.string.ok);
+        Permiso.getInstance().showRationaleInDialog(builder, callback);
+      }
+    }, Manifest.permission.READ_EXTERNAL_STORAGE);
+  }
+
+  private void checkPermissionCamera() {
+    // A request for a single permission
+    Permiso.getInstance().requestPermissions(new Permiso.IOnPermissionResult() {
+      @Override public void onPermissionResult(Permiso.ResultSet resultSet) {
+        if (resultSet.isPermissionGranted(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+          capturePicRequest();
+        } else {
+          Toast.makeText(NewBuildingActivity.this, R.string.permission_denied, Toast.LENGTH_SHORT)
+              .show();
+        }
+      }
+
+      @Override public void onRationaleRequested(Permiso.IOnRationaleProvided callback,
+          String... permissions) {
+        Permiso.getInstance().showRationaleInDialog("Title", "Message", null, callback);
+      }
+    }, Manifest.permission.WRITE_EXTERNAL_STORAGE);
   }
 }
