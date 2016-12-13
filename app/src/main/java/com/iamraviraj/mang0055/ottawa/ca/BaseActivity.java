@@ -6,6 +6,9 @@ import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.widget.Toast;
+import java.io.IOException;
+import okhttp3.Interceptor;
+import okhttp3.Request;
 
 /**
  * @author Raviraj Mangukiya (mang0055@algonquinlive.com)
@@ -32,4 +35,16 @@ public class BaseActivity extends AppCompatActivity {
     }
     return flag;
   }
+
+  public Interceptor headers = new Interceptor() {
+    @Override public okhttp3.Response intercept(Chain chain) throws IOException {
+      Request original = chain.request();
+
+      Request request = original.newBuilder()
+          .header("Authorization", BaseActivity.getAPIAuthorisation())
+          .method(original.method(), original.body())
+          .build();
+      return chain.proceed(request);
+    }
+  };
 }

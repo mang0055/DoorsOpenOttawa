@@ -19,16 +19,13 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.squareup.picasso.Picasso;
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import modal.Building;
 import modal.Calendar;
-import okhttp3.Interceptor;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -52,20 +49,8 @@ public class NewBuildingActivity extends BaseActivity
   static final int REQUEST_IMAGE_GET = 1;
   ImageView buildingImage, buildingImageOverlay;
   Button btnCancel, btnSave, btnUpdate;
-  TextInputLayout editBuildingName, editBuildingAddress, editBuildingDescription;
+  TextInputLayout editBuildingName, editBuildingAddress, editBuildingDescription, focusView;
   Uri imageUri = null;
-  private Interceptor headers = new Interceptor() {
-    @Override public okhttp3.Response intercept(Chain chain) throws IOException {
-      Request original = chain.request();
-
-      Request request = original.newBuilder()
-          //.header("Content-Type", "application/octet-stream")
-          .header("Authorization", BaseActivity.getAPIAuthorisation())
-          .method(original.method(), original.body())
-          .build();
-      return chain.proceed(request);
-    }
-  };
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -130,17 +115,49 @@ public class NewBuildingActivity extends BaseActivity
         showChooser();
         break;
       case R.id.btnSave:
-        postBuilding();
+        if (!validateFields()) {
+          postBuilding();
+        }
         break;
       case R.id.btnCancel:
         finish();
         break;
       case R.id.btnUpdate:
+        if (validateFields()) return;
         Building mBuilding = (Building) btnUpdate.getTag();
         updateBuilding(mBuilding);
         if (imageUri != null) uploadBuildingPicture(mBuilding.getBuildingId(), imageUri);
         break;
     }
+  }
+
+  private boolean validateFields() {
+    String name = editBuildingName.getEditText().getText().toString();
+    String address = editBuildingAddress.getEditText().getText().toString();
+    String description = editBuildingDescription.getEditText().getText().toString();
+    boolean cancel = false;
+
+    if (name.isEmpty()) {
+      focusView = editBuildingName;
+      focusView.setError("Please building name.");
+      cancel = true;
+    }
+    if (address.isEmpty()) {
+      focusView = editBuildingAddress;
+      focusView.setError("Please check address.");
+      cancel = true;
+    }
+    if (description.isEmpty()) {
+      focusView = editBuildingDescription;
+      focusView.setError("Please check description");
+      cancel = true;
+    }
+    if (cancel) {
+      focusView.requestFocus();
+    } else {
+      cancel = false;
+    }
+    return cancel;
   }
 
   private void postBuilding() {
