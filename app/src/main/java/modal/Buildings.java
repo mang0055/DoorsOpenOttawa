@@ -2,6 +2,7 @@ package modal;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import hugo.weaving.DebugLog;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class Buildings {
   public Buildings(List<Building> buildings) {
     this.buildings = buildings;
   }
-
+  @DebugLog
   public List<Building> getBuildings() {
     return buildings;
   }

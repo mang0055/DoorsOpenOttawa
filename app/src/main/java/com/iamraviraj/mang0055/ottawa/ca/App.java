@@ -2,6 +2,7 @@ package com.iamraviraj.mang0055.ottawa.ca;
 
 import android.app.Application;
 import android.content.SharedPreferences;
+import com.facebook.stetho.Stetho;
 import retrofit.RestClient;
 
 /**
@@ -36,6 +37,7 @@ public class App extends Application {
   @Override public void onCreate() {
     super.onCreate();
     mInstance = this;
+    Stetho.initializeWithDefaults(this);
     mediapref = this.getSharedPreferences(getResources().getString(R.string.app_name), 0);
     new RestClient();
   }
